@@ -1,0 +1,212 @@
+.privacy-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 140px;
+    margin-left: 50px;
+}
+
+.p-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    border-right: 0px solid #7D2AE8;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.p-c h3 {
+    font-size: 22px;
+    border-left: 4px solid #7D2AE8;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.p-c ul li {
+    font-size: 16px;
+    padding: 5px;
+    list-style: none;
+    padding-left: 40px;
+}
+
+.p-c h2{
+    background: linear-gradient(180deg, #7D2AE8, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Phone View Only (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+  .privacy-content {
+        margin: 100px 20px 20px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .p-c {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-evenly;
+        border-right: 0px solid #7D2AE8;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .p-c h3 {
+        font-size: 20px;
+        border-left: 4px solid #7D2AE8;
+        padding: 10px;
+    }
+
+    .p-c ul li {
+        font-size: 12px;
+        padding: 5px;
+        list-style: none;
+        padding-left: 20px;
+    }
+}
+
+.legal-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 140px;
+        margin-left: 50px;
+    }
+
+    .l-c {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-evenly;
+        border-right: 0px solid #7D2AE8;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .l-c h3 {
+        font-size: 22px;
+        border-left: 4px solid #7D2AE8;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .l-c ul li {
+        font-size: 16px;
+        padding: 5px;
+        list-style: none;
+        padding-left: 40px;
+    }
+
+.l-c h2{
+    background: linear-gradient(180deg, #7D2AE8, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Phone View Only (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+ .legal-content {
+        margin: 100px 20px 20px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .l-c {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-evenly;
+        border-right: 0px solid #7D2AE8;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .l-c h3 {
+        font-size: 20px;
+        border-left: 4px solid #7D2AE8;
+        padding: 10px;
+    }
+
+    .l-c ul li {
+        font-size: 12px;
+        padding: 5px;
+        list-style: none;
+        padding-left: 20px;
+    }
+}
+
+.terms-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 140px;
+        margin-left: 50px;
+    }
+
+    .t-c {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-evenly;
+        border-right: 0px solid #7D2AE8;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .t-c h3 {
+        font-size: 22px;
+        border-left: 4px solid #7D2AE8;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .t-c ul li {
+        font-size: 16px;
+        padding: 5px;
+        list-style: none;
+        padding-left: 40px;
+    }
+
+.t-c h2{
+    background: linear-gradient(180deg, #7D2AE8, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Phone View Only (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+   .terms-content {
+        margin: 100px 20px 20px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .t-c {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-evenly;
+        border-right: 0px solid #7D2AE8;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .t-c h3 {
+        font-size: 20px;
+        border-left: 4px solid #7D2AE8;
+        padding: 10px;
+    }
+
+    .t-c ul li {
+        font-size: 12px;
+        padding: 5px;
+        list-style: none;
+        padding-left: 20px;
+    }
+  }
