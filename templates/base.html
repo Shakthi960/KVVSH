@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>{% block title %}KVVSH Group of Companies{% endblock %}</title>
+
+<meta name="description" content="{% block description %}KVVSH Group of Companies Pvt Ltd{% endblock %}">
+<meta name="keywords" content="KVVSH Group, KVVSH, India">
+
+<link rel="icon" href="{{ url_for('image', filename='kvvsh-icon-whitebg.webp') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+{% block extra_css %}{% endblock %}
+```
+
+</head>
+
+<body>
+
+```
+{% block navbar %}
+
+<nav>
+    <div class="quicklinks">
+
+        <div class="ql">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('image', filename='kvvsh-png-bg.webp') }}" alt="KVVSH Logo">
+            </a>
+        </div>
+
+        <div class="ql">
+            <a href="{{ url_for('about') }}">About Us</a>
+        </div>
+
+        <div class="ql">
+            <a href="{{ url_for('business') }}">Businesses</a>
+        </div>
+
+        <div class="ql">
+            <a href="{{ url_for('leadership') }}">Leadership</a>
+        </div>
+
+        <div class="ql">
+            <a href="{{ url_for('global_presence') }}">Global Presence</a>
+        </div>
+
+        <div class="ql">
+            <a href="{{ url_for('career') }}">Career</a>
+        </div>
+
+        <div class="ql">
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+{% endblock %}
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer>
+
+    <section class="footer-section-1">
+
+        <div class="footer-1">
+
+            <div class="footer-1-2">
+                <p class="co">CORPORATE OFFICE</p>
+
+                <p>
+                    <span>Headquarters:</span><br>
+                    Nagore, Tamil Nadu, India.
+                </p>
+
+                <p>
+                    <span>E-mail:</span><br>
+                    kvvshcustomercare@gmail.com
+                </p>
+
+                <p>
+                    <span>Ph no.:</span><br>
+                    +91 6383149466
+                </p>
+            </div>
+
+            <div class="footer-1-1">
+                <img src="{{ url_for('image', filename='kvvsh-png-bg.webp') }}" alt="KVVSH Logo">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer-section-2">
+
+        <div class="footer-section-2-1">
+
+            <a href="{{ url_for('privacy') }}">
+                Privacy Policy
+            </a>
+
+            <a href="{{ url_for('terms') }}">
+                Terms & Conditions
+            </a>
+
+            <a href="{{ url_for('legal') }}">
+                Legal Disclaimer
+            </a>
+
+        </div>
+
+        <div class="footer-section-2-2">
+
+            <p>
+                &copy;2017-2026 KVVSH Group of Companies Pvt Ltd.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </section>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+
+{% block extra_js %}{% endblock %}
+```
+
+</body>
+</html>

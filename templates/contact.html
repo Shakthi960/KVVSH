@@ -1,97 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KVVSH group of companies pvt ltd</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="image/kvvsh-icon-whitebg.webp" type="image/jpeg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merienda:wght@300..900&family=Michroma&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <meta name="description" content="KVVSH Group of Companies - Empowering innovation across industries including tech, media, infrastructure, and more.">
-    <meta name="keywords" content="KVVSH, conglomerate, innovation, Tamil Nadu, industries, media, tech, healthcare">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <div id="popup" class="popup">
-        <div class="popup-box">
-            <span id="closePopup">&times;</span>
-            <p id="popupMessage"></p>
-        </div>
+{% block title %}
+Contact Us - KVVSH Group of Companies
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+<!-- ==========================================
+POPUP
+========================================== -->
+
+<div id="popup" class="popup">
+
+    <div class="popup-box">
+
+        <span id="closePopup">
+            &times;
+        </span>
+
+        <p id="popupMessage"></p>
+
     </div>
 
-    <nav>
-    <div class="quicklinks">
-        <div id="ql" class="ql">
-            <a href="index.html"><img src="image/kvvsh-png-bg.webp" alt="kvvsh-logo-whitebg"></a>
-        </div>
-        <div id="ql1" class="ql">
-            <a href="about.html">About Us <span>▾</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="about.html#Overview">Overview</a></li>
-                <li><a href="about.html#ourvision">Our Vision</a></li>
-                <li><a href="about.html#ourjourney">Our Journey</a></li>
-                <li><a href="about.html#cp">Corporate Philosophy</a></li>
-            </ul>
-        </div>
-        <div id="ql2" class="ql">
-            <a href="business.html">Businesses <span>▾</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="business.html#g1">All Businesses</a></li>
-                <li><a href="business.html#g2">Entertainment & Media Group</a></li>
-                <li><a href="business.html#g3">Retail & Consumer Products Group</a></li>
-                <li><a href="business.html#g4">Education & Healthcare Group</a></li>
-                <li><a href="business.html#g5">Tech & Electronics Group</a></li>
-                <li><a href="business.html#g6">Infrastructure & Amusement Group</a></li>
-                <li><a href="business.html#g7">Industrial & Manufacturing Group</a></li>
-                <li><a href="business.html#g8">Automotive Group</a></li>
-            </ul>
-        </div>
-        <div id="ql3" class="ql">
-            <a href="leadership.html">Leadership <span>▾</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="leadership.html#core-leadership">Core Leadership</a></li>
-                <li><a href="leadership.html#entertainment-media">Entertainment & Media</a></li>
-                <li><a href="leadership.html#retail-consumer">Retail & Consumer</a></li>
-                <li><a href="leadership.html#education-healthcare">Education & Healthcare</a></li>
-                <li><a href="leadership.html#tech-electronics">Tech & Electronics</a></li>
-                <li><a href="leadership.html#infrastructure-amusement">Infrastructure & Amusement</a></li>
-                <li><a href="leadership.html#industrial-manufacturing">Industrial & Manufacturing</a></li>
-                <li><a href="leadership.html#automotive">Automotive</a></li>
-                <li><a href="leadership.html#transportation-services">Transportation & Services</a></li>
-            </ul>
-        </div>
-        <div id="ql4" class="ql">
-            <a href="globalpresence.html">Global Presence <span>▾</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="globalpresence.html#overview">Overview</a></li>
-                <li><a href="globalpresence.html#india">In India</a></li>
-                <li><a href="globalpresence.html#foreign">In Foreign</a></li>
-                <li><a href="globalpresence.html#upcomings">Upcomings</a></li>
-            </ul>
-        </div>
-        <div id="ql5" class="ql">
-            <a href="career.html">Career</a>
-        </div>
-        <div id="ql6" class="ql">
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    <div class="mobile-nav">
-        <div class="mobile-nav-logo">
-            <a href="index.html"><img src="image/kvvsh-png-bg.webp" alt="kvvsh logo"></a>
-        </div>
-        <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</nav>
+</div>
 
 <!-- ==========================================
 CONTACT HERO SECTION
@@ -99,17 +36,45 @@ CONTACT HERO SECTION
 
 <section class="contact-hero">
 
+    <div class="contact-slider">
+
+        <div class="contact-slide active">
+            <img src="{{ url_for('image', filename='b1.webp') }}">
+        </div>
+
+        <div class="contact-slide">
+            <img src="{{ url_for('image', filename='b9.webp') }}">
+        </div>
+
+        <div class="contact-slide">
+            <img src="{{ url_for('image', filename='b11.webp') }}">
+        </div>
+
+        <div class="contact-slide">
+            <img src="{{ url_for('image', filename='b14.webp') }}">
+        </div>
+
+        <div class="contact-slide">
+            <img src="{{ url_for('image', filename='b18.webp') }}">
+        </div>
+
+    </div>
+
     <div class="contact-hero-overlay"></div>
 
     <div class="contact-hero-content">
 
         <span class="hero-tag">
+
             CONTACT KVVSH GROUP
+
         </span>
 
         <h1>
+
             Let's Build The Future
             Together
+
         </h1>
 
         <p>
@@ -126,11 +91,16 @@ CONTACT HERO SECTION
         <div class="hero-buttons">
 
             <a href="#contact-form">
+
                 Send Enquiry
+
             </a>
 
-            <a href="#global-offices" class="secondary-btn">
+            <a href="#global-offices"
+            class="secondary-btn">
+
                 Our Offices
+
             </a>
 
         </div>
@@ -151,12 +121,16 @@ CONTACT CARDS
             🏢
         </div>
 
-        <h3>Corporate Office</h3>
+        <h3>
+            Corporate Office
+        </h3>
 
         <p>
+
             Nagore,
             Tamil Nadu,
             India
+
         </p>
 
     </div>
@@ -167,10 +141,14 @@ CONTACT CARDS
             📧
         </div>
 
-        <h3>Email</h3>
+        <h3>
+            Email
+        </h3>
 
         <p>
+
             kvvshcustomercare@gmail.com
+
         </p>
 
     </div>
@@ -181,10 +159,14 @@ CONTACT CARDS
             📞
         </div>
 
-        <h3>Phone</h3>
+        <h3>
+            Phone
+        </h3>
 
         <p>
+
             +91 6383149466
+
         </p>
 
     </div>
@@ -195,10 +177,14 @@ CONTACT CARDS
             🌍
         </div>
 
-        <h3>Global Presence</h3>
+        <h3>
+            Global Presence
+        </h3>
 
         <p>
+
             100+ Countries
+
         </p>
 
     </div>
@@ -216,11 +202,15 @@ id="contact-form">
     <div class="contact-info">
 
         <span>
+
             GET IN TOUCH
+
         </span>
 
         <h2>
+
             Contact Information
+
         </h2>
 
         <p>
@@ -236,32 +226,44 @@ id="contact-form">
 
         <div class="info-box">
 
-            <h4>Headquarters</h4>
+            <h4>
+                Headquarters
+            </h4>
 
             <p>
+
                 Nagore,
                 Tamil Nadu,
                 India
+
             </p>
 
         </div>
 
         <div class="info-box">
 
-            <h4>Email</h4>
+            <h4>
+                Email
+            </h4>
 
             <p>
+
                 kvvshcustomercare@gmail.com
+
             </p>
 
         </div>
 
         <div class="info-box">
 
-            <h4>Phone</h4>
+            <h4>
+                Phone
+            </h4>
 
             <p>
+
                 +91 6383149466
+
             </p>
 
         </div>
@@ -271,12 +273,14 @@ id="contact-form">
     <div class="contact-form-wrapper">
 
         <form
-        action="contact.php"
         method="POST"
+        action="{{ url_for('contact') }}"
         class="contact-form">
 
             <h3>
+
                 Send Us A Message
+
             </h3>
 
             <input
@@ -297,7 +301,8 @@ id="contact-form">
             placeholder="Phone Number"
             required>
 
-            <select name="purpose">
+            <select
+            name="purpose">
 
                 <option>
                     Business Partnership
@@ -324,10 +329,10 @@ id="contact-form">
             <textarea
             name="textarea"
             placeholder="Type your message..."
-            required>
-            </textarea>
+            required></textarea>
 
-            <button type="submit">
+            <button
+            type="submit">
 
                 Send Message →
 
@@ -350,11 +355,15 @@ id="global-offices">
     <div class="section-heading">
 
         <span>
+
             GLOBAL PRESENCE
+
         </span>
 
         <h2>
+
             Our Offices Worldwide
+
         </h2>
 
     </div>
@@ -362,28 +371,63 @@ id="global-offices">
     <div class="office-grid">
 
         <div class="office-card">
-            <h3>India</h3>
-            <p>Corporate Headquarters</p>
+
+            <h3>
+                India
+            </h3>
+
+            <p>
+                Corporate Headquarters
+            </p>
+
         </div>
 
         <div class="office-card">
-            <h3>Singapore</h3>
-            <p>Asia Pacific Operations</p>
+
+            <h3>
+                Singapore
+            </h3>
+
+            <p>
+                Asia Pacific Operations
+            </p>
+
         </div>
 
         <div class="office-card">
-            <h3>Dubai</h3>
-            <p>Middle East Operations</p>
+
+            <h3>
+                Dubai
+            </h3>
+
+            <p>
+                Middle East Operations
+            </p>
+
         </div>
 
         <div class="office-card">
-            <h3>United Kingdom</h3>
-            <p>European Operations</p>
+
+            <h3>
+                United Kingdom
+            </h3>
+
+            <p>
+                European Operations
+            </p>
+
         </div>
 
         <div class="office-card">
-            <h3>United States</h3>
-            <p>North America Operations</p>
+
+            <h3>
+                United States
+            </h3>
+
+            <p>
+                North America Operations
+            </p>
+
         </div>
 
     </div>
@@ -399,11 +443,15 @@ MAP SECTION
     <div class="section-heading">
 
         <span>
+
             LOCATION
+
         </span>
 
         <h2>
+
             Find Our Headquarters
+
         </h2>
 
     </div>
@@ -447,249 +495,52 @@ CTA SECTION
 
 </section>
 
-    <footer>
-        <section class="footer-section-1">
-            <div class="footer-1">
-                
-                <div class="footer-1-2">
-                    <p class="co">CORPORATE OFFICE</p>
-                    <p><span>Headquarters:</span><br> Nagore, Tamil Nadu, India.</p>
-                    <p><span>E-mail: </span><br>kvvshcustomercare@gmail.com</p>
-                    <p><span>Ph no.:</span><br> +91 6383149466</p>
-                </div>
-                <div class="footer-1-1">
-                    <img src="image/kvvsh-png-bg.webp" alt="logo">
-                </div>
-            </div>
-            <div class="footer-2">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="leadership.html">Leadership</a>
-                <a href="career.html">Careers</a>
-                <a href="news.html">Latest news</a>
-                <a href="globalpresence.html">Global Presence</a>
-                <a href="sustainability.html">sustainability</a>
-            </div>
-            <div class="footer-3">
-                <a href="#">Entertainment & Media Group</a>
-                <a href="#">Retail & Consumer Products Group</a>
-                <a href="#">Education & Healthcare Group</a>
-                <a href="#">Tech & Electronics Group</a>
-                <a href="#">Infrastructure & Amusement Group</a>
-                <a href="#">Industrial & Manufacturing Group</a>
-                <a href="#">Automotive Group</a>
-                <a href="#">Transportation & Services Group</a>
-                
-            </div>
-            <div class="footer-4">
-                <div class="footer-4-1">
-                    <p>Empowering Innovation<br> from Tamil Nadu to the World.</p>
-                </div>
-                <div class="footer-4-2">
-                    <a href="#"><img src="image/instagram.webp" alt="instagram"></a>
-                    <a href="#"><img src="image/fb.webp" alt="facebook"></a>
-                    <a href="#"><img src="image/youtube2.webp" alt="youtube"></a>
-                    <a href="#"><img src="image/linkedin2.webp" alt="linkedin"></a>
-                    <a href="#"><img src="image/twitter2.webp" alt="twitter"></a>
-                </div>
-            </div>
-        </section>
+{% endblock %}
 
-        <section class="footer-section-2">
-            <div class="footer-section-2-1">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="termsandcon.html">Terms and Conditions</a>
-                <a href="legal.html">Legal Disclaimer</a>
-            </div>
-            <div class="footer-section-2-2">
-                <p>&copy;2017-2025 KVVSH group of companies pvt ltd, India. ALL Rights Reserved.</p>
-
-            </div>
-        </section>
-    </footer>
-
-
-    
-
-
-
-
+{% block extra_js %}
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.quicklinks');
-    const navLinks = document.querySelectorAll('.quicklinks > .ql > a');
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const body = document.body;
-    const html = document.documentElement;
 
-    // Mobile menu toggle functionality
-    mobileToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        this.classList.toggle('active');
-        nav.classList.toggle('active');
-        
-        // Toggle no-scroll class
-        if (nav.classList.contains('active')) {
-            body.classList.add('no-scroll');
-            html.classList.add('no-scroll');
-        } else {
-            body.classList.remove('no-scroll');
-            html.classList.remove('no-scroll');
-        }
-    });
+/* ==========================================
+CONTACT HERO SLIDER
+========================================== */
 
-    // Handle navigation links - no dropdowns on mobile
-    navLinks.forEach(link => {
-        // Remove any existing click handlers
-        link.onclick = null;
-        
-        // On mobile, ensure dropdown menus don't interfere
-        if (window.innerWidth <= 767) {
-            const dropdown = link.nextElementSibling;
-            if (dropdown && dropdown.classList.contains('dropdown-menu')) {
-                // Remove dropdown functionality completely on mobile
-                dropdown.style.display = 'none';
-            }
-        }
-    });
+const contactSlides =
+document.querySelectorAll(".contact-slide");
 
-    // Close menu when clicking outside on mobile
-    document.addEventListener('click', function (e) {
-        if (window.innerWidth <= 767 && 
-            !nav.contains(e.target) && 
-            !mobileToggle.contains(e.target)) {
-            
-            mobileToggle.classList.remove('active');
-            nav.classList.remove('active');
-            body.classList.remove('no-scroll');
-            html.classList.remove('no-scroll');
-        }
-    });
+let contactIndex = 0;
 
-    // Handle window resize
-    function handleResize() {
-        if (window.innerWidth > 767) {
-            // Reset mobile menu state
-            mobileToggle.classList.remove('active');
-            nav.classList.remove('active');
-            body.classList.remove('no-scroll');
-            html.classList.remove('no-scroll');
-        }
+setInterval(()=>{
+
+    contactSlides[contactIndex]
+    .classList.remove("active");
+
+    contactIndex++;
+
+    if(contactIndex >= contactSlides.length){
+
+        contactIndex = 0;
+
     }
 
-    // Add debounce to resize handler
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(handleResize, 250);
-    });
+    contactSlides[contactIndex]
+    .classList.add("active");
 
-    // Desktop dropdown functionality (only for screens wider than 767px)
-    const dropdownTriggers = document.querySelectorAll('.ql');
+},5000);
 
-    dropdownTriggers.forEach(trigger => {
-        const dropdown = trigger.querySelector('.dropdown-menu');
-        if (!dropdown) return;
 
-        trigger.addEventListener('mouseenter', function () {
-            if (window.innerWidth > 767) {
-                dropdown.style.display = 'block';
-                setTimeout(() => {
-                    dropdown.style.opacity = '1';
-                    dropdown.style.visibility = 'visible';
-                }, 10);
-            }
-        });
+/* ==========================================
+POPUP LOGIC
+========================================== */
 
-        trigger.addEventListener('mouseleave', function () {
-            if (window.innerWidth > 767) {
-                dropdown.style.opacity = '0';
-                dropdown.style.visibility = 'hidden';
-                setTimeout(() => {
-                    if (dropdown.style.opacity === '0') {
-                        dropdown.style.display = 'none';
-                    }
-                }, 300);
-            }
-        });
-    });
+const popup =
+document.getElementById("popup");
 
-    // Close dropdown when clicking outside on desktop
-    document.addEventListener('click', function(e) {
-        if (window.innerWidth > 767) {
-            dropdownTriggers.forEach(trigger => {
-                const dropdown = trigger.querySelector('.dropdown-menu');
-                if (dropdown && !trigger.contains(e.target)) {
-                    dropdown.style.opacity = '0';
-                    dropdown.style.visibility = 'hidden';
-                    setTimeout(() => {
-                        dropdown.style.display = 'none';
-                    }, 300);
-                }
-            });
-        }
-    });
+const popupMessage =
+document.getElementById("popupMessage");
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-        const nav = document.querySelector('.quicklinks');
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-        if (scrollPosition > 50) {
-            nav.classList.add('scrolled');
-            if (window.innerWidth <= 767) {
-                mobileToggle.querySelectorAll('span').forEach(span => {
-                    span.style.background = '#000';
-                });
-            }
-        } else {
-            nav.classList.remove('scrolled');
-            if (window.innerWidth <= 767) {
-                mobileToggle.querySelectorAll('span').forEach(span => {
-                    span.style.background = 'linear-gradient(90deg,#000,#7D2AE8)';
-                });
-            }
-        }
-    });
-
-    // Popup logic
-const popup = document.getElementById("popup");
-const popupMessage = document.getElementById("popupMessage");
-const closePopup = document.getElementById("closePopup");
-
-// Check URL
-const params = new URLSearchParams(window.location.search);
-
-if (params.get("status") === "success") {
-    popup.style.display = "flex";
-    popupMessage.innerText = "✅ Message sent successfully!";
-} else if (params.get("status") === "error") {
-    popup.style.display = "flex";
-    popupMessage.innerText = "❌ Something went wrong!";
-}
-
-// Close button
-closePopup.onclick = () => {
-    popup.style.display = "none";
-    window.location.href = "contact.html";
-};
-
-// Auto close after 5 sec
-if (popup.style.display === "flex") {
-    setTimeout(() => {
-        popup.style.display = "none";
-        window.location.href = "contact.html";
-    }, 5000);
-}
-
-    // Initialize
-    handleResize();
-    window.dispatchEvent(new Event('scroll'));
-});
-</script>
-<script>
+const closePopup =
+document.getElementById("closePopup");
 
 const params =
 new URLSearchParams(
@@ -701,37 +552,80 @@ params.get("status");
 
 if(status === "success"){
 
-    alert(
-    "Thank you! Your enquiry has been submitted successfully."
-    );
+    popup.style.display = "flex";
+
+    popupMessage.innerText =
+    "✅ Message sent successfully!";
 
 }
 
-if(status === "error"){
+else if(status === "error"){
 
-    alert(
-    "Something went wrong. Please try again."
-    );
+    popup.style.display = "flex";
 
-}
-
-if(status === "empty"){
-
-    alert(
-    "Please fill all required fields."
-    );
+    popupMessage.innerText =
+    "❌ Something went wrong!";
 
 }
 
-if(status === "email"){
+else if(status === "empty"){
 
-    alert(
-    "Please enter a valid email address."
-    );
+    popup.style.display = "flex";
+
+    popupMessage.innerText =
+    "⚠ Please fill all required fields.";
+
+}
+
+else if(status === "email"){
+
+    popup.style.display = "flex";
+
+    popupMessage.innerText =
+    "⚠ Please enter a valid email address.";
+
+}
+
+/* CLOSE BUTTON */
+
+if(closePopup){
+
+    closePopup.onclick = () => {
+
+        popup.style.display = "none";
+
+        window.history.replaceState(
+            {},
+            document.title,
+            window.location.pathname
+        );
+
+    };
+
+}
+
+/* AUTO CLOSE */
+
+if(status){
+
+    setTimeout(()=>{
+
+        if(popup){
+
+            popup.style.display = "none";
+
+            window.history.replaceState(
+                {},
+                document.title,
+                window.location.pathname
+            );
+
+        }
+
+    },5000);
 
 }
 
 </script>
 
-</body>
-</html>
+{% endblock %}
