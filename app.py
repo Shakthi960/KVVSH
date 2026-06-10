@@ -7,10 +7,10 @@ import os
 app = Flask(__name__)
 
 # MySQL Configuration from Azure Environment Variables
-app.config['MYSQL_HOST'] = os.environ.get('MYSQL_HOST', 'your-mysql-server.mysql.database.azure.com')
-app.config['MYSQL_USER'] = os.environ.get('MYSQL_USER', 'your_username')
-app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD', 'your_password')
-app.config['MYSQL_DATABASE'] = os.environ.get('MYSQL_DATABASE', 'kvvsh_database')
+app.config['MYSQL_HOST'] = os.environ.get('MYSQL_HOST', 'kvvsh1.mysql.database.azure.com')
+app.config['MYSQL_USER'] = os.environ.get('MYSQL_USER', 'kvvsh1')
+app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD', 'ksakthi960@#')
+app.config['MYSQL_DATABASE'] = os.environ.get('MYSQL_DATABASE', 'kvvshdb')
 
 # Mail Configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -22,13 +22,13 @@ app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', 'YOUR_GMAIL_APP_PA
 mail = Mail(app)
 
 def get_db_connection():
-    """Create MySQL database connection"""
     try:
         connection = mysql.connector.connect(
             host=app.config['MYSQL_HOST'],
             user=app.config['MYSQL_USER'],
             password=app.config['MYSQL_PASSWORD'],
-            database=app.config['MYSQL_DATABASE']
+            database=app.config['MYSQL_DATABASE'],
+            ssl_disabled=False
         )
         return connection
     except Error as e:
@@ -300,6 +300,56 @@ This application was submitted through the KVVSH careers page.
             return redirect(url_for('jobs', status='email_error'))
     
     return redirect(url_for('jobs'))
+
+import mysql.connector
+
+try:
+    conn = mysql.connector.connect(
+        host="kvvsh1.mysql.database.azure.com",
+        user="kvvsh1",
+        password="ksakthi960@#",
+        database="kvvshdb"
+    )
+
+    print("Connected Successfully!")
+
+except Exception as e:
+    print(e)
+
+def initialize_database():
+    connection = get_db_connection()
+
+    if connection:
+        cursor = connection.cursor()
+
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ContactMessages (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            fullname VARCHAR(255),
+            email VARCHAR(255),
+            phone VARCHAR(50),
+            purpose VARCHAR(255),
+            message TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+        """)
+
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS job_applications (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255),
+            email VARCHAR(255),
+            phone VARCHAR(50),
+            job_position VARCHAR(255),
+            application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+        """)
+
+        connection.commit()
+        cursor.close()
+        connection.close()
+
+initialize_database()
 
 if __name__ == '__main__':
     app.run(debug=True)
