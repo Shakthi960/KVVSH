@@ -430,97 +430,29 @@ def submit_job():
     email = request.form.get('email', '')
     phone = request.form.get('phone', '')
     job_position = request.form.get('job_position', '')
-    experience = request.form.get('experience', '')
-    location = request.form.get('location', '')
-    message = request.form.get('message', '')
-
-    resume = request.files.get('resume')
-
-    # VALIDATION
 
     if not name or not email or not phone or not job_position:
-        return redirect(
-            url_for(
-                'jobs',
-                status='empty'
-            )
-        )
-
-    if '@' not in email or '.' not in email:
-        return redirect(
-            url_for(
-                'jobs',
-                status='email'
-            )
-        )
-
-    if resume is None or resume.filename == '':
-        return redirect(
-            url_for(
-                'jobs',
-                status='resume'
-            )
-        )
+        return redirect(url_for('jobs', status='empty'))
 
     try:
-
-        # CREATE UPLOAD FOLDER
-
-        upload_folder = os.path.join(
-            app.root_path,
-            'uploads'
-        )
-
-        os.makedirs(
-            upload_folder,
-            exist_ok=True
-        )
-
-        # SAVE RESUME
-
-        filename = secure_filename(
-            resume.filename
-        )
-
-        resume_path = os.path.join(
-            upload_folder,
-            filename
-        )
-
-        resume.save(resume_path)
-
-        # DATABASE CONNECTION
 
         connection = get_db_connection()
 
         if connection is None:
-            return redirect(
-                url_for(
-                    'jobs',
-                    status='db_error'
-                )
-            )
+            return redirect(url_for('jobs', status='db_error'))
 
         cursor = connection.cursor()
 
         cursor.execute("""
             INSERT INTO job_applications
             (
-                fullname,
+                name,
                 email,
                 phone,
-                job_position,
-                experience,
-                location,
-                resume_file,
-                cover_letter
+                job_position
             )
             VALUES
             (
-                %s,
-                %s,
-                %s,
-                %s,
                 %s,
                 %s,
                 %s,
@@ -531,19 +463,13 @@ def submit_job():
             name,
             email,
             phone,
-            job_position,
-            experience,
-            location,
-            filename,
-            message
+            job_position
         ))
 
         connection.commit()
 
         cursor.close()
         connection.close()
-
-        # EMAIL NOTIFICATION
 
         email_body = f"""
 New Job Application
@@ -554,51 +480,24 @@ Phone: {phone}
 
 Position Applied:
 {job_position}
-
-Experience:
-{experience}
-
-Location:
-{location}
-
-Cover Letter:
-{message}
-
-Resume:
-{filename}
-
-------------------------------------
-Submitted from KVVSH Careers Page
 """
 
         msg = Message(
             subject=f'New Job Application - {job_position}',
             sender=app.config['MAIL_USERNAME'],
-            recipients=[
-                app.config['MAIL_USERNAME']
-            ],
+            recipients=[app.config['MAIL_USERNAME']],
             body=email_body
         )
 
         mail.send(msg)
 
-        return redirect(
-            url_for(
-                'jobs',
-                status='success'
-            )
-        )
+        return redirect(url_for('jobs', status='success'))
 
     except Exception as e:
 
         print(f"Job Form Error: {e}")
 
-        return redirect(
-            url_for(
-                'jobs',
-                status='error'
-            )
-        )
+        return redirect(url_for('jobs', status='error'))
     
     # =====================================================
 # APPLICATION START
