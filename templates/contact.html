@@ -604,6 +604,24 @@ if(closePopup){
 
 }
 
+else if(status === "email_error"){
+
+    popup.style.display = "flex";
+
+    popupMessage.innerText =
+    "❌ Email sending failed.";
+
+}
+
+else if(status === "db_error"){
+
+    popup.style.display = "flex";
+
+    popupMessage.innerText =
+    "❌ Database connection failed.";
+
+}
+
 /* AUTO CLOSE */
 
 if(status){
@@ -626,6 +644,26 @@ if(status){
 
 }
 
+</script>
+<script>
+const params2 = new URLSearchParams(window.location.search);
+const status2 = params2.get("status");
+
+if(status2 === "success"){
+    alert("Message sent successfully!");
+}
+else if(status2 === "error"){
+    alert("Database error occurred!");
+}
+else if(status2 === "email_error"){
+    alert("Email sending failed!");
+}
+else if(status2 === "db_error"){
+    alert("Database connection failed!");
+}
+else if(status2 === "empty"){
+    alert("Please fill all required fields!");
+}
 </script>
 
 {% endblock %}

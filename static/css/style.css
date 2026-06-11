@@ -3350,6 +3350,34 @@ MOBILE
     font-size:22px;
 }
 
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-box{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    max-width:400px;
+    width:90%;
+    text-align:center;
+    position:relative;
+}
+
+#closePopup{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:25px;
+    cursor:pointer;
+}
+
 /* LEADERSHIP.CSS */
 /* ==========================================
    LEADERSHIP SECTION
