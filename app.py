@@ -22,10 +22,7 @@ app.config['MYSQL_USER'] = os.environ.get(
     'kvvsh1'
 )
 
-app.config['MYSQL_PASSWORD'] = os.environ.get(
-    'MYSQL_PASSWORD',
-    'ksakthi960@#'
-)
+app.config['MYSQL_PASSWORD'] = os.environ['MYSQL_PASSWORD']
 
 app.config['MYSQL_DATABASE'] = os.environ.get(
     'MYSQL_DATABASE',
@@ -45,10 +42,7 @@ app.config['MAIL_USERNAME'] = os.environ.get(
     'kvvshcustomercare@gmail.com'
 )
 
-app.config['MAIL_PASSWORD'] = os.environ.get(
-    'MAIL_PASSWORD',
-    'YOUR_GMAIL_APP_PASSWORD'
-)
+app.config['MAIL_PASSWORD'] = os.environ['MAIL_PASSWORD']
 
 mail = Mail(app)
 
@@ -155,11 +149,6 @@ def business():
     return render_template('business.html')
 
 
-@app.route('/channels')
-def channels():
-    return render_template('channels.html')
-
-
 @app.route('/leadership')
 def leadership():
     return render_template('leadership.html')
@@ -168,11 +157,6 @@ def leadership():
 @app.route('/career')
 def career():
     return render_template('career.html')
-
-
-@app.route('/internship')
-def internship():
-    return render_template('internship.html')
 
 
 @app.route('/jobs')
@@ -193,11 +177,6 @@ def sustainability():
 @app.route('/global-presence')
 def global_presence():
     return render_template('globalpresence.html')
-
-
-@app.route('/subbrands')
-def subbrands():
-    return render_template('subbrands.html')
 
 
 @app.route('/legal')
@@ -446,7 +425,7 @@ def submit_job():
         cursor.execute("""
             INSERT INTO job_applications
             (
-                name,
+                fullname,
                 email,
                 phone,
                 job_position
