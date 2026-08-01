@@ -62,147 +62,195 @@ Businesses - KVVSH Group of Companies
 
     </div>
 
-    <div class="divisions-grid">
+    <div class="division-showcase">
 
-        <a href="{{ url_for('group1') }}" class="division-card">
+        <div class="division-nav" aria-label="Business divisions">
 
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b19.webp') }}')">
-                <span class="division-card-no">01</span>
+            <button class="division-nav-item active" data-division="0" type="button">
+                <span class="dni-no">01</span>
+                <span class="dni-name">Entertainment &amp; Media</span>
+            </button>
+
+            <button class="division-nav-item" data-division="1" type="button">
+                <span class="dni-no">02</span>
+                <span class="dni-name">Retail &amp; Consumer</span>
+            </button>
+
+            <button class="division-nav-item" data-division="2" type="button">
+                <span class="dni-no">03</span>
+                <span class="dni-name">Education &amp; Healthcare</span>
+            </button>
+
+            <button class="division-nav-item" data-division="3" type="button">
+                <span class="dni-no">04</span>
+                <span class="dni-name">Tech &amp; Electronics</span>
+            </button>
+
+            <button class="division-nav-item" data-division="4" type="button">
+                <span class="dni-no">05</span>
+                <span class="dni-name">Infrastructure</span>
+            </button>
+
+            <button class="division-nav-item" data-division="5" type="button">
+                <span class="dni-no">06</span>
+                <span class="dni-name">Industrial &amp; Manufacturing</span>
+            </button>
+
+            <button class="division-nav-item" data-division="6" type="button">
+                <span class="dni-no">07</span>
+                <span class="dni-name">Automotive &amp; Mobility</span>
+            </button>
+
+            <button class="division-nav-item" data-division="7" type="button">
+                <span class="dni-no">08</span>
+                <span class="dni-name">Transportation &amp; Logistics</span>
+            </button>
+
+            <button class="division-nav-item" data-division="8" type="button">
+                <span class="dni-no">09</span>
+                <span class="dni-name">Energy, Oil &amp; Gas</span>
+            </button>
+
+            <button class="division-nav-item" data-division="9" type="button">
+                <span class="dni-no">10</span>
+                <span class="dni-name">Finance &amp; Digital</span>
+            </button>
+
+        </div>
+
+        <div class="division-viewer" id="divisionViewer">
+
+            <div class="division-slide active" data-division="0">
+
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g1.webp') }}')"></div>
+
+                <div class="division-slide-body">
+                    <span class="division-slide-no">01</span>
+                    <h3>Entertainment, Media &amp; Digital Platforms</h3>
+                    <p>TV Channels, OTT Platforms, Movie Production, Music, Animation and Gaming.</p>
+                    <a href="{{ url_for('group1') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-            <div class="division-card-body">
-                <h3>Entertainment, Media &amp; Digital Platforms</h3>
-                <p>TV Channels, OTT Platforms, Movie Production, Music, Animation and Gaming.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
+            <div class="division-slide" data-division="1">
+
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g2.webp') }}')"></div>
+
+                <div class="division-slide-body">
+                    <span class="division-slide-no">02</span>
+                    <h3>Retail &amp; Consumer Products</h3>
+                    <p>Supermarkets, FMCG, E-Commerce, Import &amp; Export.</p>
+                    <a href="{{ url_for('group2') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-        </a>
+            <div class="division-slide" data-division="2">
 
-        <a href="{{ url_for('group2') }}" class="division-card">
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g3.webp') }}')"></div>
 
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b20.webp') }}')">
-                <span class="division-card-no">02</span>
+                <div class="division-slide-body">
+                    <span class="division-slide-no">03</span>
+                    <h3>Education &amp; Healthcare</h3>
+                    <p>Schools, Colleges, Hospitals, Research and Skill Development.</p>
+                    <a href="{{ url_for('group3') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-            <div class="division-card-body">
-                <h3>Retail &amp; Consumer Products</h3>
-                <p>Supermarkets, FMCG, E-Commerce, Import &amp; Export.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
+            <div class="division-slide" data-division="3">
+
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g4.webp') }}')"></div>
+
+                <div class="division-slide-body">
+                    <span class="division-slide-no">04</span>
+                    <h3>Technology &amp; Electronics</h3>
+                    <p>Software, IT Services, Smartphones and Consumer Electronics.</p>
+                    <a href="{{ url_for('group4') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-        </a>
+            <div class="division-slide" data-division="4">
 
-        <a href="{{ url_for('group3') }}" class="division-card">
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g5.webp') }}')"></div>
 
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b21.webp') }}')">
-                <span class="division-card-no">03</span>
+                <div class="division-slide-body">
+                    <span class="division-slide-no">05</span>
+                    <h3>Infrastructure, Real Estate &amp; Hospitality</h3>
+                    <p>Smart Cities, Construction, Hotels and Malls.</p>
+                    <a href="{{ url_for('group5') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-            <div class="division-card-body">
-                <h3>Education &amp; Healthcare</h3>
-                <p>Schools, Colleges, Hospitals, Research and Skill Development.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
+            <div class="division-slide" data-division="5">
+
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g6.webp') }}')"></div>
+
+                <div class="division-slide-body">
+                    <span class="division-slide-no">06</span>
+                    <h3>Industrial &amp; Manufacturing</h3>
+                    <p>Automobiles, Textiles, Food Processing and Shipbuilding.</p>
+                    <a href="{{ url_for('group6') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-        </a>
+            <div class="division-slide" data-division="6">
 
-        <a href="{{ url_for('group4') }}" class="division-card">
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g7.webp') }}')"></div>
 
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b22.webp') }}')">
-                <span class="division-card-no">04</span>
+                <div class="division-slide-body">
+                    <span class="division-slide-no">07</span>
+                    <h3>Automotive &amp; Mobility</h3>
+                    <p>Passenger Vehicles, EV Charging Networks and Smart Mobility.</p>
+                    <a href="{{ url_for('group7') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-            <div class="division-card-body">
-                <h3>Technology &amp; Electronics</h3>
-                <p>Software, IT Services, Smartphones and Consumer Electronics.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
+            <div class="division-slide" data-division="7">
+
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g8.webp') }}')"></div>
+
+                <div class="division-slide-body">
+                    <span class="division-slide-no">08</span>
+                    <h3>Transportation &amp; Logistics</h3>
+                    <p>Airlines, Cargo, Travel Services and Tourism.</p>
+                    <a href="{{ url_for('group8') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-        </a>
+            <div class="division-slide" data-division="8">
 
-        <a href="{{ url_for('group5') }}" class="division-card">
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g9.webp') }}')"></div>
 
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b23.webp') }}')">
-                <span class="division-card-no">05</span>
+                <div class="division-slide-body">
+                    <span class="division-slide-no">09</span>
+                    <h3>Energy, Oil &amp; Gas</h3>
+                    <p>Oil Refineries, Renewable Energy and Fuel Services.</p>
+                    <a href="{{ url_for('group9') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-            <div class="division-card-body">
-                <h3>Infrastructure, Real Estate &amp; Hospitality</h3>
-                <p>Smart Cities, Construction, Hotels and Malls.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
+            <div class="division-slide" data-division="9">
+
+                <div class="division-slide-media" style="background-image:url('{{ url_for('image', filename='g10.webp') }}')"></div>
+
+                <div class="division-slide-body">
+                    <span class="division-slide-no">10</span>
+                    <h3>Finance, Digital Services &amp; Innovation</h3>
+                    <p>Payments, Banking, Insurance, AI and Robotics.</p>
+                    <a href="{{ url_for('group10') }}" class="btn btn-primary">Visit Division &rarr;</a>
+                </div>
+
             </div>
 
-        </a>
-
-        <a href="{{ url_for('group6') }}" class="division-card">
-
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b25.webp') }}')">
-                <span class="division-card-no">06</span>
-            </div>
-
-            <div class="division-card-body">
-                <h3>Industrial &amp; Manufacturing</h3>
-                <p>Automobiles, Textiles, Food Processing and Shipbuilding.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
-            </div>
-
-        </a>
-
-        <a href="{{ url_for('group7') }}" class="division-card">
-
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b26.webp') }}')">
-                <span class="division-card-no">07</span>
-            </div>
-
-            <div class="division-card-body">
-                <h3>Automotive &amp; Mobility</h3>
-                <p>Passenger Vehicles, EV Charging Networks and Smart Mobility.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
-            </div>
-
-        </a>
-
-        <a href="{{ url_for('group8') }}" class="division-card">
-
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b27.webp') }}')">
-                <span class="division-card-no">08</span>
-            </div>
-
-            <div class="division-card-body">
-                <h3>Transportation &amp; Logistics</h3>
-                <p>Airlines, Cargo, Travel Services and Tourism.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
-            </div>
-
-        </a>
-
-        <a href="{{ url_for('group9') }}" class="division-card">
-
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b28.webp') }}')">
-                <span class="division-card-no">09</span>
-            </div>
-
-            <div class="division-card-body">
-                <h3>Energy, Oil &amp; Gas</h3>
-                <p>Oil Refineries, Renewable Energy and Fuel Services.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
-            </div>
-
-        </a>
-
-        <a href="{{ url_for('group10') }}" class="division-card">
-
-            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b29.webp') }}')">
-                <span class="division-card-no">10</span>
-            </div>
-
-            <div class="division-card-body">
-                <h3>Finance, Digital Services &amp; Innovation</h3>
-                <p>Payments, Banking, Insurance, AI and Robotics.</p>
-                <span class="division-card-link">Explore Division &rarr;</span>
-            </div>
-
-        </a>
+        </div>
 
     </div>
 
@@ -321,33 +369,73 @@ Businesses - KVVSH Group of Companies
 
         <h2>Our Journey</h2>
 
+        <p>
+            From a bold beginning in 2017 to a global force shaping
+            industries, every milestone reflects our commitment to growth.
+        </p>
+
     </div>
 
-    <div class="timeline-track">
+    <div class="journey-track">
 
-        <div class="timeline-item">
-            <h3>2017</h3>
-            <span>Founded</span>
+        <div class="journey-item">
+            <div class="journey-marker"><span>2017</span></div>
+            <div class="journey-card">
+                <span class="journey-year">2017</span>
+                <h3>Founded</h3>
+                <p>
+                    KVVSH Group was founded with a clear vision - to build
+                    industries that create opportunity and transform futures.
+                </p>
+            </div>
         </div>
 
-        <div class="timeline-item">
-            <h3>2020</h3>
-            <span>Expansion</span>
+        <div class="journey-item">
+            <div class="journey-marker"><span>2020</span></div>
+            <div class="journey-card">
+                <span class="journey-year">2020</span>
+                <h3>Rapid Expansion</h3>
+                <p>
+                    Grew from one vision into multiple divisions spanning
+                    media, retail, education and healthcare.
+                </p>
+            </div>
         </div>
 
-        <div class="timeline-item">
-            <h3>2023</h3>
-            <span>Global Presence</span>
+        <div class="journey-item">
+            <div class="journey-marker"><span>2023</span></div>
+            <div class="journey-card">
+                <span class="journey-year">2023</span>
+                <h3>Global Presence</h3>
+                <p>
+                    Expanded operations across 100+ countries with offices
+                    and partnerships on three continents.
+                </p>
+            </div>
         </div>
 
-        <div class="timeline-item">
-            <h3>2026</h3>
-            <span>Industry Leadership</span>
+        <div class="journey-item">
+            <div class="journey-marker"><span>2026</span></div>
+            <div class="journey-card">
+                <span class="journey-year">2026</span>
+                <h3>Industry Leadership</h3>
+                <p>
+                    Recognised as a diversified leader across ten business
+                    divisions powering economies worldwide.
+                </p>
+            </div>
         </div>
 
-        <div class="timeline-item">
-            <h3>2030</h3>
-            <span>Future Vision</span>
+        <div class="journey-item">
+            <div class="journey-marker"><span>2030</span></div>
+            <div class="journey-card">
+                <span class="journey-year">2030</span>
+                <h3>Future Vision</h3>
+                <p>
+                    Driving the industries of tomorrow through innovation,
+                    AI and sustainable growth for generations ahead.
+                </p>
+            </div>
         </div>
 
     </div>
@@ -382,5 +470,48 @@ Businesses - KVVSH Group of Companies
     </div>
 
 </section>
+
+{% endblock %}
+
+{% block extra_js %}
+
+<script>
+(function () {
+    var navItems = Array.prototype.slice.call(document.querySelectorAll('.division-nav-item'));
+    var slides = Array.prototype.slice.call(document.querySelectorAll('.division-slide'));
+    var current = 0;
+    var timer = null;
+
+    function show(index) {
+        current = index;
+        navItems.forEach(function (item, i) {
+            item.classList.toggle('active', i === index);
+        });
+        slides.forEach(function (slide, i) {
+            slide.classList.toggle('active', i === index);
+        });
+    }
+
+    function next() {
+        show((current + 1) % navItems.length);
+    }
+
+    function restart() {
+        if (timer) {
+            clearInterval(timer);
+        }
+        timer = setInterval(next, 5000);
+    }
+
+    navItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            show(parseInt(item.getAttribute('data-division'), 10));
+            restart();
+        });
+    });
+
+    restart();
+})();
+</script>
 
 {% endblock %}
