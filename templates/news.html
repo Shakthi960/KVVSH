@@ -8,71 +8,234 @@ Latest News - KVVSH Group of Companies
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+
 {% endblock %}
 
 {% block content %}
 
-<section class="featured-news">
+<section class="page-hero">
 
-    <div class="featured-image">
-        <img src="{{ url_for('image', filename='b22.webp') }}">
-    </div>
+    <div class="hero-bg" style="background-image:url('{{ url_for('image', filename='b22.webp') }}')"></div>
 
-    <div class="featured-content">
+    <div class="hero-inner">
 
-        <span class="news-tag">
-            BREAKING NEWS
-        </span>
+        <span class="hero-eyebrow">KVVSH PRESS ROOM</span>
 
-        <h2>
-            KVVSH Group Announces Expansion Into 5 New Countries
-        </h2>
+        <h1>
+            Latest News &amp; <span>Announcements</span>
+        </h1>
 
-        <p>
-            KVVSH Group accelerates its global growth strategy with
-            upcoming operations across Asia, Europe and North America.
+        <p class="hero-sub">
+            Milestones, expansions and corporate updates from
+            across the KVVSH Group of Companies worldwide.
         </p>
 
-        <a href="#">
-            Read Full Story →
-        </a>
+        <div class="hero-actions">
+
+            <a href="#featured-news" class="btn btn-primary">
+                Read Latest News
+            </a>
+
+            <a href="#business-updates" class="btn btn-outline">
+                Business Updates
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
-<section class="business-updates">
+<section id="featured-news" class="news-featured">
 
-    <div class="section-heading">
+    <div class="section-head">
 
-        <span>GROUP UPDATES</span>
+        <span class="section-eyebrow">Breaking News</span>
 
-        <h2>Across Our Businesses</h2>
+        <h2>Featured Story</h2>
+
+        <p>
+            The latest headline driving our global growth and innovation.
+        </p>
 
     </div>
 
-    <div class="update-timeline">
+    <div class="featured-card">
 
-        <div class="timeline-item">
+        <div class="featured-media">
+            <img src="{{ url_for('image', filename='b13.webp') }}" alt="KVVSH Group global expansion">
+        </div>
 
-            <h4>
-                Entertainment & Media
-            </h4>
+        <div class="featured-body">
+
+            <span class="news-tag">BREAKING NEWS</span>
+
+            <span class="news-date">July 2026</span>
+
+            <h3>
+                KVVSH Group Announces Expansion Into 5 New Countries
+            </h3>
 
             <p>
-                Galaxy Studios begins production on two new films.
+                KVVSH Group accelerates its global growth strategy with
+                upcoming operations across Asia, Europe and North America,
+                strengthening our presence in 100+ countries worldwide.
+            </p>
+
+            <a href="#" class="btn btn-primary">Read Full Story &rarr;</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="latest-news">
+
+    <div class="section-head">
+
+        <span class="section-eyebrow">Group Updates</span>
+
+        <h2>Across Our <span>Businesses</span></h2>
+
+        <p>
+            Discover the latest achievements, launches and initiatives
+            from every division of the group.
+        </p>
+
+    </div>
+
+    <div class="news-grid">
+
+        <article class="news-card">
+
+            <div class="news-card-media">
+                <img src="{{ url_for('image', filename='b20.webp') }}" alt="Galaxy Studios">
+                <span class="news-card-tag">Entertainment</span>
+            </div>
+
+            <div class="news-card-content">
+
+                <span class="news-date">July 2026</span>
+
+                <h3>Galaxy Studios Begins Production On Two New Films</h3>
+
+                <p>
+                    Our entertainment division ramps up production with
+                    two major feature films slated for global release.
+                </p>
+
+                <a href="#" class="news-card-link">Read More &rarr;</a>
+
+            </div>
+
+        </article>
+
+        <article class="news-card">
+
+            <div class="news-card-media">
+                <img src="{{ url_for('image', filename='b11.webp') }}" alt="Galaxy Hospital">
+                <span class="news-card-tag">Healthcare</span>
+            </div>
+
+            <div class="news-card-content">
+
+                <span class="news-date">June 2026</span>
+
+                <h3>Galaxy Hospital Expands Telemedicine Network</h3>
+
+                <p>
+                    Bringing expert medical care to more communities
+                    through an expanded digital health platform.
+                </p>
+
+                <a href="#" class="news-card-link">Read More &rarr;</a>
+
+            </div>
+
+        </article>
+
+        <article class="news-card">
+
+            <div class="news-card-media">
+                <img src="{{ url_for('image', filename='b16.webp') }}" alt="LUNA X1 Launch">
+                <span class="news-card-tag">Technology</span>
+            </div>
+
+            <div class="news-card-content">
+
+                <span class="news-date">June 2026</span>
+
+                <h3>Next-Generation LUNA Devices Enter Development</h3>
+
+                <p>
+                    KVVSH technology division unveils plans for the
+                    next generation of smart consumer electronics.
+                </p>
+
+                <a href="#" class="news-card-link">Read More &rarr;</a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="business-updates" class="business-updates">
+
+    <div class="section-head">
+
+        <span class="section-eyebrow">Live From The Group</span>
+
+        <h2>Business Updates</h2>
+
+        <p>
+            Real-time milestones and announcements from our
+            ten interconnected divisions.
+        </p>
+
+    </div>
+
+    <div class="update-track">
+
+        <div class="update-item">
+
+            <span class="update-badge">Entertainment &amp; Media</span>
+
+            <h4>Galaxy Studios Begins Production On Two New Films</h4>
+
+            <p>
+                Major production milestones reached as our media division
+                prepares its next slate of global releases.
             </p>
 
         </div>
 
-        <div class="timeline-item">
+        <div class="update-item">
 
-            <h4>
-                Healthcare
-            </h4>
+            <span class="update-badge">Healthcare</span>
+
+            <h4>Galaxy Hospital Expands Telemedicine Network</h4>
 
             <p>
-                Galaxy Hospital expands telemedicine network.
+                Telemedicine now reaches 40+ cities, connecting patients
+                with specialist care across the region.
+            </p>
+
+        </div>
+
+        <div class="update-item">
+
+            <span class="update-badge">Infrastructure</span>
+
+            <h4>New Smart City Projects Move To Construction Phase</h4>
+
+            <p>
+                Engineering teams begin construction on integrated urban
+                developments with green infrastructure at their core.
             </p>
 
         </div>
@@ -83,11 +246,15 @@ Latest News - KVVSH Group of Companies
 
 <section class="upcoming-news">
 
-    <div class="section-heading">
+    <div class="section-head">
 
-        <span>COMING SOON</span>
+        <span class="section-eyebrow">Coming Soon</span>
 
         <h2>Upcoming Announcements</h2>
+
+        <p>
+            A look ahead at what the KVVSH Group is bringing to the world.
+        </p>
 
     </div>
 
@@ -106,6 +273,43 @@ Latest News - KVVSH Group of Companies
             <h3>Galaxy OTT Expansion</h3>
 
             <p>Q2 2027</p>
+
+        </div>
+
+        <div class="announcement-card">
+
+            <h3>Global Green Energy Park</h3>
+
+            <p>Q3 2027</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="news-cta">
+
+    <div class="cta-inner">
+
+        <span class="hero-eyebrow">Press &amp; Media</span>
+
+        <h2>Partner With <span>KVVSH</span></h2>
+
+        <p>
+            For media inquiries, partnership opportunities and press
+            coverage, reach out to our corporate communications team.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="{{ url_for('contact') }}" class="btn btn-primary">
+                Contact Us
+            </a>
+
+            <a href="{{ url_for('career') }}" class="btn btn-outline">
+                Explore Careers
+            </a>
 
         </div>
 
