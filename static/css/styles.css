@@ -499,7 +499,10 @@ nav {
 }
 
 .hero-btn-secondary:hover {
-    background: rgba(255,255,255,0.18);
+    background: rgba(169,107,255,0.35);
+    border-color: rgba(169,107,255,0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(125,42,232,0.4);
 }
 
 /* Right Cards */

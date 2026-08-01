@@ -177,9 +177,10 @@
 }
 
 .contact-social-row a:hover {
-    background: var(--purple);
+    background: linear-gradient(135deg, #f3ecff, #ffffff);
     border-color: var(--purple);
     transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(125, 42, 232, 0.28);
 }
 
 .contact-social-row a img {

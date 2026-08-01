@@ -114,7 +114,11 @@ body.loader-lock {
 }
 
 .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.18);
+    background: var(--purple-light);
+    border-color: var(--purple-light);
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(169, 107, 255, 0.4);
 }
 
 .btn-dark {
@@ -145,7 +149,7 @@ body.loader-lock {
     justify-content: center;
     gap: 26px;
     min-height: 82px;
-    padding: 14px 32px;
+    padding: 14px 210px;
     background: linear-gradient(90deg, rgba(12, 12, 16, 0.84), rgba(22, 22, 28, 0.6));
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -155,7 +159,7 @@ body.loader-lock {
 
 .quicklinks.scrolled {
     min-height: 66px;
-    padding: 10px 32px;
+    padding: 10px 210px;
     background: #ffffff;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
     border-bottom-color: rgba(0, 0, 0, 0.06);
@@ -174,11 +178,16 @@ body.loader-lock {
 }
 
 .quicklinks a:hover {
+    color: var(--purple-light);
     border-bottom: none;
 }
 
 .quicklinks.scrolled a {
     color: #16161c;
+}
+
+.quicklinks.scrolled a:hover {
+    color: var(--purple);
 }
 
 /* Underline - only for top-level links, never the logo */
@@ -195,7 +204,7 @@ body.loader-lock {
     right: 0;
     bottom: 4px;
     height: 2px;
-    background: var(--purple);
+    background: var(--purple-light);
     width: 0;
     transition: width 0.3s ease;
 }
@@ -208,18 +217,22 @@ body.loader-lock {
     background: var(--purple);
 }
 
-/* Logo - solid white parallelogram, always */
+/* Logo - solid white parallelogram, pinned to far left */
 .ql.nav-logo {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ffffff;
     padding: 18px 48px 18px 28px;
     clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
-    margin-right: 18px;
+    margin: 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
     flex-shrink: 0;
+    z-index: 2;
 }
 
 .ql.nav-logo img {
@@ -398,6 +411,10 @@ body.loader-lock {
 
     /* Logo inside slide-out menu */
     .ql.nav-logo {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
         background: transparent;
         clip-path: none;
         padding: 0;
@@ -626,7 +643,7 @@ footer {
 }
 
 .footer-column a:hover {
-    color: #fff;
+    color: var(--purple-light);
     transform: translateX(8px);
 }
 
@@ -643,18 +660,20 @@ footer {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(135deg, #ffffff, #e9dcff);
+    border: 1px solid rgba(255, 255, 255, 0.85);
     color: #fff;
     font-size: 14px;
     transition: all 0.3s ease;
     margin-bottom: 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
 .social-links a:hover {
-    background: var(--purple);
-    border-color: var(--purple);
-    transform: translateY(-5px);
+    background: linear-gradient(135deg, #f3ecff, #d9c3ff);
+    border-color: var(--purple-light);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 22px rgba(169, 107, 255, 0.45);
 }
 
 .social-links a img {
