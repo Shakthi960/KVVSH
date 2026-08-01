@@ -1,3 +1,7 @@
+.hero-bg-career {
+    background-image: url('/image/b2.webp');
+}
+
 .career-section {
     padding: 110px 8%;
     background: var(--white);

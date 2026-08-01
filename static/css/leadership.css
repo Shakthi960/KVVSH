@@ -5,8 +5,16 @@
 ============================================================ */
 
 /* ------------------------------------------------------------
-   1. TEAM SECTION (overrides style.css leadership styles)
+   0. HERO BACKGROUND
 ------------------------------------------------------------ */
+
+.hero-bg-leadership {
+    background-image: url('/image/b10.webp');
+}
+
+/* ------------------------------------------------------------
+   1. TEAM SECTION (overrides style.css leadership styles)
+----------------------------------------------------------- */
 
 .leadership-section {
     padding: 110px 8%;

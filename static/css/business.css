@@ -1,5 +1,9 @@
 /* BUSINESS PAGE - unified design system styles */
 
+.hero-bg-business {
+    background-image: url('/image/b19.webp');
+}
+
 #bw-root {
     margin: 0;
     height: auto;
@@ -145,6 +149,17 @@
     transform: scale(1.06);
     transition: transform 6s ease;
 }
+
+.division-slide-media[data-bg="g1"] { background-image: url('/image/g1.webp'); }
+.division-slide-media[data-bg="g2"] { background-image: url('/image/g2.webp'); }
+.division-slide-media[data-bg="g3"] { background-image: url('/image/g3.webp'); }
+.division-slide-media[data-bg="g4"] { background-image: url('/image/g4.webp'); }
+.division-slide-media[data-bg="g5"] { background-image: url('/image/g5.webp'); }
+.division-slide-media[data-bg="g6"] { background-image: url('/image/g6.webp'); }
+.division-slide-media[data-bg="g7"] { background-image: url('/image/g7.webp'); }
+.division-slide-media[data-bg="g8"] { background-image: url('/image/g8.webp'); }
+.division-slide-media[data-bg="g9"] { background-image: url('/image/g9.webp'); }
+.division-slide-media[data-bg="g10"] { background-image: url('/image/g10.webp'); }
 
 .division-slide.active .division-slide-media {
     transform: scale(1);

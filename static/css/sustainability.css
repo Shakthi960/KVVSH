@@ -8,6 +8,10 @@
     --muted: #6f6f78;
 }
 
+.hero-bg-sustainability {
+    background-image: url('/image/b18.webp');
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
