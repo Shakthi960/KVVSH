@@ -191,6 +191,44 @@ window.addEventListener('scroll', function () {
 
 });
 
+/* Smooth Scrolling */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener('click', function (e) {
+
+        const targetId = this.getAttribute('href');
+
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+
+        if (!targetElement) return;
+
+        e.preventDefault();
+
+        window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+        });
+
+        if (
+            window.innerWidth <= 767 &&
+            nav.classList.contains('active')
+        ) {
+
+            mobileToggle.classList.remove('active');
+            nav.classList.remove('active');
+
+            body.classList.remove('no-scroll');
+            html.classList.remove('no-scroll');
+
+        }
+
+    });
+
+});
+
 handleResize();
 
 window.dispatchEvent(new Event('scroll'));

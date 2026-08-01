@@ -4050,7 +4050,7 @@ MOBILE
 }
 
 .sustainability-hero {
-    background: linear-gradient(135deg, #2c852f 0%, #4CAF50 100%);
+    background: linear-gradient(135deg, #6a1fd6 0%, #7D2AE8 100%);
     color: white;
     padding: 100px 20px;
     text-align: center;
@@ -4078,7 +4078,7 @@ MOBILE
 
 .sustainability-intro h2 {
     font-size: 2.5rem;
-    color: #4CAF50;
+    color: #7D2AE8;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -4092,8 +4092,8 @@ MOBILE
 }
 
 .vision-box {
-    background-color: #dbf9dc;
-    border-left: 5px solid #4CAF50;
+    background-color: #f4edff;
+    border-left: 5px solid #7D2AE8;
     padding: 30px;
     max-width: 800px;
     margin: 0 auto;
@@ -4101,7 +4101,7 @@ MOBILE
 }
 
 .vision-box h3 {
-    color: #4CAF50;
+    color: #7D2AE8;
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
@@ -4113,7 +4113,7 @@ MOBILE
 
 .pillars-section h2 {
     font-size: 2.5rem;
-    color: #4CAF50;
+    color: #7D2AE8;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -4141,7 +4141,7 @@ MOBILE
 .pillar-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #2c852f 0%, #4CAF50 100%);
+    background: linear-gradient(135deg, #6a1fd6 0%, #7D2AE8 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -4170,7 +4170,7 @@ MOBILE
 
 .pillar-card ul li:before {
     content: "✓";
-    color: #4CAF50;
+    color: #7D2AE8;
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -4183,7 +4183,7 @@ MOBILE
 
 .sdg-section h2 {
     font-size: 2.5rem;
-    color: #4CAF50;
+    color: #7D2AE8;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -4232,7 +4232,7 @@ MOBILE
 
 .business-commitments h2 {
     font-size: 2.5rem;
-    color: #4CAF50;
+    color: #7D2AE8;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -4258,7 +4258,7 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #7D2AE8;
     color: white;
     font-weight: bold;
 }
@@ -4273,7 +4273,7 @@ tr:hover {
 
 .chairman-message {
     padding: 80px 0;
-    background: linear-gradient(135deg, #2c852f 0%, #4CAF50 100%);
+    background: linear-gradient(135deg, #6a1fd6 0%, #7D2AE8 100%);
     color: white;
 }
 

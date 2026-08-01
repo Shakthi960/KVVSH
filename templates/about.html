@@ -181,6 +181,27 @@ About Us - KVVSH Group of Companies
 
 {% block extra_js %}
 
-<script src="{{ url_for('static', filename='js/about.js') }}"></script>
+<script>
+const aboutSlides =
+document.querySelectorAll(".about-slide");
+
+let aboutIndex = 0;
+
+setInterval(() => {
+
+    aboutSlides[aboutIndex]
+    .classList.remove("active");
+
+    aboutIndex++;
+
+    if (aboutIndex >= aboutSlides.length){
+        aboutIndex = 0;
+    }
+
+    aboutSlides[aboutIndex]
+    .classList.add("active");
+
+}, 5000);
+</script>
 
 {% endblock %}

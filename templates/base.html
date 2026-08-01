@@ -35,11 +35,28 @@
         </div>
 
         <div class="ql">
-            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('about') }}">About Us <span>▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ url_for('about') }}#Overview">Overview</a></li>
+                <li><a href="{{ url_for('about') }}#ourvision">Our Vision</a></li>
+            </ul>
         </div>
 
         <div class="ql">
-            <a href="{{ url_for('business') }}">Businesses</a>
+            <a href="{{ url_for('business') }}">Businesses <span>▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ url_for('business') }}">All Businesses</a></li>
+                <li><a href="{{ url_for('group1') }}">Entertainment & Media</a></li>
+                <li><a href="{{ url_for('group2') }}">Retail & Consumer</a></li>
+                <li><a href="{{ url_for('group3') }}">Education & Healthcare</a></li>
+                <li><a href="{{ url_for('group4') }}">Tech & Electronics</a></li>
+                <li><a href="{{ url_for('group5') }}">Infrastructure</a></li>
+                <li><a href="{{ url_for('group6') }}">Industrial & Manufacturing</a></li>
+                <li><a href="{{ url_for('group7') }}">Automotive</a></li>
+                <li><a href="{{ url_for('group8') }}">Transportation</a></li>
+                <li><a href="{{ url_for('group9') }}">Energy</a></li>
+                <li><a href="{{ url_for('group10') }}">Finance</a></li>
+            </ul>
         </div>
 
         <div class="ql">
@@ -47,7 +64,13 @@
         </div>
 
         <div class="ql">
-            <a href="{{ url_for('global_presence') }}">Global Presence</a>
+            <a href="{{ url_for('global_presence') }}">Global Presence <span>▾</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ url_for('global_presence') }}#global-map">Overview</a></li>
+                <li><a href="{{ url_for('global_presence') }}#india">In India</a></li>
+                <li><a href="{{ url_for('global_presence') }}#foreign">In Foreign</a></li>
+                <li><a href="{{ url_for('global_presence') }}#expansion">Upcomings</a></li>
+            </ul>
         </div>
 
         <div class="ql">
@@ -59,11 +82,24 @@
         </div>
 
     </div>
+
+    <div class="mobile-nav">
+        <div class="mobile-nav-logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('image', filename='kvvsh-png-bg.webp') }}" alt="KVVSH Logo">
+            </a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 </nav>
 
 {% endblock %}
 
-<main>
+<main class="{% block main_class %}{% endblock %}">
     {% block content %}
     {% endblock %}
 </main>
@@ -96,6 +132,8 @@
             <a href="{{ url_for('global_presence') }}">Global Presence</a>
             <a href="{{ url_for('career') }}">Careers</a>
             <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('news') }}">Latest News</a>
+            <a href="{{ url_for('sustainability') }}">Sustainability</a>
         </div>
 
         <!-- Group Companies -->
