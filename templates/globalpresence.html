@@ -9,61 +9,43 @@ Global Presence - KVVSH Group of Companies
 <link rel="stylesheet"
 href="{{ url_for('static', filename='css/style.css') }}">
 
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/globalpresence.css') }}">
+
 {% endblock %}
 
 {% block content %}
 
-<section class="gp-hero">
+<section class="page-hero">
 
-    <div class="gp-slider">
+    <div class="hero-bg" style="background-image:url('{{ url_for('image', filename='worldmap.webp') }}')"></div>
 
-        <div class="gp-slide active">
-            <img src="{{ url_for('image', filename='b9.webp') }}">
-        </div>
+    <div class="hero-inner">
 
-        <div class="gp-slide">
-            <img src="{{ url_for('image', filename='b11.webp') }}">
-        </div>
-
-        <div class="gp-slide">
-            <img src="{{ url_for('image', filename='b14.webp') }}">
-        </div>
-
-        <div class="gp-slide">
-            <img src="{{ url_for('image', filename='b18.webp') }}">
-        </div>
-
-    </div>
-
-    <div class="gp-overlay"></div>
-
-    <div class="gp-content">
-
-        <span class="hero-tag">
+        <span class="hero-eyebrow">
             GLOBAL PRESENCE
         </span>
 
         <h1>
-            Connecting
-            The World Through
+            Connecting The World Through
             <span>Innovation</span>
         </h1>
 
-        <p>
-            From our headquarters in India
-            to international operations across
-            Asia, Middle East, Europe and
-            North America.
+        <p class="hero-sub">
+            From our headquarters in India to international
+            operations across Asia, the Middle East, Europe
+            and North America.
         </p>
 
-        <div class="hero-buttons">
+        <div class="hero-actions">
 
-            <a href="#global-map">
+            <a href="#global-map"
+               class="btn btn-primary">
                 Explore Network
             </a>
 
             <a href="#expansion"
-               class="secondary-btn">
+               class="btn btn-outline">
                 Future Expansion
             </a>
 
@@ -73,272 +55,348 @@ href="{{ url_for('static', filename='css/style.css') }}">
 
 </section>
 
-<section
-class="network-map"
+<section class="gp-overview"
 id="global-map">
 
-    <div class="section-heading">
+    <div class="gp-container">
 
-        <span>
-            OUR FOOTPRINT
-        </span>
+        <div class="gp-section-head">
 
-        <h2>
-            Global Operations
-        </h2>
+            <span class="gp-eyebrow">
+                OUR FOOTPRINT
+            </span>
 
-    </div>
+            <h2>
+                Global <span>Operations</span>
+            </h2>
 
-    <div class="map-wrapper">
+            <p class="gp-lead">
+                A worldwide network of offices, partners and
+                investments that spans every major region,
+                anchored by our headquarters in India.
+            </p>
 
-        <img
-        src="{{ url_for('image',
-        filename='worldmap.webp') }}"
-        alt="World Map">
+        </div>
+
+        <div class="gp-map">
+
+            <img
+            src="{{ url_for('image',
+            filename='worldmap.webp') }}"
+            alt="World Map">
+
+        </div>
+
+        <div class="gp-regions">
+
+            <div class="gp-region">
+                <span>ASIA</span>
+                <h3>Regional Headquarters</h3>
+                <p>
+                    Singapore &amp; Malaysia
+                    driving Southeast Asian growth.
+                </p>
+            </div>
+
+            <div class="gp-region">
+                <span>MIDDLE EAST</span>
+                <h3>Retail &amp; Entertainment</h3>
+                <p>
+                    UAE expansion across
+                    consumer and media sectors.
+                </p>
+            </div>
+
+            <div class="gp-region">
+                <span>EUROPE</span>
+                <h3>Investment &amp; Operations</h3>
+                <p>
+                    United Kingdom and upcoming
+                    continental operations.
+                </p>
+            </div>
+
+            <div class="gp-region">
+                <span>NORTH AMERICA</span>
+                <h3>Distribution &amp; Partnerships</h3>
+                <p>
+                    USA-based international
+                    distribution network.
+                </p>
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
-<section class="india-hub" id="india">
+<section class="gp-india"
+id="india">
 
-    <div class="hub-image">
+    <div class="gp-india-inner">
 
-        <img
-        src="{{ url_for('image',
-        filename='b21.webp') }}">
+        <div class="gp-india-media">
+
+            <img
+            src="{{ url_for('image',
+            filename='b21.webp') }}"
+            alt="KVVSH Headquarters India">
+
+            <div class="gp-india-badge">
+                <h3>HQ</h3>
+                <p>Nagore, Tamil Nadu</p>
+            </div>
+
+        </div>
+
+        <div class="gp-india-copy">
+
+            <span class="gp-eyebrow">
+                HEADQUARTERS
+            </span>
+
+            <h2>
+                Nagore, <span>Tamil Nadu</span>,
+                India
+            </h2>
+
+            <p>
+                KVVSH Group originated in India and continues
+                to drive innovation from its headquarters while
+                expanding across the country and the world.
+            </p>
+
+            <div class="gp-city-grid">
+
+                <div class="gp-city">Chennai</div>
+                <div class="gp-city">Bengaluru</div>
+                <div class="gp-city">Hyderabad</div>
+                <div class="gp-city">Mumbai</div>
+                <div class="gp-city">Delhi</div>
+                <div class="gp-city">Pune</div>
+
+            </div>
+
+            <a href="{{ url_for('contact') }}"
+               class="btn btn-outline gp-india-btn">
+                Partner With Us
+            </a>
+
+        </div>
 
     </div>
 
-    <div class="hub-content">
+</section>
 
-        <span>
-            HEADQUARTERS
-        </span>
+<section class="gp-stats">
+
+    <div class="gp-stats-inner">
+
+        <div class="gp-stat-card">
+            <h2>100+</h2>
+            <p>Countries Served</p>
+        </div>
+
+        <div class="gp-stat-card">
+            <h2>25+</h2>
+            <p>Regional Offices</p>
+        </div>
+
+        <div class="gp-stat-card">
+            <h2>10</h2>
+            <p>Business Divisions</p>
+        </div>
+
+        <div class="gp-stat-card">
+            <h2>1M+</h2>
+            <p>Global Workforce</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="gp-foreign"
+id="foreign">
+
+    <div class="gp-container">
+
+        <div class="gp-section-head">
+
+            <span class="gp-eyebrow">
+                WORLDWIDE
+            </span>
+
+            <h2>
+                International <span>Presence</span>
+            </h2>
+
+            <p class="gp-lead">
+                Strategic hubs and investments across
+                six key international markets.
+            </p>
+
+        </div>
+
+        <div class="gp-countries">
+
+            <div class="gp-country-card">
+                <span class="gp-flag">SG</span>
+                <h3>Singapore</h3>
+                <p>
+                    Regional headquarters
+                    for Southeast Asia.
+                </p>
+            </div>
+
+            <div class="gp-country-card">
+                <span class="gp-flag">MY</span>
+                <h3>Malaysia</h3>
+                <p>
+                    Retail and infrastructure
+                    investments.
+                </p>
+            </div>
+
+            <div class="gp-country-card">
+                <span class="gp-flag">LK</span>
+                <h3>Sri Lanka</h3>
+                <p>
+                    Healthcare and media
+                    operations.
+                </p>
+            </div>
+
+            <div class="gp-country-card">
+                <span class="gp-flag">AE</span>
+                <h3>UAE</h3>
+                <p>
+                    Entertainment and retail
+                    expansion.
+                </p>
+            </div>
+
+            <div class="gp-country-card">
+                <span class="gp-flag">US</span>
+                <h3>USA</h3>
+                <p>
+                    International distribution
+                    and partnerships.
+                </p>
+            </div>
+
+            <div class="gp-country-card">
+                <span class="gp-flag">UK</span>
+                <h3>United Kingdom</h3>
+                <p>
+                    European operations
+                    and investments.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="gp-expansion"
+id="expansion">
+
+    <div class="gp-container">
+
+        <div class="gp-section-head">
+
+            <span class="gp-eyebrow">
+                FUTURE GROWTH
+            </span>
+
+            <h2>
+                Expansion <span>Roadmap</span>
+            </h2>
+
+            <p class="gp-lead">
+                Our next wave of international
+                growth across new continents.
+            </p>
+
+        </div>
+
+        <div class="gp-timeline">
+
+            <div class="gp-timeline-item">
+                <span class="gp-year">2027</span>
+                <h3>Germany</h3>
+                <p>
+                    European engineering
+                    and automotive base.
+                </p>
+            </div>
+
+            <div class="gp-timeline-item">
+                <span class="gp-year">2028</span>
+                <h3>France</h3>
+                <p>
+                    Luxury retail and
+                    fashion investments.
+                </p>
+            </div>
+
+            <div class="gp-timeline-item">
+                <span class="gp-year">2028</span>
+                <h3>Australia</h3>
+                <p>
+                    Pacific logistics
+                    and commodities.
+                </p>
+            </div>
+
+            <div class="gp-timeline-item">
+                <span class="gp-year">2029</span>
+                <h3>South Africa</h3>
+                <p>
+                    African resources
+                    and energy projects.
+                </p>
+            </div>
+
+            <div class="gp-timeline-item">
+                <span class="gp-year">2030</span>
+                <h3>Global Innovation Hub</h3>
+                <p>
+                    A unified digital
+                    headquarters network.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="gp-cta">
+
+    <div class="gp-cta-inner">
 
         <h2>
-            Nagore,
-            Tamil Nadu,
-            India
+            Building A Truly
+            <span>Global Enterprise</span>
         </h2>
 
         <p>
-            KVVSH Group originated in India
-            and continues to drive innovation
-            from its headquarters while
-            expanding globally.
+            Connecting industries, innovation
+            and people across continents.
         </p>
 
-        <div class="city-grid">
-
-            <div>Chennai</div>
-            <div>Bengaluru</div>
-            <div>Hyderabad</div>
-            <div>Mumbai</div>
-            <div>Delhi</div>
-            <div>Pune</div>
-
-        </div>
+        <a href="{{ url_for('contact') }}"
+           class="btn btn-primary">
+            Contact Us
+        </a>
 
     </div>
 
 </section>
-
-<section class="countries-section" id="foreign">
-
-    <div class="section-heading">
-
-        <span>
-            WORLDWIDE
-        </span>
-
-        <h2>
-            International Presence
-        </h2>
-
-    </div>
-
-    <div class="countries-grid">
-
-        <div class="country-card">
-            <h3>🇸🇬 Singapore</h3>
-            <p>
-                Regional headquarters
-                for Southeast Asia.
-            </p>
-        </div>
-
-        <div class="country-card">
-            <h3>🇲🇾 Malaysia</h3>
-            <p>
-                Retail and infrastructure
-                investments.
-            </p>
-        </div>
-
-        <div class="country-card">
-            <h3>🇱🇰 Sri Lanka</h3>
-            <p>
-                Healthcare and media
-                operations.
-            </p>
-        </div>
-
-        <div class="country-card">
-            <h3>🇦🇪 UAE</h3>
-            <p>
-                Entertainment and retail
-                expansion.
-            </p>
-        </div>
-
-        <div class="country-card">
-            <h3>🇺🇸 USA</h3>
-            <p>
-                International distribution
-                and partnerships.
-            </p>
-        </div>
-
-        <div class="country-card">
-            <h3>🇬🇧 United Kingdom</h3>
-            <p>
-                European operations
-                and investments.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="global-stats">
-
-    <div class="impact-card">
-
-        <h2>100+</h2>
-        <p>Countries Served</p>
-
-    </div>
-
-    <div class="impact-card">
-
-        <h2>25+</h2>
-        <p>Regional Offices</p>
-
-    </div>
-
-    <div class="impact-card">
-
-        <h2>10</h2>
-        <p>Business Divisions</p>
-
-    </div>
-
-    <div class="impact-card">
-
-        <h2>1M+</h2>
-        <p>Global Workforce</p>
-
-    </div>
-
-</section>
-
-<section
-class="expansion-roadmap"
-id="expansion">
-
-    <div class="section-heading">
-
-        <span>
-            FUTURE GROWTH
-        </span>
-
-        <h2>
-            Expansion Roadmap
-        </h2>
-
-    </div>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-            2027
-            <span>Germany</span>
-        </div>
-
-        <div class="timeline-item">
-            2028
-            <span>France</span>
-        </div>
-
-        <div class="timeline-item">
-            2028
-            <span>Australia</span>
-        </div>
-
-        <div class="timeline-item">
-            2029
-            <span>South Africa</span>
-        </div>
-
-        <div class="timeline-item">
-            2030
-            <span>Global Innovation Hub</span>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="global-cta">
-
-    <h2>
-        Building A Truly
-        Global Enterprise
-    </h2>
-
-    <p>
-        Connecting industries,
-        innovation and people
-        across continents.
-    </p>
-
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
-
-</section>
-
-{% endblock %}
-
-{% block extra_js %}
-
-<script>
-
-const slides =
-document.querySelectorAll(".gp-slide");
-
-let current = 0;
-
-setInterval(()=>{
-
-slides[current]
-.classList.remove("active");
-
-current++;
-
-if(current >= slides.length){
-
-current = 0;
-
-}
-
-slides[current]
-.classList.add("active");
-
-},5000);
-
-</script>
 
 {% endblock %}

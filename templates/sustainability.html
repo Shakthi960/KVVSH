@@ -4,158 +4,291 @@
 Sustainability - KVVSH Group of Companies
 {% endblock %}
 
-{% block main_class %}
-sustainability-main
-{% endblock %}
-
 {% block extra_css %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sustainability.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<section class="sustainability-hero">
-    <div class="hero-content">
-        <h1>🌿 Sustainability at KVVSH</h1>
-        <p>Building a future where business success and environmental responsibility go hand in hand</p>
+<section class="page-hero">
+
+    <div class="hero-bg" style="background-image:url('{{ url_for('image', filename='b18.webp') }}')"></div>
+
+    <div class="hero-inner">
+
+        <span class="hero-eyebrow">KVVSH GROUP</span>
+
+        <h1>
+            <span>Sustainability at KVVSH</span>
+        </h1>
+
+        <p class="hero-sub">
+            Building a future where business success and environmental responsibility go hand in hand.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#commitment" class="btn btn-primary">
+                Our Commitment
+            </a>
+
+            <a href="#sdg-goals" class="btn btn-outline">
+                Explore SDG Goals
+            </a>
+
+        </div>
+
     </div>
+
 </section>
 
-<section class="sustainability-intro">
-    <div class="container">
-        <h2>Our Commitment to a Sustainable Future</h2>
-        <p>At KVVSH Group, sustainability is woven into the fabric of everything we do. Across our diverse business verticals - from entertainment to healthcare, infrastructure to electronics - we are committed to creating value that lasts while minimizing our environmental footprint and maximizing positive social impact.</p>
+<section class="commitment-section" id="commitment">
 
-        <div class="vision-box">
-            <h3>♻️ Our Vision for Sustainability</h3>
-            <p>We envision a future where innovation, profitability, and sustainability are inseparable. Our goal is to lead by example in responsible business practices that benefit all stakeholders - our customers, employees, communities, and the planet we share.</p>
+    <div class="container">
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">Our Promise</span>
+
+            <h2>
+                Our Commitment to a <span>Sustainable Future</span>
+            </h2>
+
         </div>
+
+        <div class="commitment-grid">
+
+            <div class="commitment-copy">
+
+                <p>
+                    At KVVSH Group, sustainability is woven into the fabric of everything we do. Across our diverse business verticals - from entertainment to healthcare, infrastructure to electronics - we are committed to creating value that lasts while minimizing our environmental footprint and maximizing positive social impact.
+                </p>
+
+                <a href="{{ url_for('business') }}" class="btn btn-primary">
+                    Discover Our Businesses
+                </a>
+
+            </div>
+
+            <div class="vision-card">
+
+                <span class="vision-icon">&#9852;</span>
+
+                <h3>Our Vision for Sustainability</h3>
+
+                <p>
+                    We envision a future where innovation, profitability, and sustainability are inseparable. Our goal is to lead by example in responsible business practices that benefit all stakeholders - our customers, employees, communities, and the planet we share.
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
 <section class="pillars-section">
+
     <div class="container">
-        <h2>🌱 Pillars of Our Sustainability Strategy</h2>
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">Our Strategy</span>
+
+            <h2>
+                Pillars of Our <span>Sustainability Strategy</span>
+            </h2>
+
+            <p>
+                Four interconnected pillars guide responsible growth across every KVVSH business.
+            </p>
+
+        </div>
 
         <div class="pillars-grid">
+
             <div class="pillar-card">
+
                 <div class="pillar-icon">1</div>
+
                 <h3>Environmental Responsibility</h3>
+
                 <p>Reducing emissions, conserving resources, and implementing eco-friendly practices across all operations:</p>
+
                 <ul>
                     <li>Solar installations in Galaxy Infrastructure projects</li>
                     <li>E-waste recycling drives by LUNA Mobiles</li>
                     <li>Water and energy optimization at all facilities</li>
                 </ul>
+
             </div>
 
             <div class="pillar-card">
+
                 <div class="pillar-icon">2</div>
+
                 <h3>Social Impact</h3>
+
                 <p>Nurturing inclusive growth and community wellbeing through:</p>
+
                 <ul>
                     <li>Education programs by Galaxy Educational Institutions</li>
                     <li>Free health camps under Galaxy Hospital outreach</li>
                     <li>Fair employment and women empowerment policies</li>
                 </ul>
+
             </div>
 
             <div class="pillar-card">
+
                 <div class="pillar-icon">3</div>
-                <h3>Innovation & Circular Economy</h3>
+
+                <h3>Innovation &amp; Circular Economy</h3>
+
                 <p>Promoting sustainable product innovation and reuse models:</p>
+
                 <ul>
                     <li>Low-power mobile technology at LUNA</li>
                     <li>Biodegradable packaging for Galaxy Groceries</li>
                     <li>Green building designs in real estate projects</li>
                 </ul>
+
             </div>
 
             <div class="pillar-card">
+
                 <div class="pillar-icon">4</div>
+
                 <h3>Ethical Governance</h3>
+
                 <p>Transparent operations and compliance as our foundation:</p>
+
                 <ul>
                     <li>Strict ESG compliance framework</li>
                     <li>Anti-corruption and data protection policies</li>
                     <li>Sustainable sourcing and supplier code of conduct</li>
                 </ul>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<section class="sdg-section">
+<section class="sdg-section" id="sdg-goals">
+
     <div class="container">
-        <h2>🌍 Supporting the Global Goals</h2>
-        <p>KVVSH Group aligns its sustainability framework with the United Nations Sustainable Development Goals (SDGs):</p>
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">Global Goals</span>
+
+            <h2>
+                Supporting the <span>Global Goals</span>
+            </h2>
+
+            <p>
+                KVVSH Group aligns its sustainability framework with the United Nations Sustainable Development Goals (SDGs):
+            </p>
+
+        </div>
 
         <div class="sdg-grid">
+
             <div class="sdg-item">
                 <img src="{{ url_for('image', filename='sdg3.webp') }}" alt="SDG 3">
-                <p>Good Health & Well-being</p>
+                <p>Good Health &amp; Well-being</p>
             </div>
+
             <div class="sdg-item">
                 <img src="{{ url_for('image', filename='sdg4.webp') }}" alt="SDG 4">
                 <p>Quality Education</p>
             </div>
+
             <div class="sdg-item">
                 <img src="{{ url_for('image', filename='sdg9.webp') }}" alt="SDG 9">
-                <p>Industry, Innovation & Infrastructure</p>
+                <p>Industry, Innovation &amp; Infrastructure</p>
             </div>
+
             <div class="sdg-item">
                 <img src="{{ url_for('image', filename='sdg11.webp') }}" alt="SDG 11">
-                <p>Sustainable Cities & Communities</p>
+                <p>Sustainable Cities &amp; Communities</p>
             </div>
+
             <div class="sdg-item">
                 <img src="{{ url_for('image', filename='sdg12.webp') }}" alt="SDG 12">
-                <p>Responsible Consumption & Production</p>
+                <p>Responsible Consumption &amp; Production</p>
             </div>
+
             <div class="sdg-item">
                 <img src="{{ url_for('image', filename='sdg13.webp') }}" alt="SDG 13">
                 <p>Climate Action</p>
             </div>
+
         </div>
+
     </div>
+
 </section>
 
 <section class="business-commitments">
+
     <div class="container">
-        <h2>🌐 Green Commitments Across Our Business Groups</h2>
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">Across the Group</span>
+
+            <h2>
+                Green Commitments Across Our <span>Business Groups</span>
+            </h2>
+
+            <p>
+                Every KVVSH vertical embeds sustainability into its daily operations and long-term vision.
+            </p>
+
+        </div>
 
         <div class="commitments-table">
+
             <table>
+
                 <thead>
                     <tr>
                         <th>Business Group</th>
                         <th>Key Sustainable Practices</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
-                        <td>Entertainment & Media</td>
+                        <td>Entertainment &amp; Media</td>
                         <td>Carbon-neutral digital content creation</td>
                     </tr>
                     <tr>
-                        <td>Retail & Consumer Products</td>
+                        <td>Retail &amp; Consumer Products</td>
                         <td>Eco-packaging and local sourcing</td>
                     </tr>
                     <tr>
-                        <td>Education & Healthcare</td>
-                        <td>Health & hygiene awareness, sustainability curriculum</td>
+                        <td>Education &amp; Healthcare</td>
+                        <td>Health &amp; hygiene awareness, sustainability curriculum</td>
                     </tr>
                     <tr>
-                        <td>Tech & Electronics</td>
+                        <td>Tech &amp; Electronics</td>
                         <td>Energy-efficient gadgets, responsible e-waste handling</td>
                     </tr>
                     <tr>
-                        <td>Infrastructure & Amusement</td>
+                        <td>Infrastructure &amp; Amusement</td>
                         <td>Green building tech, water-saving rides</td>
                     </tr>
                     <tr>
-                        <td>Industrial & Manufacturing</td>
+                        <td>Industrial &amp; Manufacturing</td>
                         <td>Zero waste policy, emission control</td>
                     </tr>
                     <tr>
@@ -163,25 +296,38 @@ sustainability-main
                         <td>Hybrid R&D, low-carbon assembly lines</td>
                     </tr>
                     <tr>
-                        <td>Transportation & Services</td>
+                        <td>Transportation &amp; Services</td>
                         <td>Fleet electrification roadmap, route optimization</td>
                     </tr>
                 </tbody>
+
             </table>
+
         </div>
+
     </div>
+
 </section>
 
 <section class="chairman-message">
+
     <div class="container">
+
         <div class="message-box">
-            <h3>💬 Message from the Chairman</h3>
+
+            <span class="chairman-eyebrow">A Word From the Top</span>
+
+            <h3>Message from the Chairman</h3>
+
             <blockquote>
                 "Sustainability is not an obligation; it is our opportunity to lead responsibly and leave behind a legacy of innovation, balance, and care. Every action we take today shapes a cleaner tomorrow."
-                <br><br>— Mr. Shakthi K. (Rockstar K. Shakthi)<br>Founder & Chairman, KVVSH Group
+                <br><br>— Mr. Shakthi K. (Rockstar K. Shakthi)<br>Founder &amp; Chairman, KVVSH Group
             </blockquote>
+
         </div>
+
     </div>
+
 </section>
 
 {% endblock %}

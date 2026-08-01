@@ -7,6 +7,7 @@ Contact Us - KVVSH Group of Companies
 {% block extra_css %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
 
 {% endblock %}
 
@@ -31,76 +32,37 @@ POPUP
 </div>
 
 <!-- ==========================================
-CONTACT HERO SECTION
+HERO SECTION
 ========================================== -->
 
-<section class="contact-hero">
+<section class="page-hero">
 
-    <div class="contact-slider">
+    <div class="hero-bg" style="background-image:url('{{ url_for('image', filename='b10.webp') }}')"></div>
 
-        <div class="contact-slide active">
-            <img src="{{ url_for('image', filename='b1.webp') }}">
-        </div>
+    <div class="hero-inner">
 
-        <div class="contact-slide">
-            <img src="{{ url_for('image', filename='b9.webp') }}">
-        </div>
-
-        <div class="contact-slide">
-            <img src="{{ url_for('image', filename='b11.webp') }}">
-        </div>
-
-        <div class="contact-slide">
-            <img src="{{ url_for('image', filename='b14.webp') }}">
-        </div>
-
-        <div class="contact-slide">
-            <img src="{{ url_for('image', filename='b18.webp') }}">
-        </div>
-
-    </div>
-
-    <div class="contact-hero-overlay"></div>
-
-    <div class="contact-hero-content">
-
-        <span class="hero-tag">
-
+        <span class="hero-eyebrow">
             CONTACT KVVSH GROUP
-
         </span>
 
         <h1>
-
-            Let's Build The Future
-            Together
-
+            Let's Build The Future <span>Together</span>
         </h1>
 
-        <p>
-
-            Whether you're a customer,
-            business partner,
-            investor,
-            media representative,
-            or future employee,
-            our team is ready to help.
-
+        <p class="hero-sub">
+            Whether you're a customer, business partner, investor,
+            media representative, or future employee, our team is
+            ready to help.
         </p>
 
-        <div class="hero-buttons">
+        <div class="hero-actions">
 
-            <a href="#contact-form">
-
+            <a href="#contact-form" class="btn btn-primary">
                 Send Enquiry
-
             </a>
 
-            <a href="#global-offices"
-            class="secondary-btn">
-
+            <a href="#global-offices" class="btn btn-outline">
                 Our Offices
-
             </a>
 
         </div>
@@ -126,11 +88,7 @@ CONTACT CARDS
         </h3>
 
         <p>
-
-            Nagore,
-            Tamil Nadu,
-            India
-
+            Nagore, Tamil Nadu, India
         </p>
 
     </div>
@@ -146,9 +104,7 @@ CONTACT CARDS
         </h3>
 
         <p>
-
             kvvshcustomercare@gmail.com
-
         </p>
 
     </div>
@@ -164,9 +120,7 @@ CONTACT CARDS
         </h3>
 
         <p>
-
             +91 6383149466
-
         </p>
 
     </div>
@@ -182,9 +136,7 @@ CONTACT CARDS
         </h3>
 
         <p>
-
             100+ Countries
-
         </p>
 
     </div>
@@ -192,79 +144,112 @@ CONTACT CARDS
 </section>
 
 <!-- ==========================================
-CONTACT FORM SECTION
+CONTACT INFO + FORM SECTION
 ========================================== -->
 
-<section
-class="contact-main"
-id="contact-form">
+<section class="contact-main" id="contact-form">
 
     <div class="contact-info">
 
-        <span>
-
+        <span class="contact-eyebrow">
             GET IN TOUCH
-
         </span>
 
         <h2>
-
-            Contact Information
-
+            Contact <span>Information</span>
         </h2>
 
         <p>
-
-            Reach out to us for
-            partnerships,
-            investments,
-            media enquiries,
-            careers,
-            and customer support.
-
+            Reach out to us for partnerships, investments,
+            media enquiries, careers, and customer support.
+            Our team responds within one business day.
         </p>
 
-        <div class="info-box">
+        <div class="contact-info-item">
 
-            <h4>
-                Headquarters
-            </h4>
+            <div class="item-icon">
+                🏢
+            </div>
 
-            <p>
+            <div>
 
-                Nagore,
-                Tamil Nadu,
-                India
+                <h4>
+                    Headquarters
+                </h4>
 
-            </p>
+                <p>
+                    Nagore, Tamil Nadu, India
+                </p>
 
-        </div>
-
-        <div class="info-box">
-
-            <h4>
-                Email
-            </h4>
-
-            <p>
-
-                kvvshcustomercare@gmail.com
-
-            </p>
+            </div>
 
         </div>
 
-        <div class="info-box">
+        <div class="contact-info-item">
+
+            <div class="item-icon">
+                📧
+            </div>
+
+            <div>
+
+                <h4>
+                    Email
+                </h4>
+
+                <p>
+                    kvvshcustomercare@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="contact-info-item">
+
+            <div class="item-icon">
+                📞
+            </div>
+
+            <div>
+
+                <h4>
+                    Phone
+                </h4>
+
+                <p>
+                    +91 6383149466
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="contact-info-socials">
 
             <h4>
-                Phone
+                Follow Us
             </h4>
 
-            <p>
+            <div class="contact-social-row">
 
-                +91 6383149466
+                <a href="#" aria-label="LinkedIn">
+                    <img src="{{ url_for('image', filename='linkedin2.webp') }}" alt="LinkedIn">
+                </a>
 
-            </p>
+                <a href="#" aria-label="Instagram">
+                    <img src="{{ url_for('image', filename='instagram.webp') }}" alt="Instagram">
+                </a>
+
+                <a href="#" aria-label="Twitter / X">
+                    <img src="{{ url_for('image', filename='twitter2.webp') }}" alt="Twitter">
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <img src="{{ url_for('image', filename='youtube2.webp') }}" alt="YouTube">
+                </a>
+
+            </div>
 
         </div>
 
@@ -272,37 +257,23 @@ id="contact-form">
 
     <div class="contact-form-wrapper">
 
-        <form
-        method="POST"
-        action="{{ url_for('contact') }}"
-        class="contact-form">
+        <form method="POST" action="{{ url_for('contact') }}" class="contact-form">
 
             <h3>
-
                 Send Us A Message
-
             </h3>
 
-            <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            required>
+            <p class="form-note">
+                Fill in the form and our team will get back to you shortly.
+            </p>
 
-            <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            required>
+            <input type="text" name="name" placeholder="Full Name" required>
 
-            <input
-            type="tel"
-            name="phoneno"
-            placeholder="Phone Number"
-            required>
+            <input type="email" name="email" placeholder="Email Address" required>
 
-            <select
-            name="purpose">
+            <input type="tel" name="phoneno" placeholder="Phone Number" required>
+
+            <select name="purpose">
 
                 <option>
                     Business Partnership
@@ -326,16 +297,10 @@ id="contact-form">
 
             </select>
 
-            <textarea
-            name="textarea"
-            placeholder="Type your message..."
-            required></textarea>
+            <textarea name="textarea" placeholder="Type your message..." required></textarea>
 
-            <button
-            type="submit">
-
+            <button type="submit">
                 Send Message →
-
             </button>
 
         </form>
@@ -348,22 +313,16 @@ id="contact-form">
 GLOBAL OFFICES
 ========================================== -->
 
-<section
-class="global-offices"
-id="global-offices">
+<section class="global-offices" id="global-offices">
 
     <div class="section-heading">
 
         <span>
-
             GLOBAL PRESENCE
-
         </span>
 
         <h2>
-
             Our Offices Worldwide
-
         </h2>
 
     </div>
@@ -443,15 +402,11 @@ MAP SECTION
     <div class="section-heading">
 
         <span>
-
             LOCATION
-
         </span>
 
         <h2>
-
             Find Our Headquarters
-
         </h2>
 
     </div>
@@ -474,23 +429,15 @@ CTA SECTION
 <section class="contact-cta">
 
     <h2>
-
-        Ready To Partner
-        With KVVSH?
-
+        Ready To Partner With KVVSH?
     </h2>
 
     <p>
-
-        Join us in shaping the future
-        across industries worldwide.
-
+        Join us in shaping the future across industries worldwide.
     </p>
 
     <a href="#contact-form">
-
         Contact Us Today
-
     </a>
 
 </section>
@@ -500,34 +447,6 @@ CTA SECTION
 {% block extra_js %}
 
 <script>
-
-/* ==========================================
-CONTACT HERO SLIDER
-========================================== */
-
-const contactSlides =
-document.querySelectorAll(".contact-slide");
-
-let contactIndex = 0;
-
-setInterval(()=>{
-
-    contactSlides[contactIndex]
-    .classList.remove("active");
-
-    contactIndex++;
-
-    if(contactIndex >= contactSlides.length){
-
-        contactIndex = 0;
-
-    }
-
-    contactSlides[contactIndex]
-    .classList.add("active");
-
-},5000);
-
 
 /* ==========================================
 POPUP LOGIC

@@ -1,0 +1,476 @@
+:root {
+    --purple: #7D2AE8;
+    --purple-light: #a96bff;
+    --purple-dark: #5b13b8;
+    --ink: #14141a;
+    --white: #ffffff;
+    --off: #f6f4f0;
+    --muted: #6f6f78;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.commitment-section,
+.pillars-section,
+.sdg-section,
+.business-commitments {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-head {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 60px;
+}
+
+.section-eyebrow {
+    display: inline-block;
+    color: var(--purple);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding: 8px 22px;
+    background: rgba(125, 42, 232, 0.08);
+    border: 1px solid rgba(125, 42, 232, 0.25);
+    border-radius: 50px;
+}
+
+.section-head h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 18px;
+}
+
+.section-head h2 span {
+    background: linear-gradient(120deg, var(--purple), var(--purple-light));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-head p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.commitment-section {
+    background: var(--white);
+}
+
+.commitment-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.commitment-copy p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 34px;
+}
+
+.vision-card {
+    background:
+        radial-gradient(320px 220px at 100% 0%, rgba(125, 42, 232, 0.18), transparent 60%),
+        linear-gradient(150deg, #f6f0ff, #ffffff);
+    border: 1px solid rgba(125, 42, 232, 0.25);
+    border-left: 5px solid var(--purple);
+    border-radius: 18px;
+    padding: 40px 36px;
+    box-shadow: 0 18px 40px rgba(91, 19, 184, 0.12);
+}
+
+.vision-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--purple-light));
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 22px rgba(125, 42, 232, 0.35);
+}
+
+.vision-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    color: var(--purple-dark);
+    margin-bottom: 16px;
+}
+
+.vision-card p {
+    color: #4a4a55;
+    line-height: 1.95;
+    font-size: 15px;
+}
+
+.pillars-section {
+    background:
+        radial-gradient(900px 420px at 8% 0%, rgba(125, 42, 232, 0.14), transparent 60%),
+        radial-gradient(900px 420px at 92% 100%, rgba(125, 42, 232, 0.12), transparent 60%),
+        var(--off);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.pillar-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 38px 30px;
+    border-top: 4px solid var(--purple);
+    box-shadow: 0 12px 30px rgba(20, 20, 26, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pillar-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(125, 42, 232, 0.08), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 44px rgba(91, 19, 184, 0.18);
+}
+
+.pillar-card:hover::before {
+    opacity: 1;
+}
+
+.pillar-icon {
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(135deg, var(--purple), var(--purple-light));
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 20px rgba(125, 42, 232, 0.32);
+    position: relative;
+    z-index: 1;
+}
+
+.pillar-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.pillar-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.pillar-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.pillar-card ul li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+    color: #3c3c46;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pillar-card ul li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--purple);
+    font-weight: 700;
+}
+
+.sdg-section {
+    background: var(--white);
+}
+
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sdg-item {
+    text-align: center;
+    padding: 36px 22px;
+    background: linear-gradient(180deg, #fdfbff, #ffffff);
+    border: 1px solid rgba(125, 42, 232, 0.18);
+    border-radius: 18px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.sdg-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--purple);
+    box-shadow: 0 20px 38px rgba(91, 19, 184, 0.16);
+}
+
+.sdg-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 8px 16px rgba(125, 42, 232, 0.2));
+    transition: transform 0.35s ease;
+}
+
+.sdg-item:hover img {
+    transform: scale(1.08);
+}
+
+.sdg-item p {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+.business-commitments {
+    background:
+        radial-gradient(1100px 500px at 50% -10%, rgba(125, 42, 232, 0.3), transparent 60%),
+        linear-gradient(150deg, #0c0c10, #16161d);
+}
+
+.business-commitments .section-head h2 {
+    color: #fff;
+}
+
+.business-commitments .section-head p {
+    color: #b9b9c2;
+}
+
+.commitments-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 26px 54px rgba(0, 0, 0, 0.45);
+}
+
+.commitments-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    font-size: 15px;
+}
+
+.commitments-table thead th {
+    background: linear-gradient(135deg, var(--purple), var(--purple-light));
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 20px 26px;
+    text-align: left;
+}
+
+.commitments-table tbody td {
+    padding: 18px 26px;
+    border-bottom: 1px solid #eceaf0;
+    color: #33333c;
+}
+
+.commitments-table tbody tr:nth-child(even) {
+    background: #f7f3fd;
+}
+
+.commitments-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.commitments-table tbody tr {
+    transition: background 0.25s ease;
+}
+
+.commitments-table tbody tr:hover {
+    background: rgba(125, 42, 232, 0.08);
+}
+
+.chairman-message {
+    background:
+        radial-gradient(900px 460px at 85% 15%, rgba(169, 107, 255, 0.35), transparent 60%),
+        radial-gradient(800px 420px at 10% 90%, rgba(91, 19, 184, 0.55), transparent 60%),
+        linear-gradient(135deg, var(--purple-dark), var(--purple) 55%, var(--purple-light));
+    padding: 110px 0;
+}
+
+.message-box {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.chairman-eyebrow {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 9px 22px;
+    border-radius: 50px;
+    margin-bottom: 26px;
+}
+
+.message-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.message-box blockquote {
+    font-size: 20px;
+    line-height: 1.95;
+    font-style: italic;
+    color: #ffffff;
+    position: relative;
+    padding: 30px 46px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.message-box blockquote::before {
+    content: '\201C';
+    position: absolute;
+    top: 6px;
+    left: 22px;
+    font-size: 64px;
+    font-family: "Playfair Display", serif;
+    color: rgba(255, 255, 255, 0.35);
+    line-height: 1;
+}
+
+.message-box blockquote::after {
+    content: none;
+}
+
+@media (max-width: 767px) {
+
+    .commitment-section,
+    .pillars-section,
+    .sdg-section,
+    .business-commitments {
+        padding: 70px 0;
+    }
+
+    .chairman-message {
+        padding: 80px 0;
+    }
+
+    .section-head {
+        margin-bottom: 44px;
+    }
+
+    .section-head h2 {
+        font-size: 32px;
+    }
+
+    .section-head p {
+        font-size: 15px;
+    }
+
+    .commitment-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .vision-card {
+        padding: 30px 24px;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .sdg-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .sdg-item {
+        padding: 26px 14px;
+    }
+
+    .sdg-item img {
+        width: 92px;
+        height: 92px;
+    }
+
+    .sdg-item p {
+        font-size: 13px;
+    }
+
+    .commitments-table {
+        overflow-x: auto;
+    }
+
+    .commitments-table table {
+        font-size: 14px;
+        min-width: 560px;
+    }
+
+    .commitments-table thead th,
+    .commitments-table tbody td {
+        padding: 15px 18px;
+    }
+
+    .message-box h3 {
+        font-size: 30px;
+    }
+
+    .message-box blockquote {
+        font-size: 16px;
+        padding: 24px 20px;
+    }
+}

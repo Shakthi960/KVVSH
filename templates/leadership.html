@@ -8,14 +8,49 @@ Leadership - KVVSH Group of Companies
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/leadership.css') }}">
+
 {% endblock %}
 
 {% block content %}
 
+<section class="page-hero">
+
+    <div class="hero-bg" style="background-image:url('{{ url_for('image', filename='leaders.webp') }}')"></div>
+
+    <div class="hero-inner">
+
+        <span class="hero-eyebrow">KVVSH GROUP</span>
+
+        <h1>
+            The Minds Behind <span>KVVSH</span>
+        </h1>
+
+        <p class="hero-sub">
+            Visionary leaders driving innovation, global expansion,
+            technology and sustainable growth across every KVVSH business.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="{{ url_for('career') }}" class="btn btn-primary">
+                Join Our Team
+            </a>
+
+            <a href="{{ url_for('about') }}" class="btn btn-outline">
+                About the Group
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
 <section class="leadership-section">
 
     <div class="leadership-header">
-        <span>KVVSH GROUP</span>
+        <span class="tbc-eyebrow">Executive Team</span>
         <h2>Leadership Team</h2>
         <p>
             Visionary leaders driving innovation, global expansion,
@@ -23,118 +58,261 @@ Leadership - KVVSH Group of Companies
         </p>
     </div>
 
-    <!-- Founder -->
-        <div class="founder-row">
-            <div class="founder-card">
-                <img src="{{ url_for('image', filename='pic.webp') }}">
-                <h4>Shakthi K</h4>
-                <span>Founder & President</span>
+    <div class="founder-row">
+        <div class="founder-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='pic.webp') }}" alt="Shakthi K">
             </div>
+            <h4>Shakthi K</h4>
+            <span>Founder &amp; President</span>
         </div>
-        <!-- Core Leadership -->
+    </div>
 
-        <div class="core-grid">
+    <div class="core-grid">
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Sharan M J</h4>
-                <span>Group Chief Executive Officer</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Sharan M J">
             </div>
-
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Kanisthik S</h4>
-                <span>Group Chief Operating Officer</span>
-            </div>
-
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Dr.Hari Haran V</h4>
-                <span>Group Chief Financial Officer</span>
-            </div>
-
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Devesh</h4>
-                <span>Global Expansion Director</span>
-            </div>
-
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Raja Saravana Kumar</h4>
-                <span>Chief Technology Officer</span>
-            </div>
-
+            <h4>Sharan M J</h4>
+            <span>Group Chief Executive Officer</span>
         </div>
 
-    <!-- DIVISION CEOs -->
-    <div class="leadership-category">
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Kanisthik S">
+            </div>
+            <h4>Kanisthik S</h4>
+            <span>Group Chief Operating Officer</span>
+        </div>
 
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Dr. Hari Haran V">
+            </div>
+            <h4>Dr.Hari Haran V</h4>
+            <span>Group Chief Financial Officer</span>
+        </div>
+
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Devesh">
+            </div>
+            <h4>Devesh</h4>
+            <span>Global Expansion Director</span>
+        </div>
+
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Raja Saravana Kumar">
+            </div>
+            <h4>Raja Saravana Kumar</h4>
+            <span>Chief Technology Officer</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="leadership-category">
+
+    <div class="category-title">
+        <span class="tbc-eyebrow">Business Leadership</span>
         <h3>Business Division CEOs</h3>
-        <div class="ceo-grid">
+    </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Naveen Prasad S</h4>
-                <span>CEO - Entertainment, Media & Digital Platforms</span>
-            </div>
+    <div class="ceo-grid">
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Pugazhmani T</h4>
-                <span>CEO - Retail & Consumer Products</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Naveen Prasad S">
             </div>
+            <h4>Naveen Prasad S</h4>
+            <span>CEO - Entertainment, Media &amp; Digital Platforms</span>
+        </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Selvakumar S</h4>
-                <span>CEO - Education & Healthcare</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Pugazhmani T">
             </div>
+            <h4>Pugazhmani T</h4>
+            <span>CEO - Retail &amp; Consumer Products</span>
+        </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Prasanna Raj G</h4>
-                <span>CEO - Technology & Electronics</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Selvakumar S">
             </div>
+            <h4>Selvakumar S</h4>
+            <span>CEO - Education &amp; Healthcare</span>
+        </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Nikhil B</h4>
-                <span>CEO - Infrastructure & Hospitality</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Prasanna Raj G">
             </div>
+            <h4>Prasanna Raj G</h4>
+            <span>CEO - Technology &amp; Electronics</span>
+        </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Sakthi Velan M</h4>
-                <span>CEO - Industrial & Manufacturing</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Nikhil B">
             </div>
+            <h4>Nikhil B</h4>
+            <span>CEO - Infrastructure &amp; Hospitality</span>
+        </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Sandehep S S</h4>
-                <span>CEO - Automotive & Mobility</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Sakthi Velan M">
             </div>
+            <h4>Sakthi Velan M</h4>
+            <span>CEO - Industrial &amp; Manufacturing</span>
+        </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Riswant R G</h4>
-                <span>CEO - Transportation & Logistics</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Sandehep S S">
             </div>
+            <h4>Sandehep S S</h4>
+            <span>CEO - Automotive &amp; Mobility</span>
+        </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Naveen Kumar S</h4>
-                <span>CEO - Energy, Oil & Gas</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Riswant R G">
             </div>
+            <h4>Riswant R G</h4>
+            <span>CEO - Transportation &amp; Logistics</span>
+        </div>
 
-            <div class="leader-card">
-                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="">
-                <h4>Sanjay M</h4>
-                <span>CEO - Finance, Digital Services & Innovation</span>
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Naveen Kumar S">
             </div>
+            <h4>Naveen Kumar S</h4>
+            <span>CEO - Energy, Oil &amp; Gas</span>
+        </div>
+
+        <div class="leader-card">
+            <div class="leader-photo">
+                <img src="{{ url_for('image', filename='leaders.webp') }}" alt="Sanjay M">
+            </div>
+            <h4>Sanjay M</h4>
+            <span>CEO - Finance, Digital Services &amp; Innovation</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="leadership-quote">
+
+    <div class="quote-inner">
+
+        <span class="quote-mark">&ldquo;</span>
+
+        <p class="quote-text">
+            Leadership is not about position. It is about responsibility,
+            vision and the courage to build for the people and nations we serve.
+        </p>
+
+        <span class="quote-source">Shakthi K — Founder &amp; President</span>
+
+    </div>
+
+</section>
+
+<section class="leadership-values">
+
+    <div class="values-header">
+        <span class="tbc-eyebrow">Our Leadership Principles</span>
+        <h2>What Guides Our Leaders</h2>
+        <p>
+            Every KVVSH leader is guided by principles that shape decisions,
+            partnerships and long-term value across our businesses.
+        </p>
+    </div>
+
+    <div class="values-grid">
+
+        <div class="value-card">
+            <h3>Vision</h3>
+            <p>
+                Seeing beyond today and building industries that shape
+                the future of global commerce and communities.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <h3>Integrity</h3>
+            <p>
+                Leading with honesty, transparency and trust in every
+                decision, partnership and commitment we make.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <h3>Innovation</h3>
+            <p>
+                Embracing technology and new ideas to solve real-world
+                challenges across every division of the group.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <h3>Sustainability</h3>
+            <p>
+                Balancing growth with responsibility to people and planet
+                for enduring success across generations.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <h3>Excellence</h3>
+            <p>
+                Pursuing the highest standards of quality and service in
+                everything we build and operate worldwide.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <h3>Collaboration</h3>
+            <p>
+                Uniting talent across borders and disciplines to create
+                shared value for customers, partners and employees.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="leadership-cta">
+
+    <div class="cta-inner">
+
+        <h2>Build the Future With <span>Us</span></h2>
+
+        <p>
+            Grow alongside visionary leaders across 10 business divisions
+            and 100+ countries.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="{{ url_for('career') }}" class="btn btn-primary">
+                Explore Careers
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
 
         </div>
-</div>
+
+    </div>
 
 </section>
 

@@ -8,61 +8,6 @@ KVVSH Group of Companies Pvt Ltd
 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 {% endblock %}
 
-{% block navbar %}
-
-<nav class="home-navbar">
-
-    <div class="quicklinks">
-
-        <div id="ql" class="ql">
-            <a href="{{ url_for('home') }}">
-                <img src="{{ url_for('image', filename='kvvsh-png-bg.webp') }}" alt="KVVSH Logo">
-            </a>
-        </div>
-
-        <div class="ql">
-            <a href="{{ url_for('about') }}">About Us</a>
-        </div>
-
-        <div class="ql">
-            <a href="{{ url_for('business') }}">Businesses</a>
-        </div>
-
-        <div class="ql">
-            <a href="{{ url_for('leadership') }}">Leadership</a>
-        </div>
-
-        <div class="ql">
-            <a href="{{ url_for('global_presence') }}">Global Presence</a>
-        </div>
-
-        <div class="ql">
-            <a href="{{ url_for('career') }}">Career</a>
-        </div>
-
-        <div class="ql">
-            <a href="{{ url_for('contact') }}">Contact</a>
-        </div>
-
-    </div>
-
-    <div class="mobile-nav">
-        <div class="mobile-nav-logo">
-            <a href="{{ url_for('home') }}">
-                <img src="{{ url_for('image', filename='kvvsh-png-bg.webp') }}" alt="KVVSH Logo">
-            </a>
-        </div>
-        <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-
-</nav>
-
-{% endblock %}
-
 {% block content %}
 
 <!-- HERO SECTION -->
@@ -156,20 +101,48 @@ KVVSH Group of Companies Pvt Ltd
 
 <section class="third-body-content">
 
-    <div class="tbc-one">
-        <h2>About us</h2>
+    <div class="tbc-header">
+        <span class="tbc-eyebrow">Who We Are</span>
+        <h2>About KVVSH Group</h2>
+        <div class="tbc-line"></div>
     </div>
 
-    <div class="tbc-two">
-        <p>
-            "Founded in 2017, Headquarters in Nagore ........."
-        </p>
-    </div>
+    <div class="tbc-grid">
 
-    <div class="tbc-three">
-        <a href="{{ url_for('about') }}">
-            Read more
-        </a>
+        <div class="tbc-visual">
+            <img src="{{ url_for('image', filename='tbc.webp') }}" alt="KVVSH Group of Companies">
+            <div class="tbc-badge">
+                <h3>2017</h3>
+                <p>Founded in Nagore, India</p>
+            </div>
+        </div>
+
+        <div class="tbc-copy">
+
+            <h3>A Diversified Global Enterprise</h3>
+
+            <p>
+                Founded in 2017, headquarters in Nagore, KVVSH Group of
+                Companies Pvt Ltd has grown into a diversified global
+                enterprise operating across technology, healthcare,
+                media, infrastructure, finance and emerging industries.
+                We build businesses that move people, power economies
+                and shape the future.
+            </p>
+
+            <ul class="tbc-points">
+                <li><span>✓</span> 10 business divisions worldwide</li>
+                <li><span>✓</span> Present in 100+ countries</li>
+                <li><span>✓</span> 1M+ employees and partners</li>
+                <li><span>✓</span> Driving innovation across sectors</li>
+            </ul>
+
+            <a href="{{ url_for('about') }}" class="btn btn-primary">
+                Read More About Us
+            </a>
+
+        </div>
+
     </div>
 
 </section>
@@ -513,46 +486,71 @@ KVVSH Group of Companies Pvt Ltd
 
 <section class="fifth-body-content">
 
-    <div class="ffbc-one">
-
-        <img src="{{ url_for('image', filename='b1.webp') }}"
-             alt="KVVSH Global Presence">
-
-        <a href="{{ url_for('global_presence') }}">
-            Global Presence
-        </a>
-
+    <div class="ffbc-header">
+        <span class="ffbc-eyebrow">Explore KVVSH</span>
+        <h2>Beyond Businesses</h2>
+        <p>
+            Discover our global footprint, latest updates, career
+            opportunities and our commitment to a sustainable future.
+        </p>
     </div>
 
-    <div class="ffbc-two">
+    <div class="ffbc-grid">
 
-        <img src="{{ url_for('image', filename='b13.webp') }}"
-             alt="KVVSH Latest News">
+        <a href="{{ url_for('global_presence') }}" class="ffbc-card">
 
-        <a href="{{ url_for('news') }}">
-            Latest News
+            <div class="ffbc-img">
+                <img src="{{ url_for('image', filename='b1.webp') }}" alt="KVVSH Global Presence">
+            </div>
+
+            <div class="ffbc-body">
+                <h3>Global Presence</h3>
+                <p>Operating across 100+ countries with offices worldwide.</p>
+                <span class="ffbc-link">Discover →</span>
+            </div>
+
         </a>
 
-    </div>
+        <a href="{{ url_for('news') }}" class="ffbc-card">
 
-    <div class="ffbc-three">
+            <div class="ffbc-img">
+                <img src="{{ url_for('image', filename='b13.webp') }}" alt="KVVSH Latest News">
+            </div>
 
-        <img src="{{ url_for('image', filename='b2.webp') }}"
-             alt="KVVSH Careers">
+            <div class="ffbc-body">
+                <h3>Latest News</h3>
+                <p>Milestones, expansions and corporate announcements.</p>
+                <span class="ffbc-link">Read News →</span>
+            </div>
 
-        <a href="{{ url_for('career') }}">
-            Careers
         </a>
 
-    </div>
+        <a href="{{ url_for('career') }}" class="ffbc-card">
 
-    <div class="ffbc-four">
+            <div class="ffbc-img">
+                <img src="{{ url_for('image', filename='b2.webp') }}" alt="KVVSH Careers">
+            </div>
 
-        <img src="{{ url_for('image', filename='b18.webp') }}"
-             alt="KVVSH Sustainability">
+            <div class="ffbc-body">
+                <h3>Careers</h3>
+                <p>Build your future with 1M+ talented colleagues.</p>
+                <span class="ffbc-link">Join Us →</span>
+            </div>
 
-        <a href="{{ url_for('sustainability') }}">
-            Sustainability
+        </a>
+
+        <a href="{{ url_for('sustainability') }}" class="ffbc-card">
+
+            <div class="ffbc-img">
+                <img src="{{ url_for('image', filename='b18.webp') }}" alt="KVVSH Sustainability">
+            </div>
+
+            <div class="ffbc-body">
+                <h3>Sustainability</h3>
+                <p>Committed to responsible growth and a greener planet.</p>
+                <span class="ffbc-link">Learn More →</span>
+            </div>
+
         </a>
 
     </div>

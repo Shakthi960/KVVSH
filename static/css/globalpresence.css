@@ -1,0 +1,479 @@
+/* ============================================================
+   KVVSH GLOBAL PRESENCE PAGE (globalpresence.css)
+   Loaded after style.css, before core.css.
+   Works with the unified design system in core.css.
+============================================================ */
+
+/* ------------------------------------------------------------
+   1. OVERVIEW / FOOTPRINT
+------------------------------------------------------------ */
+
+.gp-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.gp-overview {
+    padding: 110px 0;
+    background: var(--off);
+}
+
+.gp-section-head {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 70px;
+}
+
+.gp-eyebrow {
+    display: inline-block;
+    color: var(--purple);
+    letter-spacing: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.gp-section-head h2 {
+    font-size: 48px;
+    color: var(--ink);
+    margin-bottom: 20px;
+}
+
+.gp-section-head h2 span {
+    background: linear-gradient(90deg, var(--purple), var(--purple-light));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gp-lead {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+.gp-map {
+    max-width: 980px;
+    margin: 0 auto 80px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(20, 20, 26, 0.14);
+    border: 1px solid rgba(125, 42, 232, 0.15);
+}
+
+.gp-map img {
+    width: 100%;
+    display: block;
+}
+
+.gp-regions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.gp-region {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 26px;
+    border-top: 4px solid var(--purple);
+    box-shadow: 0 12px 30px rgba(20, 20, 26, 0.07);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gp-region:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(125, 42, 232, 0.18);
+}
+
+.gp-region span {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--purple);
+    background: rgba(125, 42, 232, 0.1);
+    padding: 5px 12px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.gp-region h3 {
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 10px;
+}
+
+.gp-region p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* ------------------------------------------------------------
+   2. INDIA / HEADQUARTERS
+------------------------------------------------------------ */
+
+.gp-india {
+    padding: 110px 8%;
+    background: #ffffff;
+}
+
+.gp-india-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gp-india-media {
+    position: relative;
+}
+
+.gp-india-media img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 30px 65px rgba(20, 20, 26, 0.2);
+}
+
+.gp-india-badge {
+    position: absolute;
+    bottom: -26px;
+    right: 26px;
+    background: linear-gradient(135deg, var(--purple), var(--purple-light));
+    color: #fff;
+    border-radius: 16px;
+    padding: 20px 28px;
+    box-shadow: 0 18px 40px rgba(125, 42, 232, 0.4);
+    text-align: center;
+}
+
+.gp-india-badge h3 {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.gp-india-badge p {
+    font-size: 12px;
+    opacity: 0.92;
+    margin: 0;
+}
+
+.gp-india-copy h2 {
+    font-size: 44px;
+    color: var(--ink);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.gp-india-copy h2 span {
+    background: linear-gradient(90deg, var(--purple), var(--purple-light));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gp-india-copy > p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.gp-city-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.gp-city {
+    background: var(--off);
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(125, 42, 232, 0.2);
+    transition: all 0.3s ease;
+}
+
+.gp-city:hover {
+    background: var(--purple);
+    color: #fff;
+}
+
+/* ------------------------------------------------------------
+   3. STATS BAND
+------------------------------------------------------------ */
+
+.gp-stats {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #0d0d12, #191920);
+}
+
+.gp-stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.gp-stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 40px 20px;
+    transition: all 0.35s ease;
+}
+
+.gp-stat-card:hover {
+    border-color: var(--purple);
+    transform: translateY(-8px);
+    background: rgba(125, 42, 232, 0.12);
+}
+
+.gp-stat-card h2 {
+    font-size: 52px;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, var(--purple-light), #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gp-stat-card p {
+    color: #c9c9d2;
+    font-size: 14px;
+}
+
+/* ------------------------------------------------------------
+   4. FOREIGN / INTERNATIONAL
+------------------------------------------------------------ */
+
+.gp-foreign {
+    padding: 110px 0;
+    background: var(--off);
+}
+
+.gp-countries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gp-country-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(20, 20, 26, 0.07);
+    transition: all 0.35s ease;
+}
+
+.gp-country-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(125, 42, 232, 0.18);
+}
+
+.gp-flag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(125, 42, 232, 0.1);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--purple);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.gp-country-card h3 {
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 10px;
+}
+
+.gp-country-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* ------------------------------------------------------------
+   5. EXPANSION TIMELINE
+------------------------------------------------------------ */
+
+.gp-expansion {
+    padding: 110px 0;
+    background: #ffffff;
+}
+
+.gp-timeline {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.gp-timeline::before {
+    content: '';
+    position: absolute;
+    top: 26px;
+    left: 6%;
+    right: 6%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple), var(--purple-light));
+    opacity: 0.35;
+    border-radius: 3px;
+}
+
+.gp-timeline-item {
+    position: relative;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.gp-year {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--purple-light));
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(125, 42, 232, 0.4);
+    z-index: 1;
+}
+
+.gp-timeline-item h3 {
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+
+.gp-timeline-item p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* ------------------------------------------------------------
+   6. CTA
+------------------------------------------------------------ */
+
+.gp-cta {
+    padding: 110px 8%;
+    background:
+        radial-gradient(900px 400px at 50% 0%, rgba(125, 42, 232, 0.25), transparent 60%),
+        #0d0d12;
+    text-align: center;
+}
+
+.gp-cta-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.gp-cta h2 {
+    font-size: 46px;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.gp-cta h2 span {
+    background: linear-gradient(90deg, var(--purple-light), #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gp-cta p {
+    color: #b9b9c2;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 34px;
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------------ */
+
+@media (max-width: 991px) {
+    .gp-regions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gp-countries {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gp-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .gp-timeline::before {
+        display: none;
+    }
+
+    .gp-stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gp-india-inner {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gp-overview,
+    .gp-india,
+    .gp-foreign,
+    .gp-expansion,
+    .gp-cta {
+        padding: 70px 0;
+    }
+
+    .gp-india {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .gp-cta {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .gp-section-head h2,
+    .gp-india-copy h2,
+    .gp-cta h2 {
+        font-size: 32px;
+    }
+
+    .gp-regions,
+    .gp-countries {
+        grid-template-columns: 1fr;
+    }
+
+    .gp-india-badge {
+        bottom: -20px;
+        right: 14px;
+        padding: 14px 20px;
+    }
+}

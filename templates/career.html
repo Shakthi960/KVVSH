@@ -7,201 +7,39 @@ Careers - KVVSH Group of Companies
 {% block extra_css %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/career.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<!-- ======================================================
-CAREERS HERO
-====================================================== -->
+<section class="page-hero">
 
-<section class="career-hero">
+    <div class="hero-bg" style="background-image:url('{{ url_for('image', filename='b2.webp') }}')"></div>
 
-    <div class="career-slider">
+    <div class="hero-inner">
 
-        <div class="career-slide active">
-            <img src="{{ url_for('image', filename='b1.webp') }}">
-        </div>
-
-        <div class="career-slide">
-            <img src="{{ url_for('image', filename='b9.webp') }}">
-        </div>
-
-        <div class="career-slide">
-            <img src="{{ url_for('image', filename='b14.webp') }}">
-        </div>
-
-        <div class="career-slide">
-            <img src="{{ url_for('image', filename='b16.webp') }}">
-        </div>
-
-        <div class="career-slide">
-            <img src="{{ url_for('image', filename='b18.webp') }}">
-        </div>
-
-    </div>
-
-    <div class="career-overlay"></div>
-
-    <div class="career-content">
-
-        <span>CAREERS AT KVVSH GROUP</span>
+        <span class="hero-eyebrow">CAREERS AT KVVSH GROUP</span>
 
         <h1>
-            Build The Future
-            <br>
-            With Us
+            Build The <span>Future</span> With Us
         </h1>
 
-        <p>
-            Join one of India's fastest growing diversified
-            business groups and create impact across
-            technology, media, healthcare, infrastructure,
-            manufacturing, finance and more.
+        <p class="hero-sub">
+            Join one of India's fastest growing diversified business
+            groups and create impact across technology, media, healthcare,
+            infrastructure, manufacturing, finance and more.
         </p>
 
-        <div class="career-buttons">
-            <a href="{{ url_for('jobs') }}">Explore Jobs</a>
-        </div>
+        <div class="hero-actions">
 
-    </div>
+            <a href="{{ url_for('jobs') }}" class="btn btn-primary">
+                Explore Openings
+            </a>
 
-</section>
-
-<!-- ======================================================
-WHY KVVSH
-====================================================== -->
-
-<section class="why-kvvsh">
-
-    <div class="section-title">
-
-        <span>WHY KVVSH</span>
-
-        <h2>
-            A Place To Grow
-        </h2>
-
-    </div>
-
-    <div class="why-grid">
-
-        <div class="why-card">
-            <h3>Global Exposure</h3>
-            <p>Opportunities across international markets and industries.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>Innovation Culture</h3>
-            <p>Work on future-ready technologies and business models.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>Leadership Mentoring</h3>
-            <p>Learn directly from experienced leaders and executives.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>Career Growth</h3>
-            <p>Structured learning and promotion pathways.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>Diverse Industries</h3>
-            <p>Explore opportunities across 10 major business groups.</p>
-        </div>
-
-        <div class="why-card">
-            <h3>Inclusive Workplace</h3>
-            <p>A culture where talent and ideas matter most.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ======================================================
-LIFE AT KVVSH
-====================================================== -->
-
-<section class="life-section">
-
-    <div class="section-title">
-
-        <span>LIFE AT KVVSH</span>
-
-        <h2>
-            Where Ambition Meets Opportunity
-        </h2>
-
-    </div>
-
-    <div class="life-grid">
-
-        <img src="{{ url_for('image', filename='b1.webp') }}">
-
-        <img src="{{ url_for('image', filename='b3.webp') }}">
-
-        <img src="{{ url_for('image', filename='b9.webp') }}">
-
-        <img src="{{ url_for('image', filename='b14.webp') }}">
-
-    </div>
-
-</section>
-
-<!-- ======================================================
-OPEN POSITIONS
-====================================================== -->
-
-<section class="jobs-section">
-
-    <div class="section-title">
-
-        <span>OPPORTUNITIES</span>
-
-        <h2>
-            Current Openings
-        </h2>
-
-    </div>
-
-    <div class="jobs-grid">
-
-        <div class="job-card">
-
-            <h3>Software Engineer</h3>
-
-            <p>Technology Group</p>
-
-            <span>Chennai • Full Time</span>
-
-            <a href="{{ url_for('jobs') }}">Apply →</a>
-
-        </div>
-
-        <div class="job-card">
-
-            <h3>Marketing Executive</h3>
-
-            <p>Media Group</p>
-
-            <span>Bangalore • Full Time</span>
-
-            <a href="{{ url_for('jobs') }}">Apply →</a>
-
-        </div>
-
-        <div class="job-card">
-
-            <h3>Business Analyst</h3>
-
-            <p>Finance Group</p>
-
-            <span>Mumbai • Full Time</span>
-
-            <a href="{{ url_for('jobs') }}">Apply →</a>
+            <a href="#culture" class="btn btn-outline">
+                Life At KVVSH
+            </a>
 
         </div>
 
@@ -209,109 +47,98 @@ OPEN POSITIONS
 
 </section>
 
+<section class="career-section" id="culture">
 
-<!-- ======================================================
-INTERNSHIP PROGRAM
-====================================================== -->
+    <div class="career-inner">
 
-<section class="internship-section">
+        <div class="career-header">
 
-    <div class="section-title">
+            <span class="career-eyebrow">WHY KVVSH</span>
 
-        <span>STUDENTS</span>
-
-        <h2>
-            Internship & Graduate Program
-        </h2>
-
-    </div>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-            <h3>01</h3>
-            <p>Apply</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>02</h3>
-            <p>Assessment</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>03</h3>
-            <p>Interview</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>04</h3>
-            <p>Offer</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>05</h3>
-            <p>Join KVVSH</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ======================================================
-EMPLOYEE STORIES
-====================================================== -->
-
-<section class="testimonial-section">
-
-    <div class="section-title">
-
-        <span>OUR PEOPLE</span>
-
-        <h2>
-            Employee Stories
-        </h2>
-
-    </div>
-
-    <div class="testimonial-grid">
-
-        <div class="testimonial-card">
+            <h2>
+                A Place To <span>Grow</span>
+            </h2>
 
             <p>
-                “KVVSH provided opportunities that accelerated
-                my professional growth beyond expectations.”
+                A workplace built on opportunity, collaboration and
+                continuous learning across every industry we serve.
             </p>
-
-            <h4>R. Shalini</h4>
-
-            <span>Senior Content Producer</span>
 
         </div>
 
-        <div class="testimonial-card">
+        <div class="culture-grid">
 
-            <p>
-                “An environment where innovation is encouraged
-                and leadership is approachable.”
-            </p>
+            <div class="culture-card">
 
-            <h4>Dr. Harish M</h4>
+                <span class="culture-num">01</span>
 
-            <span>Resident Surgeon</span>
+                <h3>Global Exposure</h3>
 
-        </div>
+                <p>
+                    Opportunities across international markets and industries.
+                </p>
 
-        <div class="testimonial-card">
+            </div>
 
-            <p>
-                “The exposure across multiple industries is
-                unmatched.”
-            </p>
+            <div class="culture-card">
 
-            <h4>A. Karthik</h4>
+                <span class="culture-num">02</span>
 
-            <span>Management Associate</span>
+                <h3>Innovation Culture</h3>
+
+                <p>
+                    Work on future-ready technologies and business models.
+                </p>
+
+            </div>
+
+            <div class="culture-card">
+
+                <span class="culture-num">03</span>
+
+                <h3>Leadership Mentoring</h3>
+
+                <p>
+                    Learn directly from experienced leaders and executives.
+                </p>
+
+            </div>
+
+            <div class="culture-card">
+
+                <span class="culture-num">04</span>
+
+                <h3>Career Growth</h3>
+
+                <p>
+                    Structured learning and promotion pathways.
+                </p>
+
+            </div>
+
+            <div class="culture-card">
+
+                <span class="culture-num">05</span>
+
+                <h3>Diverse Industries</h3>
+
+                <p>
+                    Explore opportunities across 10 major business groups.
+                </p>
+
+            </div>
+
+            <div class="culture-card">
+
+                <span class="culture-num">06</span>
+
+                <h3>Inclusive Workplace</h3>
+
+                <p>
+                    A culture where talent and ideas matter most.
+                </p>
+
+            </div>
 
         </div>
 
@@ -319,82 +146,454 @@ EMPLOYEE STORIES
 
 </section>
 
-<!-- ======================================================
-STATS
-====================================================== -->
+<section class="career-section alt">
 
-<section class="career-stats">
+    <div class="career-inner">
 
-    <div class="stat-box">
+        <div class="career-header">
+
+            <span class="career-eyebrow">OUR VALUES</span>
+
+            <h2>
+                The Principles We <span>Work By</span>
+            </h2>
+
+            <p>
+                Shared values that guide every decision, every team
+                and every KVVSH employee around the world.
+            </p>
+
+        </div>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+
+                <h3>Integrity</h3>
+
+                <p>
+                    We act with honesty, transparency and accountability in
+                    everything we do.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>Innovation</h3>
+
+                <p>
+                    We embrace bold ideas and future-ready thinking across
+                    every business.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>Excellence</h3>
+
+                <p>
+                    We hold ourselves to the highest standards of quality and
+                    performance.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>People First</h3>
+
+                <p>
+                    We invest in talent, respect diverse voices and build
+                    inclusive teams.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="career-section">
+
+    <div class="career-inner">
+
+        <div class="career-header">
+
+            <span class="career-eyebrow">BENEFITS</span>
+
+            <h2>
+                Rewards That <span>Matter</span>
+            </h2>
+
+            <p>
+                Competitive benefits designed to support your wellbeing,
+                growth and long-term success.
+            </p>
+
+        </div>
+
+        <div class="benefits-grid">
+
+            <div class="benefit-card">
+
+                <h3>Competitive Compensation</h3>
+
+                <p>
+                    Market-aligned pay with performance-linked rewards.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <h3>Health &amp; Wellness</h3>
+
+                <p>
+                    Comprehensive medical coverage for you and your family.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <h3>Learning &amp; Development</h3>
+
+                <p>
+                    Training programs, certifications and skill academies.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <h3>Flexible Work</h3>
+
+                <p>
+                    Flexible arrangements that respect work-life balance.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <h3>Global Mobility</h3>
+
+                <p>
+                    International projects and relocation opportunities.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <h3>Recognition &amp; Growth</h3>
+
+                <p>
+                    A clear career path with recognition at every milestone.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="career-section alt">
+
+    <div class="career-inner">
+
+        <div class="career-header">
+
+            <span class="career-eyebrow">LIFE AT KVVSH</span>
+
+            <h2>
+                Where Ambition Meets <span>Opportunity</span>
+            </h2>
+
+            <p>
+                Vibrant campuses, collaborative teams and a culture that
+                celebrates the people behind our success.
+            </p>
+
+        </div>
+
+        <div class="life-grid">
+
+            <img src="{{ url_for('image', filename='b1.webp') }}" alt="Life at KVVSH">
+
+            <img src="{{ url_for('image', filename='b3.webp') }}" alt="Life at KVVSH">
+
+            <img src="{{ url_for('image', filename='b9.webp') }}" alt="Life at KVVSH">
+
+            <img src="{{ url_for('image', filename='b14.webp') }}" alt="Life at KVVSH">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="career-section">
+
+    <div class="career-inner">
+
+        <div class="career-header">
+
+            <span class="career-eyebrow">OPPORTUNITIES</span>
+
+            <h2>
+                Current <span>Openings</span>
+            </h2>
+
+            <p>
+                Explore exciting roles across the KVVSH Group businesses.
+            </p>
+
+        </div>
+
+        <div class="openings-grid">
+
+            <div class="opening-card">
+
+                <h3>Software Engineer</h3>
+
+                <p>Technology Group</p>
+
+                <span class="opening-meta">Chennai · Full Time</span>
+
+                <a href="{{ url_for('jobs') }}">Apply Now →</a>
+
+            </div>
+
+            <div class="opening-card">
+
+                <h3>Marketing Executive</h3>
+
+                <p>Media Group</p>
+
+                <span class="opening-meta">Bangalore · Full Time</span>
+
+                <a href="{{ url_for('jobs') }}">Apply Now →</a>
+
+            </div>
+
+            <div class="opening-card">
+
+                <h3>Business Analyst</h3>
+
+                <p>Finance Group</p>
+
+                <span class="opening-meta">Mumbai · Full Time</span>
+
+                <a href="{{ url_for('jobs') }}">Apply Now →</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="career-section alt">
+
+    <div class="career-inner">
+
+        <div class="career-header">
+
+            <span class="career-eyebrow">STUDENTS</span>
+
+            <h2>
+                Internship &amp; <span>Graduate Program</span>
+            </h2>
+
+            <p>
+                A guided journey from your first application to the start
+                of a rewarding career at KVVSH.
+            </p>
+
+        </div>
+
+        <div class="process-steps">
+
+            <div class="process-step">
+
+                <span class="process-num">01</span>
+
+                <h3>Apply</h3>
+
+                <p>Submit your application online.</p>
+
+            </div>
+
+            <div class="process-step">
+
+                <span class="process-num">02</span>
+
+                <h3>Assessment</h3>
+
+                <p>Complete our skill assessment.</p>
+
+            </div>
+
+            <div class="process-step">
+
+                <span class="process-num">03</span>
+
+                <h3>Interview</h3>
+
+                <p>Meet our teams and leaders.</p>
+
+            </div>
+
+            <div class="process-step">
+
+                <span class="process-num">04</span>
+
+                <h3>Offer</h3>
+
+                <p>Receive your offer of employment.</p>
+
+            </div>
+
+            <div class="process-step">
+
+                <span class="process-num">05</span>
+
+                <h3>Join KVVSH</h3>
+
+                <p>Begin your journey with us.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="career-section">
+
+    <div class="career-inner">
+
+        <div class="career-header">
+
+            <span class="career-eyebrow">OUR PEOPLE</span>
+
+            <h2>
+                Employee <span>Stories</span>
+            </h2>
+
+            <p>
+                Hear from the people who build, grow and shape KVVSH
+                every single day.
+            </p>
+
+        </div>
+
+        <div class="stories-grid">
+
+            <div class="story-card">
+
+                <p>
+                    "KVVSH provided opportunities that accelerated my
+                    professional growth beyond expectations."
+                </p>
+
+                <h4>R. Shalini</h4>
+
+                <span>Senior Content Producer</span>
+
+            </div>
+
+            <div class="story-card">
+
+                <p>
+                    "An environment where innovation is encouraged and
+                    leadership is approachable."
+                </p>
+
+                <h4>Dr. Harish M</h4>
+
+                <span>Resident Surgeon</span>
+
+            </div>
+
+            <div class="story-card">
+
+                <p>
+                    "The exposure across multiple industries is unmatched."
+                </p>
+
+                <h4>A. Karthik</h4>
+
+                <span>Management Associate</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-strip">
+
+    <div class="stat-item">
+
         <h2>10+</h2>
+
         <p>Business Groups</p>
+
     </div>
 
-    <div class="stat-box">
+    <div class="stat-item">
+
         <h2>25+</h2>
+
         <p>Countries</p>
+
     </div>
 
-    <div class="stat-box">
+    <div class="stat-item">
+
         <h2>5000+</h2>
+
         <p>Future Employees</p>
+
     </div>
 
-    <div class="stat-box">
+    <div class="stat-item">
+
         <h2>100+</h2>
+
         <p>Career Paths</p>
+
     </div>
 
 </section>
-
-
-<!-- ======================================================
-FINAL CTA
-====================================================== -->
 
 <section class="career-cta">
 
     <h2>
-        Ready To Shape The Future?
+        Ready To Shape The <span>Future</span>?
     </h2>
 
     <p>
-        Explore exciting opportunities across the KVVSH ecosystem.
+        Explore exciting opportunities across the KVVSH ecosystem and
+        start building your career with us today.
     </p>
 
-    <a href="{{ url_for('jobs') }}">
+    <a href="{{ url_for('jobs') }}" class="btn btn-primary">
         Explore Careers →
     </a>
 
 </section>
-
-{% endblock %}
-
-{% block extra_js %}
-
-<script>
-
-const careerSlides =
-document.querySelectorAll(".career-slide");
-
-let careerIndex = 0;
-
-setInterval(()=>{
-
-    careerSlides[careerIndex]
-    .classList.remove("active");
-
-    careerIndex++;
-
-    if(careerIndex >= careerSlides.length){
-        careerIndex = 0;
-    }
-
-    careerSlides[careerIndex]
-    .classList.add("active");
-
-},5000);
-
-</script>
 
 {% endblock %}

@@ -7,469 +7,380 @@ Businesses - KVVSH Group of Companies
 {% block extra_css %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/business.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<section class="business-hero">
+<section class="page-hero">
 
-    <div class="business-slider">
+    <div class="hero-bg" style="background-image:url('{{ url_for('image', filename='b19.webp') }}')"></div>
 
-        <div class="business-slide active">
-            <img src="{{ url_for('image', filename='b9.webp') }}">
-        </div>
+    <div class="hero-inner">
 
-        <div class="business-slide">
-            <img src="{{ url_for('image', filename='b11.webp') }}">
-        </div>
+        <span class="hero-eyebrow">Our Businesses</span>
 
-        <div class="business-slide">
-            <img src="{{ url_for('image', filename='b14.webp') }}">
-        </div>
+        <h1>
+            Building Industries.
+            <span>Transforming Futures.</span>
+        </h1>
 
-        <div class="business-slide">
-            <img src="{{ url_for('image', filename='b16.webp') }}">
-        </div>
+        <p class="hero-sub">
+            A diversified multinational group operating across media,
+            technology, infrastructure, healthcare, finance and beyond.
+        </p>
 
-        <div class="business-slide">
-            <img src="{{ url_for('image', filename='b18.webp') }}">
+        <div class="hero-actions">
+
+            <a href="#bw-root" class="btn btn-primary">
+                Explore Divisions
+            </a>
+
+            <a href="{{ url_for('global_presence') }}" class="btn btn-outline">
+                Global Footprint
+            </a>
+
         </div>
 
     </div>
 
-    <div class="business-overlay"></div>
+</section>
 
-    <div class="business-content">
+<section id="bw-root" class="business-divisions">
 
-        <span>OUR BUSINESSES</span>
+    <div class="section-head">
 
-        <h1>
-            Building Industries.
-            Transforming Futures.
-        </h1>
+        <span class="section-eyebrow">Our Ecosystem</span>
+
+        <h2>Business Divisions</h2>
 
         <p>
-            A diversified multinational group operating
-            across media, technology, infrastructure,
-            healthcare, finance and beyond.
+            Ten interconnected divisions working together to build
+            industries, create opportunities and shape the future.
         </p>
 
-        <a href="#bw-root">
-            Explore Divisions
+    </div>
+
+    <div class="divisions-grid">
+
+        <a href="{{ url_for('group1') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b19.webp') }}')">
+                <span class="division-card-no">01</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Entertainment, Media &amp; Digital Platforms</h3>
+                <p>TV Channels, OTT Platforms, Movie Production, Music, Animation and Gaming.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group2') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b20.webp') }}')">
+                <span class="division-card-no">02</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Retail &amp; Consumer Products</h3>
+                <p>Supermarkets, FMCG, E-Commerce, Import &amp; Export.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group3') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b21.webp') }}')">
+                <span class="division-card-no">03</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Education &amp; Healthcare</h3>
+                <p>Schools, Colleges, Hospitals, Research and Skill Development.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group4') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b22.webp') }}')">
+                <span class="division-card-no">04</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Technology &amp; Electronics</h3>
+                <p>Software, IT Services, Smartphones and Consumer Electronics.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group5') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b23.webp') }}')">
+                <span class="division-card-no">05</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Infrastructure, Real Estate &amp; Hospitality</h3>
+                <p>Smart Cities, Construction, Hotels and Malls.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group6') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b25.webp') }}')">
+                <span class="division-card-no">06</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Industrial &amp; Manufacturing</h3>
+                <p>Automobiles, Textiles, Food Processing and Shipbuilding.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group7') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b26.webp') }}')">
+                <span class="division-card-no">07</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Automotive &amp; Mobility</h3>
+                <p>Passenger Vehicles, EV Charging Networks and Smart Mobility.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group8') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b27.webp') }}')">
+                <span class="division-card-no">08</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Transportation &amp; Logistics</h3>
+                <p>Airlines, Cargo, Travel Services and Tourism.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group9') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b28.webp') }}')">
+                <span class="division-card-no">09</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Energy, Oil &amp; Gas</h3>
+                <p>Oil Refineries, Renewable Energy and Fuel Services.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
+        </a>
+
+        <a href="{{ url_for('group10') }}" class="division-card">
+
+            <div class="division-card-media" style="background-image:url('{{ url_for('image', filename='b29.webp') }}')">
+                <span class="division-card-no">10</span>
+            </div>
+
+            <div class="division-card-body">
+                <h3>Finance, Digital Services &amp; Innovation</h3>
+                <p>Payments, Banking, Insurance, AI and Robotics.</p>
+                <span class="division-card-link">Explore Division &rarr;</span>
+            </div>
+
         </a>
 
     </div>
 
 </section>
 
-<!-- INTERACTIVE WHEEL COMPONENT -->
+<section class="business-stats">
 
-<div id="bw-root">
+    <div class="stats-grid">
 
-    <h2 class="sr-only"
-        style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">
-        KVVSH Business Divisions — Interactive Wheel
-    </h2>
-
-    <!-- LEFT WHEEL PANEL -->
-
-    <div id="bw-left">
-
-        <div class="division-title">
-            Business Divisions
+        <div class="stat-item">
+            <h3>10</h3>
+            <p>Business Divisions</p>
         </div>
 
-        <div id="bw-nav">
+        <div class="stat-item">
+            <h3>100+</h3>
+            <p>Countries</p>
+        </div>
 
-            <div class="bw-nav-item active" data-idx="0">
-                <span>01</span> Entertainment
-            </div>
+        <div class="stat-item">
+            <h3>1M+</h3>
+            <p>Employees &amp; Partners</p>
+        </div>
 
-            <div class="bw-nav-item" data-idx="1">
-                <span>02</span> Retail
-            </div>
+        <div class="stat-item">
+            <h3>2017</h3>
+            <p>Year Founded</p>
+        </div>
 
-            <div class="bw-nav-item" data-idx="2">
-                <span>03</span> Education
-            </div>
+    </div>
 
-            <div class="bw-nav-item" data-idx="3">
-                <span>04</span> Technology
-            </div>
+</section>
 
-            <div class="bw-nav-item" data-idx="4">
-                <span>05</span> Infrastructure
-            </div>
+<section class="business-approach">
 
-            <div class="bw-nav-item" data-idx="5">
-                <span>06</span> Manufacturing
-            </div>
+    <div class="section-head">
 
-            <div class="bw-nav-item" data-idx="6">
-                <span>07</span> Automotive
-            </div>
+        <span class="section-eyebrow">How We Grow</span>
 
-            <div class="bw-nav-item" data-idx="7">
-                <span>08</span> Transportation
-            </div>
+        <h2>Our Approach</h2>
 
-            <div class="bw-nav-item" data-idx="8">
-                <span>09</span> Energy
-            </div>
+        <p>
+            Every division we build is designed to create lasting value
+            for communities, partners and the world around us.
+        </p>
 
-            <div class="bw-nav-item" data-idx="9">
-                <span>10</span> Finance
-            </div>
+    </div>
+
+    <div class="approach-grid">
+
+        <div class="approach-card">
+            <span class="approach-no">01</span>
+            <h3>Diversified Growth</h3>
+            <p>
+                Building resilient businesses across ten interlinked
+                sectors that power economies and uplift communities.
+            </p>
+        </div>
+
+        <div class="approach-card">
+            <span class="approach-no">02</span>
+            <h3>Global Reach</h3>
+            <p>
+                Connecting 100+ countries through strategic operations,
+                partnerships and world-class talent.
+            </p>
+        </div>
+
+        <div class="approach-card">
+            <span class="approach-no">03</span>
+            <h3>Innovation First</h3>
+            <p>
+                Investing in technology, AI and research to shape the
+                industries of tomorrow, today.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="business-banner">
+
+    <div class="banner-inner">
+
+        <span class="hero-eyebrow">Global Footprint</span>
+
+        <h2>100+ Countries</h2>
+
+        <p>
+            Connecting industries, communities and innovation
+            around the globe.
+        </p>
+
+        <div class="banner-actions">
+
+            <a href="{{ url_for('global_presence') }}" class="btn btn-primary">
+                Explore Global Presence
+            </a>
+
+            <a href="{{ url_for('news') }}" class="btn btn-outline">
+                Latest News
+            </a>
 
         </div>
 
     </div>
 
-    <!-- RIGHT DISPLAY PANEL -->
+</section>
 
-    <div id="bw-right">
+<section class="business-timeline">
 
-        <div id="bw-slides"></div>
+    <div class="section-head">
 
-        <div id="bw-dots"></div>
+        <span class="section-eyebrow">Milestones</span>
 
-        <div id="bw-progress">
-            <div id="bw-progress-bar"></div>
-        </div>
+        <h2>Our Journey</h2>
 
     </div>
 
-</div>
+    <div class="timeline-track">
 
+        <div class="timeline-item">
+            <h3>2017</h3>
+            <span>Founded</span>
+        </div>
 
-<section class="division-grid">
+        <div class="timeline-item">
+            <h3>2020</h3>
+            <span>Expansion</span>
+        </div>
 
-<h2>
-Business Ecosystem
-</h2>
+        <div class="timeline-item">
+            <h3>2023</h3>
+            <span>Global Presence</span>
+        </div>
 
-<div class="grid-container">
+        <div class="timeline-item">
+            <h3>2026</h3>
+            <span>Industry Leadership</span>
+        </div>
 
-<a href="{{ url_for('group1') }}" class="grid-card">
-    Entertainment
-</a>
+        <div class="timeline-item">
+            <h3>2030</h3>
+            <span>Future Vision</span>
+        </div>
 
-<a href="{{ url_for('group2') }}" class="grid-card">
-    Retail
-</a>
-
-<a href="{{ url_for('group3') }}" class="grid-card">
-    Healthcare
-</a>
-
-<a href="{{ url_for('group4') }}" class="grid-card">
-    Technology
-</a>
-
-<a href="{{ url_for('group5') }}" class="grid-card">
-    Infrastructure
-</a>
-
-<a href="{{ url_for('group6') }}" class="grid-card">
-    Manufacturing
-</a>
-
-<a href="{{ url_for('group7') }}" class="grid-card">
-    Automotive
-</a>
-
-<a href="{{ url_for('group8') }}" class="grid-card">
-    Transportation
-</a>
-
-<a href="{{ url_for('group9') }}" class="grid-card">
-    Energy
-</a>
-
-<a href="{{ url_for('group10') }}" class="grid-card">
-    Finance
-</a>
-</div>
-
-</section>
-
-<section class="global-banner">
-
-<h2>
-100+ Countries
-</h2>
-
-<p>
-Connecting industries,
-communities and innovation
-around the globe.
-</p>
-
-</section>
-
-<section class="timeline">
-
-<div class="timeline-item">
-2017
-<span>Founded</span>
-</div>
-
-<div class="timeline-item">
-2020
-<span>Expansion</span>
-</div>
-
-<div class="timeline-item">
-2023
-<span>Global Presence</span>
-</div>
-
-<div class="timeline-item">
-2026
-<span>Industry Leadership</span>
-</div>
-
-<div class="timeline-item">
-2030
-<span>Future Vision</span>
-</div>
+    </div>
 
 </section>
 
 <section class="business-cta">
 
-<h2>
-Let's Build The Future Together
-</h2>
+    <div class="cta-inner">
 
-<div class="cta-buttons">
+        <span class="hero-eyebrow">Get Involved</span>
 
-<a href="{{ url_for('career') }}">
-Explore Careers
-</a>
+        <h2>Let's Build The Future Together</h2>
 
-<a href="{{ url_for('contact') }}">
-Contact Us
-</a>
+        <p>
+            Join a global family of 1M+ people building industries
+            and transforming futures.
+        </p>
 
-</div>
+        <div class="cta-buttons">
+
+            <a href="{{ url_for('career') }}" class="btn btn-primary">
+                Explore Careers
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
-
-{% endblock %}
-
-{% block extra_js %}
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-const divisions = [
-
-{
-group:"GROUP 01",
-title:"Entertainment, Media & Digital Platforms",
-desc:"TV Channels, OTT Platforms, Movie Production, Music, Animation and Gaming.",
-link:"{{ url_for('group1') }}",
-image:"{{ url_for('image', filename='b19.webp') }}"
-},
-
-{
-group:"GROUP 02",
-title:"Retail & Consumer Products",
-desc:"Supermarkets, FMCG, E-Commerce, Import & Export.",
-link:"{{ url_for('group2') }}",
-image:"{{ url_for('image', filename='b20.webp') }}"
-},
-
-{
-group:"GROUP 03",
-title:"Education & Healthcare",
-desc:"Schools, Colleges, Hospitals, Research and Skill Development.",
-link:"{{ url_for('group3') }}",
-image:"{{ url_for('image', filename='b21.webp') }}"
-},
-
-{
-group:"GROUP 04",
-title:"Technology & Electronics",
-desc:"Software, IT Services, Smartphones and Consumer Electronics.",
-link:"{{ url_for('group4') }}",
-image:"{{ url_for('image', filename='b22.webp') }}"
-},
-
-{
-group:"GROUP 05",
-title:"Infrastructure, Real Estate & Hospitality",
-desc:"Smart Cities, Construction, Hotels and Malls.",
-link:"{{ url_for('group5') }}",
-image:"{{ url_for('image', filename='b23.webp') }}"
-},
-
-{
-group:"GROUP 06",
-title:"Industrial & Manufacturing",
-desc:"Automobiles, Textiles, Food Processing and Shipbuilding.",
-link:"{{ url_for('group6') }}",
-image:"{{ url_for('image', filename='b25.webp') }}"
-},
-
-{
-group:"GROUP 07",
-title:"Automotive & Mobility",
-desc:"Passenger Vehicles, EV Charging Networks and Smart Mobility.",
-link:"{{ url_for('group7') }}",
-image:"{{ url_for('image', filename='b26.webp') }}"
-},
-
-{
-group:"GROUP 08",
-title:"Transportation & Logistics",
-desc:"Airlines, Cargo, Travel Services and Tourism.",
-link:"{{ url_for('group8') }}",
-image:"{{ url_for('image', filename='b27.webp') }}"
-},
-
-{
-group:"GROUP 09",
-title:"Energy, Oil & Gas",
-desc:"Oil Refineries, Renewable Energy and Fuel Services.",
-link:"{{ url_for('group9') }}",
-image:"{{ url_for('image', filename='b28.webp') }}"
-},
-
-{
-group:"GROUP 10",
-title:"Finance, Digital Services & Innovation",
-desc:"Payments, Banking, Insurance, AI and Robotics.",
-link:"{{ url_for('group10') }}",
-image:"{{ url_for('image', filename='b29.webp') }}"
-}
-
-];
-
-const slidesContainer = document.getElementById("bw-slides");
-const dotsContainer = document.getElementById("bw-dots");
-const progressBar = document.getElementById("bw-progress-bar");
-const navItems = document.querySelectorAll(".bw-nav-item");
-
-let current = 0;
-let progress = 0;
-
-const TOTAL = divisions.length;
-const dotEls = [];
-
-divisions.forEach((d,i)=>{
-
-const slide = document.createElement("div");
-slide.className = "bw-slide";
-
-slide.innerHTML = `
-
-<div class="bw-slide-bg"
-style="background-image:url('${d.image}');">
-</div>
-
-<div class="bw-slide-overlay"></div>
-
-<div class="bw-slide-content">
-
-<span class="gno">
-${d.group}
-</span>
-
-<h2>
-${d.title}
-</h2>
-
-<p>
-${d.desc}
-</p>
-
-<a href="${d.link}">
-Know More →
-</a>
-
-</div>
-`;
-
-slidesContainer.appendChild(slide);
-
-const dot = document.createElement("div");
-dot.className = "bw-dot";
-
-dot.addEventListener("click",()=>{
-goTo(i);
-resetProgress();
-});
-
-dotsContainer.appendChild(dot);
-dotEls.push(dot);
-
-});
-
-const slides = document.querySelectorAll(".bw-slide");
-
-function goTo(index){
-
-slides.forEach(slide =>
-slide.classList.remove("active")
-);
-
-navItems.forEach(item =>
-item.classList.remove("active")
-);
-
-dotEls.forEach(dot =>
-dot.classList.remove("active")
-);
-
-slides[index].classList.add("active");
-navItems[index].classList.add("active");
-dotEls[index].classList.add("active");
-
-current = index;
-}
-
-function resetProgress(){
-
-progress = 0;
-progressBar.style.width = "0%";
-}
-
-navItems.forEach((item,index)=>{
-
-item.addEventListener("click",()=>{
-
-goTo(index);
-resetProgress();
-
-});
-
-});
-
-goTo(0);
-
-setInterval(()=>{
-
-progress += 2.22;
-
-progressBar.style.width = progress + "%";
-
-if(progress >= 100){
-
-progress = 0;
-
-let next = (current + 1) % TOTAL;
-
-goTo(next);
-
-}
-
-},100);
-
-});
-
-</script>
 
 {% endblock %}
