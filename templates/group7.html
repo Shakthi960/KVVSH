@@ -1,36 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Automotive &amp; Mobility
+Automotive &amp; Mobility - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
+<section class="page-hero">
 
-<section class="group-hero">
+    <div class="hero-bg hero-bg-group7"></div>
 
-    <div class="hero-overlay">
+    <div class="hero-inner">
 
-        <span class="group-tag">
-            KVVSH AUTOMOTIVE
-        </span>
+        <span class="hero-eyebrow">KVVSH Automotive</span>
 
         <h1>
-            Automotive &amp; Mobility
+            Driving The Future <span>Of Mobility</span>
         </h1>
 
-        <p>
-            Driving the future of mobility through
-            innovation, sustainability and intelligent
-            transportation solutions.
+        <p class="hero-sub">
+            Driving the future of mobility through innovation,
+            sustainability and intelligent transportation solutions.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#companies" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -38,97 +47,80 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
-        <h2>6+</h2>
-        <p>Mobility Solutions</p>
-    </div>
+    <div class="stats-grid">
 
-    <div class="stat-box">
-        <h2>EV</h2>
-        <p>Future Focus</p>
-    </div>
+        <div class="stat-box">
+            <h2>6+</h2>
+            <p>Mobility Solutions</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>R&amp;D</h2>
-        <p>Innovation Driven</p>
-    </div>
+        <div class="stat-box">
+            <h2>EV</h2>
+            <p>Future Focus</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>Global</h2>
-        <p>Expansion Vision</p>
+        <div class="stat-box">
+            <h2>R&amp;D</h2>
+            <p>Innovation Driven</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>Global</h2>
+            <p>Expansion Vision</p>
+        </div>
+
     </div>
 
 </section>
 
-<section class="companies">
+<section class="group-section alt" id="companies">
 
-    <h2>Our Mobility Businesses</h2>
+    <div class="inner">
 
-    <div class="company-grid">
+        <div class="section-head">
 
-        <div class="company-card">
+            <span class="section-eyebrow">Our Mobility Businesses</span>
 
-            <h3>Galaxxy Motors</h3>
+            <h2>Mobility <span>Portfolio</span></h2>
 
             <p>
-                Passenger vehicles built for
-                performance, safety and comfort.
+                Vehicles, services and charging networks
+                built as one seamless experience.
             </p>
 
         </div>
 
-        <div class="company-card">
+        <div class="company-grid">
 
-            <h3>Galaxxy EV</h3>
+            <div class="company-card">
+                <h3>Galaxxy Motors</h3>
+                <p>Passenger vehicles built for performance, safety and comfort.</p>
+            </div>
 
-            <p>
-                Sustainable electric mobility
-                solutions for the future.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy EV</h3>
+                <p>Sustainable electric mobility solutions for the future.</p>
+            </div>
 
-        </div>
+            <div class="company-card">
+                <h3>Galaxxy VServices</h3>
+                <p>Service, maintenance and customer support network.</p>
+            </div>
 
-        <div class="company-card">
+            <div class="company-card">
+                <h3>Spare Parts Division</h3>
+                <p>Genuine automotive parts and accessories.</p>
+            </div>
 
-            <h3>Galaxxy VServices</h3>
+            <div class="company-card">
+                <h3>EV Charging Network</h3>
+                <p>Reliable charging infrastructure for electric vehicles.</p>
+            </div>
 
-            <p>
-                Service, maintenance and
-                customer support network.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Spare Parts Division</h3>
-
-            <p>
-                Genuine automotive parts
-                and accessories.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>EV Charging Network</h3>
-
-            <p>
-                Reliable charging infrastructure
-                for electric vehicles.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Automotive Research Center</h3>
-
-            <p>
-                Innovation, testing and future
-                vehicle development.
-            </p>
+            <div class="company-card">
+                <h3>Automotive Research Center</h3>
+                <p>Innovation, testing and future vehicle development.</p>
+            </div>
 
         </div>
 
@@ -136,75 +128,74 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="vehicle-section">
+<section class="group-section white">
 
-    <h2>Vehicle Portfolio</h2>
+    <div class="inner">
 
-    <div class="vehicle-grid">
+        <div class="section-head">
 
-        <div class="vehicle-card">
-            🚗
-            <h3>Passenger Cars</h3>
+            <span class="section-eyebrow">Vehicle Portfolio</span>
+
+            <h2>Vehicles For <span>Everyone</span></h2>
+
         </div>
 
-        <div class="vehicle-card">
-            ⚡
-            <h3>Electric Vehicles</h3>
-        </div>
+        <div class="icon-grid">
 
-        <div class="vehicle-card">
-            🏍️
-            <h3>Electric Bikes</h3>
-        </div>
+            <div class="icon-card">
+                🚗
+                <h3>Passenger Cars</h3>
+            </div>
 
-        <div class="vehicle-card">
-            🚲
-            <h3>E-Bicycles</h3>
+            <div class="icon-card">
+                ⚡
+                <h3>Electric Vehicles</h3>
+            </div>
+
+            <div class="icon-card">
+                🏍️
+                <h3>Electric Bikes</h3>
+            </div>
+
+            <div class="icon-card">
+                🚲
+                <h3>E-Bicycles</h3>
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<section class="innovation-section">
+<section class="group-section alt">
 
-    <h2>Mobility Innovation</h2>
+    <div class="inner">
 
-    <div class="innovation-grid">
+        <div class="section-head">
 
-        <div class="innovation-card">
+            <span class="section-eyebrow">Mobility Innovation</span>
 
-            <h3>
-                Electric Future
-            </h3>
-
-            <p>
-                Advancing zero-emission transportation.
-            </p>
+            <h2>Innovation In <span>Motion</span></h2>
 
         </div>
 
-        <div class="innovation-card">
+        <div class="feature-grid">
 
-            <h3>
-                Smart Mobility
-            </h3>
+            <div class="feature-card">
+                <h3>Electric Future</h3>
+                <p>Advancing zero-emission transportation.</p>
+            </div>
 
-            <p>
-                Connected vehicles and intelligent systems.
-            </p>
+            <div class="feature-card">
+                <h3>Smart Mobility</h3>
+                <p>Connected vehicles and intelligent systems.</p>
+            </div>
 
-        </div>
-
-        <div class="innovation-card">
-
-            <h3>
-                Safety First
-            </h3>
-
-            <p>
-                Engineering safer journeys for everyone.
-            </p>
+            <div class="feature-card">
+                <h3>Safety First</h3>
+                <p>Engineering safer journeys for everyone.</p>
+            </div>
 
         </div>
 
@@ -214,38 +205,46 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="future-vision">
 
-    <h2>Driving Tomorrow</h2>
+    <div class="inner">
 
-    <p>
+        <h2>Driving <span>Tomorrow</span></h2>
 
-        We aim to redefine mobility through
-        sustainable transportation, intelligent
-        engineering and cutting-edge automotive
-        technologies for future generations.
+        <p>
+            We aim to redefine mobility through sustainable
+            transportation, intelligent engineering and cutting-edge
+            automotive technologies for future generations.
+        </p>
 
-    </p>
+    </div>
 
 </section>
+
 <section class="group-cta">
 
+    <div class="cta-inner">
 
-<h2>
-    Driving The Future
-    Of Mobility
-</h2>
+        <span class="hero-eyebrow">Get Involved</span>
 
-<div class="cta-buttons">
+        <h2>Driving The Future Of Mobility</h2>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <p>
+            Partner with us to build the vehicles
+            and journeys of tomorrow.
+        </p>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <div class="cta-buttons">
 
-</div>
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
 
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 

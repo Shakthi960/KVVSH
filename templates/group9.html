@@ -1,36 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Energy, Oil &amp; Gas
+Energy, Oil &amp; Gas - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
+<section class="page-hero">
 
-<section class="group-hero">
+    <div class="hero-bg hero-bg-group9"></div>
 
-    <div class="hero-overlay">
+    <div class="hero-inner">
 
-        <span class="group-tag">
-            KVVSH ENERGY
-        </span>
+        <span class="hero-eyebrow">KVVSH Energy</span>
 
         <h1>
-            Energy, Oil &amp; Gas
+            Powering Industries, <span>Communities &amp; Nations</span>
         </h1>
 
-        <p>
-            Powering industries, communities
-            and economies through reliable energy,
-            advanced fuels and sustainable solutions.
+        <p class="hero-sub">
+            Powering industries, communities and economies through
+            reliable energy, advanced fuels and sustainable solutions.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#companies" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -38,123 +47,80 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
+    <div class="stats-grid">
 
-        <h2>5+</h2>
+        <div class="stat-box">
+            <h2>5+</h2>
+            <p>Energy Segments</p>
+        </div>
 
-        <p>
-            Energy Segments
-        </p>
+        <div class="stat-box">
+            <h2>24/7</h2>
+            <p>Energy Supply Vision</p>
+        </div>
 
-    </div>
+        <div class="stat-box">
+            <h2>Global</h2>
+            <p>Fuel Distribution Goals</p>
+        </div>
 
-    <div class="stat-box">
-
-        <h2>24/7</h2>
-
-        <p>
-            Energy Supply Vision
-        </p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <h2>Global</h2>
-
-        <p>
-            Fuel Distribution Goals
-        </p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <h2>Green</h2>
-
-        <p>
-            Future Energy Focus
-        </p>
+        <div class="stat-box">
+            <h2>Green</h2>
+            <p>Future Energy Focus</p>
+        </div>
 
     </div>
 
 </section>
 
-<section class="companies">
+<section class="group-section alt" id="companies">
 
-    <h2>Our Energy Businesses</h2>
+    <div class="inner">
 
-    <div class="company-grid">
+        <div class="section-head">
 
-        <div class="company-card">
+            <span class="section-eyebrow">Our Energy Businesses</span>
 
-            <h3>
-                GOF Refineries
-            </h3>
+            <h2>Energy <span>Portfolio</span></h2>
 
             <p>
-                Oil refining and fuel production.
+                From refining and retail to renewable energy,
+                one balanced and reliable energy ecosystem.
             </p>
 
         </div>
 
-        <div class="company-card">
+        <div class="company-grid">
 
-            <h3>
-                GOF Fuel Stations
-            </h3>
+            <div class="company-card">
+                <h3>GOF Refineries</h3>
+                <p>Oil refining and fuel production.</p>
+            </div>
 
-            <p>
-                Petrol and diesel retail network.
-            </p>
+            <div class="company-card">
+                <h3>GOF Fuel Stations</h3>
+                <p>Petrol and diesel retail network.</p>
+            </div>
 
-        </div>
+            <div class="company-card">
+                <h3>GOF LPG</h3>
+                <p>Domestic and commercial LPG solutions.</p>
+            </div>
 
-        <div class="company-card">
+            <div class="company-card">
+                <h3>Aviation Fuel Division</h3>
+                <p>Fueling global aviation operations.</p>
+            </div>
 
-            <h3>
-                GOF LPG
-            </h3>
+            <div class="company-card">
+                <h3>Marine Fuel Solutions</h3>
+                <p>Supporting maritime transportation.</p>
+            </div>
 
-            <p>
-                Domestic and commercial LPG solutions.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>
-                Aviation Fuel Division
-            </h3>
-
-            <p>
-                Fueling global aviation operations.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>
-                Marine Fuel Solutions
-            </h3>
-
-            <p>
-                Supporting maritime transportation.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>
-                Renewable Energy Division
-            </h3>
-
-            <p>
-                Solar, wind and tidal power projects.
-            </p>
+            <div class="company-card">
+                <h3>Renewable Energy Division</h3>
+                <p>Solar, wind and tidal power projects.</p>
+            </div>
 
         </div>
 
@@ -162,47 +128,74 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="sustainability-energy">
+<section class="group-section white">
 
-    <h2>
-        Sustainable Energy Future
-    </h2>
+    <div class="inner">
 
-    <div class="sustainability-grid">
+        <div class="section-head">
 
-        <div class="sustainability-card">
+            <span class="section-eyebrow">Sustainable Energy Future</span>
 
-            <h3>
-                Carbon Reduction
-            </h3>
-
-            <p>
-                Reducing environmental impact through cleaner technologies.
-            </p>
+            <h2>Powering A <span>Greener Tomorrow</span></h2>
 
         </div>
 
-        <div class="sustainability-card">
+        <div class="feature-grid">
 
-            <h3>
-                Renewable Investments
-            </h3>
+            <div class="feature-card">
+                <h3>Carbon Reduction</h3>
+                <p>Reducing environmental impact through cleaner technologies.</p>
+            </div>
 
-            <p>
-                Accelerating the transition to green energy.
-            </p>
+            <div class="feature-card">
+                <h3>Renewable Investments</h3>
+                <p>Accelerating the transition to green energy.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Energy Security</h3>
+                <p>Reliable supply for future generations.</p>
+            </div>
 
         </div>
 
-        <div class="sustainability-card">
+    </div>
 
-            <h3>
-                Energy Security
-            </h3>
+</section>
 
-            <p>
-                Reliable supply for future generations.
-            </p>
+<section class="group-section alt">
+
+    <div class="inner">
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">Energy Sources</span>
+
+            <h2>Balanced <span>Ecosystem</span></h2>
+
+        </div>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                🛢️
+                <h3>Oil &amp; Refining</h3>
+            </div>
+
+            <div class="icon-card">
+                ⛽
+                <h3>Fuel Retail</h3>
+            </div>
+
+            <div class="icon-card">
+                ☀️
+                <h3>Solar Power</h3>
+            </div>
+
+            <div class="icon-card">
+                🌊
+                <h3>Wind &amp; Tidal</h3>
+            </div>
 
         </div>
 
@@ -212,41 +205,46 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="future-vision">
 
-    <h2>
-        Powering Tomorrow
-    </h2>
+    <div class="inner">
 
-    <p>
+        <h2>Powering <span>Tomorrow</span></h2>
 
-        We are committed to building a balanced
-        energy ecosystem that combines traditional
-        energy strength with renewable innovation,
-        ensuring sustainable growth for generations.
+        <p>
+            We are committed to building a balanced energy ecosystem
+            that combines traditional energy strength with renewable
+            innovation, ensuring sustainable growth for generations.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
-  <section class="group-cta">
+<section class="group-cta">
 
+    <div class="cta-inner">
 
-<h2>
-    Powering Industries,
-    Communities &amp; Nations
-</h2>
+        <span class="hero-eyebrow">Get Involved</span>
 
-<div class="cta-buttons">
+        <h2>Powering Industries, Communities &amp; Nations</h2>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <p>
+            Partner with us to power the energy
+            of the future.
+        </p>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <div class="cta-buttons">
 
-</div>
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
 
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -256,7 +254,7 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <script>
 
-// Group 10 specific JavaScript
+// Group 09 specific JavaScript
 
 </script>
 

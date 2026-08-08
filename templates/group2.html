@@ -1,34 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Retail &amp; Consumer Products
+Retail &amp; Consumer Products - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<section class="group-hero">
+<section class="page-hero">
 
-    <div class="hero-overlay">
+    <div class="hero-bg hero-bg-group2"></div>
 
-        <span class="group-tag">
-            KVVSH GROUP
-        </span>
+    <div class="hero-inner">
+
+        <span class="hero-eyebrow">KVVSH Retail &amp; Consumer</span>
 
         <h1>
-            Retail &amp; Consumer Products
+            Quality Products, <span>Trusted Brands</span>
         </h1>
 
-        <p>
+        <p class="hero-sub">
             Delivering quality products, trusted brands and
             convenient shopping experiences to millions of customers.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#companies" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -36,109 +47,129 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
-        <h2>100+</h2>
-        <p>Consumer Products</p>
-    </div>
+    <div class="stats-grid">
 
-    <div class="stat-box">
-        <h2>Future</h2>
-        <p>E-Commerce Platform</p>
-    </div>
-
-    <div class="stat-box">
-        <h2>India</h2>
-        <p>Retail Expansion</p>
-    </div>
-
-    <div class="stat-box">
-        <h2>Global</h2>
-        <p>Import &amp; Export Vision</p>
-    </div>
-
-</section>
-
-<section class="companies">
-
-    <h2>Our Businesses</h2>
-
-    <div class="company-grid">
-
-        <div class="company-card">
-            <h3>Galaxxy Grocery</h3>
-            <p>
-                Everyday groceries and household essentials.
-            </p>
+        <div class="stat-box">
+            <h2>100+</h2>
+            <p>Consumer Products</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy FMCG</h3>
-            <p>
-                Food, flour, masala and consumer products.
-            </p>
+        <div class="stat-box">
+            <h2>Future</h2>
+            <p>E-Commerce Platform</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy Hypermarket</h3>
-            <p>
-                Large-scale shopping destinations.
-            </p>
+        <div class="stat-box">
+            <h2>India</h2>
+            <p>Retail Expansion</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy Buyon</h3>
-            <p>
-                Future e-commerce marketplace.
-            </p>
-        </div>
-
-        <div class="company-card">
-            <h3>Galaxxy Imports</h3>
-            <p>
-                International sourcing and distribution.
-            </p>
-        </div>
-
-        <div class="company-card">
-            <h3>Galaxxy Exports</h3>
-            <p>
-                Exporting quality Indian products worldwide.
-            </p>
+        <div class="stat-box">
+            <h2>Global</h2>
+            <p>Import &amp; Export Vision</p>
         </div>
 
     </div>
 
 </section>
 
-<section class="categories">
+<section class="group-section alt" id="companies">
 
-    <h2>Product Categories</h2>
+    <div class="inner">
 
-    <div class="category-grid">
+        <div class="section-head">
 
-        <div class="category-card">
-            Food &amp; Beverages
+            <span class="section-eyebrow">Our Businesses</span>
+
+            <h2>Retail <span>Ecosystem</span></h2>
+
+            <p>
+                A complete retail network spanning stores,
+                marketplaces and global trade.
+            </p>
+
         </div>
 
-        <div class="category-card">
-            Grocery Essentials
+        <div class="company-grid">
+
+            <div class="company-card">
+                <h3>Galaxxy Grocery</h3>
+                <p>Everyday groceries and household essentials.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy FMCG</h3>
+                <p>Food, flour, masala and consumer products.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy Hypermarket</h3>
+                <p>Large-scale shopping destinations.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy Buyon</h3>
+                <p>Future e-commerce marketplace.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy Imports</h3>
+                <p>International sourcing and distribution.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy Exports</h3>
+                <p>Exporting quality Indian products worldwide.</p>
+            </div>
+
         </div>
 
-        <div class="category-card">
-            Home Care
+    </div>
+
+</section>
+
+<section class="group-section white">
+
+    <div class="inner">
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">What We Offer</span>
+
+            <h2>Product <span>Categories</span></h2>
+
         </div>
 
-        <div class="category-card">
-            Kitchen Products
+        <div class="chip-grid">
+
+            <div class="chip-card">Food &amp; Beverages</div>
+
+            <div class="chip-card">Grocery Essentials</div>
+
+            <div class="chip-card">Home Care</div>
+
+            <div class="chip-card">Kitchen Products</div>
+
+            <div class="chip-card">Personal Care</div>
+
+            <div class="chip-card">Daily Necessities</div>
+
         </div>
 
-        <div class="category-card">
-            Personal Care
-        </div>
+    </div>
 
-        <div class="category-card">
-            Daily Necessities
-        </div>
+</section>
+
+<section class="group-banner">
+
+    <div class="banner-inner">
+
+        <h2>From Store To Doorstep</h2>
+
+        <p>
+            Combining physical retail, digital commerce and global
+            supply chains under one trusted ecosystem.
+        </p>
 
     </div>
 
@@ -146,36 +177,46 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="future-vision">
 
-    <h2>Our Retail Vision</h2>
+    <div class="inner">
 
-    <p>
+        <h2>Our Retail <span>Vision</span></h2>
 
-        To become one of India's most trusted consumer brands,
-        combining physical retail, digital commerce and global
-        supply chain excellence under a unified ecosystem.
+        <p>
+            To become one of India's most trusted consumer brands,
+            combining physical retail, digital commerce and global
+            supply chain excellence under a unified ecosystem.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
 <section class="group-cta">
 
-<h2>
-    Building The Future
-    Of Retail
-</h2>
+    <div class="cta-inner">
 
-<div class="cta-buttons">
+        <span class="hero-eyebrow">Get Involved</span>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <h2>Building The Future Of Retail</h2>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <p>
+            Partner with us to shape modern retail and consumer
+            experiences across India and beyond.
+        </p>
 
-</div>
+        <div class="cta-buttons">
+
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 

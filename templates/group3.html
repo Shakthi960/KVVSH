@@ -1,34 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Education &amp; Healthcare
+Education &amp; Healthcare - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<section class="group-hero">
+<section class="page-hero">
 
-    <div class="hero-overlay">
+    <div class="hero-bg hero-bg-group3"></div>
 
-        <span class="group-tag">
-            KVVSH GROUP
-        </span>
+    <div class="hero-inner">
+
+        <span class="hero-eyebrow">KVVSH Education &amp; Healthcare</span>
 
         <h1>
-            Education &amp; Healthcare
+            Empowering Minds, <span>Transforming Lives</span>
         </h1>
 
-        <p>
-            Empowering minds and transforming lives through
-            world-class education, healthcare and research.
+        <p class="hero-sub">
+            World-class education, healthcare and research
+            that nurture knowledge, innovation and human wellbeing.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#institutions" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -36,149 +47,160 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
-        <h2>11+</h2>
-        <p>Special Schools</p>
-    </div>
+    <div class="stats-grid">
 
-    <div class="stat-box">
-        <h2>8+</h2>
-        <p>Higher Education Institutions</p>
-    </div>
-
-    <div class="stat-box">
-        <h2>1</h2>
-        <p>Healthcare Ecosystem</p>
-    </div>
-
-    <div class="stat-box">
-        <h2>Future</h2>
-        <p>Research &amp; Innovation</p>
-    </div>
-
-</section>
-
-<section class="companies">
-
-    <h2>Our Institutions</h2>
-
-    <div class="company-grid">
-
-        <div class="company-card">
-            <h3>Galaxxy Special Schools</h3>
-            <p>
-                Inclusive education across Tamil Nadu.
-            </p>
+        <div class="stat-box">
+            <h2>11+</h2>
+            <p>Special Schools</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy Medical College</h3>
-            <p>
-                Excellence in medical education.
-            </p>
+        <div class="stat-box">
+            <h2>8+</h2>
+            <p>Higher Education Institutions</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy Engineering College</h3>
-            <p>
-                Technology and innovation driven learning.
-            </p>
+        <div class="stat-box">
+            <h2>1</h2>
+            <p>Healthcare Ecosystem</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy Arts &amp; Science College</h3>
-            <p>
-                Multi-disciplinary academic excellence.
-            </p>
-        </div>
-
-        <div class="company-card">
-            <h3>Galaxxy Polytechnic</h3>
-            <p>
-                Practical skill-focused education.
-            </p>
-        </div>
-
-        <div class="company-card">
-            <h3>Galaxxy Law College</h3>
-            <p>
-                Future legal leaders.
-            </p>
+        <div class="stat-box">
+            <h2>Future</h2>
+            <p>Research &amp; Innovation</p>
         </div>
 
     </div>
 
 </section>
 
-<section class="healthcare-system">
+<section class="group-section alt" id="institutions">
 
-    <h2>Healthcare Network</h2>
+    <div class="inner">
 
-    <div class="health-grid">
+        <div class="section-head">
 
-        <div class="health-card">
-            <h3>Galaxxy Hospitals</h3>
+            <span class="section-eyebrow">Our Institutions</span>
+
+            <h2>Centres Of <span>Learning</span></h2>
+
             <p>
-                Multi-speciality healthcare services.
+                Accessible, high-quality education from
+                school through to university.
             </p>
+
         </div>
 
-        <div class="health-card">
-            <h3>Galaxxy Clinics</h3>
-            <p>
-                Community healthcare access.
-            </p>
-        </div>
+        <div class="company-grid">
 
-        <div class="health-card">
-            <h3>Galaxxy Pharmacy</h3>
-            <p>
-                Trusted medicines and wellness.
-            </p>
-        </div>
+            <div class="company-card">
+                <h3>Galaxxy Special Schools</h3>
+                <p>Inclusive education across Tamil Nadu.</p>
+            </div>
 
-        <div class="health-card">
-            <h3>Medical Research Labs</h3>
-            <p>
-                Future healthcare innovation.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy Medical College</h3>
+                <p>Excellence in medical education.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy Engineering College</h3>
+                <p>Technology and innovation driven learning.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy Arts &amp; Science College</h3>
+                <p>Multi-disciplinary academic excellence.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy Polytechnic</h3>
+                <p>Practical skill-focused education.</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Galaxxy Law College</h3>
+                <p>Future legal leaders.</p>
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<section class="impact-section">
+<section class="group-section white">
 
-    <h2>Creating Future Leaders</h2>
+    <div class="inner">
 
-    <div class="impact-grid">
+        <div class="section-head">
 
-        <div class="impact-box">
-            <h3>Education</h3>
+            <span class="section-eyebrow">Healthcare Network</span>
 
-            <p>
-                Providing accessible, high-quality education
-                from school to university.
-            </p>
+            <h2>Care For Every <span>Community</span></h2>
+
         </div>
 
-        <div class="impact-box">
-            <h3>Healthcare</h3>
+        <div class="icon-grid">
 
-            <p>
-                Delivering compassionate and advanced
-                healthcare services.
-            </p>
+            <div class="icon-card">
+                🏥
+                <h3>Galaxxy Hospitals</h3>
+                <p>Multi-speciality healthcare services.</p>
+            </div>
+
+            <div class="icon-card">
+                🩺
+                <h3>Galaxxy Clinics</h3>
+                <p>Community healthcare access.</p>
+            </div>
+
+            <div class="icon-card">
+                💊
+                <h3>Galaxxy Pharmacy</h3>
+                <p>Trusted medicines and wellness.</p>
+            </div>
+
+            <div class="icon-card">
+                🔬
+                <h3>Medical Research Labs</h3>
+                <p>Future healthcare innovation.</p>
+            </div>
+
         </div>
 
-        <div class="impact-box">
-            <h3>Research</h3>
+    </div>
 
-            <p>
-                Building future-ready innovation and
-                scientific advancement.
-            </p>
+</section>
+
+<section class="group-section alt">
+
+    <div class="inner">
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">Our Impact</span>
+
+            <h2>Creating Future <span>Leaders</span></h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>Education</h3>
+                <p>Providing accessible, high-quality education from school to university.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Healthcare</h3>
+                <p>Delivering compassionate and advanced healthcare services.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Research</h3>
+                <p>Building future-ready innovation and scientific advancement.</p>
+            </div>
+
         </div>
 
     </div>
@@ -187,36 +209,46 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="future-vision">
 
-    <h2>Our Vision</h2>
+    <div class="inner">
 
-    <p>
+        <h2>Our <span>Vision</span></h2>
 
-        To establish one of the world's most trusted education
-        and healthcare ecosystems, nurturing knowledge,
-        innovation and human wellbeing for generations.
+        <p>
+            To establish one of the world's most trusted education
+            and healthcare ecosystems, nurturing knowledge,
+            innovation and human wellbeing for generations.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
 <section class="group-cta">
 
-<h2>
-    Transforming Lives Through
-    Education &amp; Healthcare
-</h2>
+    <div class="cta-inner">
 
-<div class="cta-buttons">
+        <span class="hero-eyebrow">Get Involved</span>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <h2>Transforming Lives Through Education &amp; Healthcare</h2>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <p>
+            Join us in building knowledge and wellbeing
+            for generations to come.
+        </p>
 
-</div>
+        <div class="cta-buttons">
+
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 

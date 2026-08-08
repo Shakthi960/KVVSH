@@ -1,35 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Transportation &amp; Logistics
+Transportation &amp; Logistics - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<section class="group-hero">
+<section class="page-hero">
 
-    <div class="hero-overlay">
+    <div class="hero-bg hero-bg-group8"></div>
 
-        <span class="group-tag">
-            KVVSH TRANSPORTATION
-        </span>
+    <div class="hero-inner">
+
+        <span class="hero-eyebrow">KVVSH Transportation</span>
 
         <h1>
-            Transportation &amp; Logistics
+            Connecting People, <span>Businesses &amp; Nations</span>
         </h1>
 
-        <p>
-            Connecting people, businesses and nations
-            through world-class transportation,
-            logistics and travel services.
+        <p class="hero-sub">
+            Connecting people, businesses and nations through
+            world-class transportation, logistics and travel services.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#companies" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -37,92 +47,80 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
-        <h2>7+</h2>
-        <p>Business Segments</p>
-    </div>
+    <div class="stats-grid">
 
-    <div class="stat-box">
-        <h2>Global</h2>
-        <p>Connectivity Vision</p>
-    </div>
+        <div class="stat-box">
+            <h2>7+</h2>
+            <p>Business Segments</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>24/7</h2>
-        <p>Logistics Operations</p>
-    </div>
+        <div class="stat-box">
+            <h2>Global</h2>
+            <p>Connectivity Vision</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>Future</h2>
-        <p>Expansion Network</p>
+        <div class="stat-box">
+            <h2>24/7</h2>
+            <p>Logistics Operations</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>Future</h2>
+            <p>Expansion Network</p>
+        </div>
+
     </div>
 
 </section>
 
-<section class="companies">
+<section class="group-section alt" id="companies">
 
-    <h2>Our Transportation Businesses</h2>
+    <div class="inner">
 
-    <div class="company-grid">
+        <div class="section-head">
 
-        <div class="company-card">
+            <span class="section-eyebrow">Our Transportation Businesses</span>
 
-            <h3>Galaxxy AirX</h3>
+            <h2>Moving The <span>World</span></h2>
 
             <p>
-                International airline services
-                connecting global destinations.
+                From air and sea to road, cargo and travel,
+                one connected mobility network.
             </p>
 
         </div>
 
-        <div class="company-card">
+        <div class="company-grid">
 
-            <h3>Galaxxy Ocean Breeze</h3>
+            <div class="company-card">
+                <h3>Galaxxy AirX</h3>
+                <p>International airline services connecting global destinations.</p>
+            </div>
 
-            <p>
-                Premium passenger cruise experiences.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy Ocean Breeze</h3>
+                <p>Premium passenger cruise experiences.</p>
+            </div>
 
-        </div>
+            <div class="company-card">
+                <h3>Galaxxy Transports</h3>
+                <p>Reliable passenger transportation services.</p>
+            </div>
 
-        <div class="company-card">
+            <div class="company-card">
+                <h3>Ocean Breeze Cargo</h3>
+                <p>Efficient global cargo and freight movement.</p>
+            </div>
 
-            <h3>Galaxxy Transports</h3>
+            <div class="company-card">
+                <h3>Galaxxy OX Breeze</h3>
+                <p>Travel and tourism services platform.</p>
+            </div>
 
-            <p>
-                Reliable passenger transportation services.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Ocean Breeze Cargo</h3>
-
-            <p>
-                Efficient global cargo and freight movement.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Galaxxy OX Breeze</h3>
-
-            <p>
-                Travel and tourism services platform.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Galaxxy NexX</h3>
-
-            <p>
-                Ticketing and booking ecosystem.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy NexX</h3>
+                <p>Ticketing and booking ecosystem.</p>
+            </div>
 
         </div>
 
@@ -130,49 +128,39 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="network-section">
+<section class="group-section white">
 
-    <h2>Global Transportation Network</h2>
+    <div class="inner">
 
-    <div class="network-grid">
+        <div class="section-head">
 
-        <div class="network-card">
+            <span class="section-eyebrow">Global Transportation Network</span>
 
-            ✈️
-
-            <h3>
-                Aviation
-            </h3>
+            <h2>Every Mode, <span>One Network</span></h2>
 
         </div>
 
-        <div class="network-card">
+        <div class="icon-grid">
 
-            🚢
+            <div class="icon-card">
+                ✈️
+                <h3>Aviation</h3>
+            </div>
 
-            <h3>
-                Cruise Services
-            </h3>
+            <div class="icon-card">
+                🚢
+                <h3>Cruise Services</h3>
+            </div>
 
-        </div>
+            <div class="icon-card">
+                🚚
+                <h3>Cargo Logistics</h3>
+            </div>
 
-        <div class="network-card">
-
-            🚚
-
-            <h3>
-                Cargo Logistics
-            </h3>
-
-        </div>
-
-        <div class="network-card">
-
-            🚌
-
-            <h3>
-                Passenger Transport
-            </h3>
+            <div class="icon-card">
+                🚌
+                <h3>Passenger Transport</h3>
+            </div>
 
         </div>
 
@@ -180,45 +168,34 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="logistics-section">
+<section class="group-section alt">
 
-    <h2>Logistics Excellence</h2>
+    <div class="inner">
 
-    <div class="logistics-grid">
+        <div class="section-head">
 
-        <div class="logistics-card">
+            <span class="section-eyebrow">Logistics Excellence</span>
 
-            <h3>
-                Global Reach
-            </h3>
-
-            <p>
-                Connecting markets across continents.
-            </p>
+            <h2>Built For <span>Reliability</span></h2>
 
         </div>
 
-        <div class="logistics-card">
+        <div class="feature-grid">
 
-            <h3>
-                Fast Delivery
-            </h3>
+            <div class="feature-card">
+                <h3>Global Reach</h3>
+                <p>Connecting markets across continents.</p>
+            </div>
 
-            <p>
-                Optimized transportation and supply chains.
-            </p>
+            <div class="feature-card">
+                <h3>Fast Delivery</h3>
+                <p>Optimized transportation and supply chains.</p>
+            </div>
 
-        </div>
-
-        <div class="logistics-card">
-
-            <h3>
-                Smart Tracking
-            </h3>
-
-            <p>
-                Real-time shipment visibility and control.
-            </p>
+            <div class="feature-card">
+                <h3>Smart Tracking</h3>
+                <p>Real-time shipment visibility and control.</p>
+            </div>
 
         </div>
 
@@ -226,54 +203,63 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="travel-section">
+<section class="group-banner">
 
-    <h2>Travel Beyond Boundaries</h2>
+    <div class="banner-inner">
 
-    <p>
+        <h2>Travel Beyond Boundaries</h2>
 
-        From air travel and cruises to tourism and
-        ticketing solutions, we create seamless
-        journeys that connect people with destinations.
+        <p>
+            From air travel and cruises to tourism and ticketing,
+            we create seamless journeys that connect people with destinations.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
 <section class="future-vision">
 
-    <h2>Connecting The World</h2>
+    <div class="inner">
 
-    <p>
+        <h2>Connecting The <span>World</span></h2>
 
-        Our vision is to become a trusted global
-        transportation and logistics ecosystem,
-        enabling movement, commerce and tourism
-        without boundaries.
+        <p>
+            Our vision is to become a trusted global transportation
+            and logistics ecosystem, enabling movement, commerce and
+            tourism without boundaries.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
- <section class="group-cta">
+<section class="group-cta">
 
+    <div class="cta-inner">
 
-<h2>
-    Connecting The World
-    Through Transportation
-</h2>
+        <span class="hero-eyebrow">Get Involved</span>
 
-<div class="cta-buttons">
+        <h2>Connecting The World Through Transportation</h2>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <p>
+            Partner with us to power seamless
+            journeys across the globe.
+        </p>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <div class="cta-buttons">
 
-</div>
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 

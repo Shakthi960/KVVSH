@@ -1,35 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Technology &amp; Electronics
+Technology &amp; Electronics - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<section class="group-hero">
+<section class="page-hero">
 
-    <div class="hero-overlay">
+    <div class="hero-bg hero-bg-group4"></div>
 
-        <span class="group-tag">
-            KVVSH TECHNOLOGY
-        </span>
+    <div class="hero-inner">
+
+        <span class="hero-eyebrow">KVVSH Technology</span>
 
         <h1>
-            Technology &amp; Electronics
+            Intelligent Technology, <span>Connected Ecosystems</span>
         </h1>
 
-        <p>
-            Creating intelligent technologies,
-            connected ecosystems and next-generation
-            digital experiences for the future.
+        <p class="hero-sub">
+            Creating intelligent technologies, connected ecosystems
+            and next-generation digital experiences for the future.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#brands" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -37,96 +47,80 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
-        <h2>1</h2>
-        <p>Mobile Brand</p>
-    </div>
+    <div class="stats-grid">
 
-    <div class="stat-box">
-        <h2>1</h2>
-        <p>Operating System</p>
-    </div>
+        <div class="stat-box">
+            <h2>1</h2>
+            <p>Mobile Brand</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>5+</h2>
-        <p>Electronic Categories</p>
-    </div>
+        <div class="stat-box">
+            <h2>1</h2>
+            <p>Operating System</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>Future</h2>
-        <p>Global Expansion</p>
+        <div class="stat-box">
+            <h2>5+</h2>
+            <p>Electronic Categories</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>Future</h2>
+            <p>Global Expansion</p>
+        </div>
+
     </div>
 
 </section>
 
-<section class="companies">
+<section class="group-section alt" id="brands">
 
-    <h2>Technology Brands</h2>
+    <div class="inner">
 
-    <div class="company-grid">
+        <div class="section-head">
 
-        <div class="company-card">
+            <span class="section-eyebrow">Technology Brands</span>
 
-            <h3>QuantumX Mobiles</h3>
+            <h2>OCEAN <span>Ecosystem</span></h2>
 
             <p>
-                Next generation smartphones
-                designed for everyone.
+                Smartphones, operating systems, audio and wearables
+                built as one connected experience.
             </p>
 
         </div>
 
-        <div class="company-card">
+        <div class="company-grid">
 
-            <h3>OceanUI</h3>
+            <div class="company-card">
+                <h3>OCEAN Mobiles</h3>
+                <p>Next generation smartphones designed for everyone.</p>
+            </div>
 
-            <p>
-                A modern operating system
-                built for the QuantumX ecosystem.
-            </p>
+            <div class="company-card">
+                <h3>OceanUI</h3>
+                <p>A modern operating system built for the OCEAN ecosystem.</p>
+            </div>
 
-        </div>
+            <div class="company-card">
+                <h3>OCEAN Audio</h3>
+                <p>TWS, headphones and smart audio experiences.</p>
+            </div>
 
-        <div class="company-card">
+            <div class="company-card">
+                <h3>OCEAN Wearables</h3>
+                <p>Smart watches and connected devices.</p>
+            </div>
 
-            <h3>QuantumX Audio</h3>
+            <div class="company-card">
+                <h3>Galaxxy Tech Solutions</h3>
+                <p>Software development and enterprise solutions.</p>
+            </div>
 
-            <p>
-                TWS, headphones and smart
-                audio experiences.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>QuantumX Wearables</h3>
-
-            <p>
-                Smart watches and connected devices.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Galaxxy Tech Solutions</h3>
-
-            <p>
-                Software development and
-                enterprise solutions.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Future AI Division</h3>
-
-            <p>
-                Artificial intelligence and
-                emerging technologies.
-            </p>
+            <div class="company-card">
+                <h3>Future AI Division</h3>
+                <p>Artificial intelligence and emerging technologies.</p>
+            </div>
 
         </div>
 
@@ -134,65 +128,91 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="ecosystem-section">
+<section class="group-section white">
 
-    <h2>Connected Ecosystem</h2>
+    <div class="inner">
 
-    <div class="ecosystem-grid">
+        <div class="section-head">
 
-        <div class="eco-card">
-            📱
-            <h3>Smartphones</h3>
+            <span class="section-eyebrow">Connected Ecosystem</span>
+
+            <h2>One Ecosystem, <span>Every Device</span></h2>
+
         </div>
 
-        <div class="eco-card">
-            🎧
-            <h3>Audio</h3>
-        </div>
+        <div class="icon-grid">
 
-        <div class="eco-card">
-            ⌚
-            <h3>Wearables</h3>
-        </div>
+            <div class="icon-card">
+                📱
+                <h3>Smartphones</h3>
+                <p>OCEAN phones for everyone.</p>
+            </div>
 
-        <div class="eco-card">
-            💻
-            <h3>Software</h3>
-        </div>
+            <div class="icon-card">
+                🎧
+                <h3>Audio</h3>
+                <p>Immersive sound experiences.</p>
+            </div>
 
-        <div class="eco-card">
-            ☁️
-            <h3>Cloud</h3>
-        </div>
+            <div class="icon-card">
+                ⌚
+                <h3>Wearables</h3>
+                <p>Connected, always on.</p>
+            </div>
 
-        <div class="eco-card">
-            🤖
-            <h3>Artificial Intelligence</h3>
+            <div class="icon-card">
+                💻
+                <h3>Software</h3>
+                <p>Intelligent applications.</p>
+            </div>
+
+            <div class="icon-card">
+                ☁️
+                <h3>Cloud</h3>
+                <p>Secure digital services.</p>
+            </div>
+
+            <div class="icon-card">
+                🤖
+                <h3>Artificial Intelligence</h3>
+                <p>Smart, adaptive technology.</p>
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<section class="innovation-section">
+<section class="group-section alt">
 
-    <h2>Innovation Roadmap</h2>
+    <div class="inner">
 
-    <div class="timeline">
+        <div class="section-head">
 
-        <div class="timeline-item">
-            <h3>QuantumX Smartphones</h3>
-            <p>Affordable innovation for everyone.</p>
+            <span class="section-eyebrow">Innovation Roadmap</span>
+
+            <h2>Building The <span>Future</span></h2>
+
         </div>
 
-        <div class="timeline-item">
-            <h3>OceanUI Platform</h3>
-            <p>Building a unique software ecosystem.</p>
-        </div>
+        <div class="roadmap">
 
-        <div class="timeline-item">
-            <h3>AI &amp; Future Computing</h3>
-            <p>Research into tomorrow's technologies.</p>
+            <div class="roadmap-item">
+                <h3>OCEAN Smartphones</h3>
+                <p>Affordable innovation for everyone.</p>
+            </div>
+
+            <div class="roadmap-item">
+                <h3>OceanUI Platform</h3>
+                <p>Building a unique software ecosystem.</p>
+            </div>
+
+            <div class="roadmap-item">
+                <h3>AI &amp; Future Computing</h3>
+                <p>Research into tomorrow's technologies.</p>
+            </div>
+
         </div>
 
     </div>
@@ -201,37 +221,46 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="future-vision">
 
-    <h2>Technology For Billions</h2>
+    <div class="inner">
 
-    <p>
+        <h2>Technology For <span>Billions</span></h2>
 
-        Our mission is to build accessible,
-        intelligent and sustainable technologies
-        that empower individuals, businesses
-        and communities worldwide.
+        <p>
+            Our mission is to build accessible, intelligent and
+            sustainable technologies that empower individuals,
+            businesses and communities worldwide.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
 <section class="group-cta">
 
-<h2>
-    Building The Future
-    Through Technology
-</h2>
+    <div class="cta-inner">
 
-<div class="cta-buttons">
+        <span class="hero-eyebrow">Get Involved</span>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <h2>Building The Future Through Technology</h2>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <p>
+            Partner with KVVSH to create technology that
+            empowers people everywhere.
+        </p>
 
-</div>
+        <div class="cta-buttons">
+
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 

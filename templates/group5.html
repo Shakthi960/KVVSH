@@ -1,36 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Infrastructure, Real Estate &amp; Hospitality
+Infrastructure, Real Estate &amp; Hospitality - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
+<section class="page-hero">
 
-<section class="group-hero">
+    <div class="hero-bg hero-bg-group5"></div>
 
-    <div class="hero-overlay">
+    <div class="hero-inner">
 
-        <span class="group-tag">
-            KVVSH INFRASTRUCTURE
-        </span>
+        <span class="hero-eyebrow">KVVSH Infrastructure</span>
 
         <h1>
-            Infrastructure, Real Estate &amp; Hospitality
+            Building Iconic <span>Destinations</span>
         </h1>
 
-        <p>
-            Building iconic destinations,
-            smart cities and unforgettable
-            experiences for generations.
+        <p class="hero-sub">
+            Building iconic destinations, smart cities and
+            unforgettable experiences for generations.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#companies" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -38,114 +47,80 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
-        <h2>7+</h2>
-        <p>Amusement Parks</p>
-    </div>
+    <div class="stats-grid">
 
-    <div class="stat-box">
-        <h2>6+</h2>
-        <p>Major Arenas</p>
-    </div>
-
-    <div class="stat-box">
-        <h2>Global</h2>
-        <p>Hotel Vision</p>
-    </div>
-
-    <div class="stat-box">
-        <h2>Future</h2>
-        <p>Smart Cities</p>
-    </div>
-
-</section>
-
-<section class="companies">
-
-    <h2>Our Businesses</h2>
-
-    <div class="company-grid">
-
-        <div class="company-card">
-            <h3>Galaxxy Constructions</h3>
-            <p>
-                Residential and commercial projects.
-            </p>
+        <div class="stat-box">
+            <h2>7+</h2>
+            <p>Amusement Parks</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy IT World</h3>
-            <p>
-                Future-ready technology parks.
-            </p>
+        <div class="stat-box">
+            <h2>6+</h2>
+            <p>Major Arenas</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy Malls</h3>
-            <p>
-                World-class shopping destinations.
-            </p>
+        <div class="stat-box">
+            <h2>Global</h2>
+            <p>Hotel Vision</p>
         </div>
 
-        <div class="company-card">
-            <h3>Galaxxy Amusement Parks</h3>
-            <p>
-                Entertainment for all generations.
-            </p>
-        </div>
-
-        <div class="company-card">
-            <h3>Galaxxy Arenas</h3>
-            <p>
-                Sports and entertainment venues.
-            </p>
-        </div>
-
-        <div class="company-card">
-            <h3>Galaxxy Hotels &amp; Resorts</h3>
-            <p>
-                Luxury hospitality experiences.
-            </p>
+        <div class="stat-box">
+            <h2>Future</h2>
+            <p>Smart Cities</p>
         </div>
 
     </div>
 
 </section>
 
-<section class="projects-section">
+<section class="group-section alt" id="companies">
 
-    <h2>Signature Projects</h2>
+    <div class="inner">
 
-    <div class="projects-grid">
+        <div class="section-head">
 
-        <div class="project-card">
+            <span class="section-eyebrow">Our Businesses</span>
 
-            <h3>Galaxxy Smart City</h3>
+            <h2>Built To <span>Inspire</span></h2>
 
             <p>
-                Sustainable urban development
-                integrating technology and lifestyle.
+                Landmark developments, infrastructure and hospitality
+                that elevate communities.
             </p>
 
         </div>
 
-        <div class="project-card">
+        <div class="company-grid">
 
-            <h3>Galaxxy International Cricket Stadium</h3>
+            <div class="company-card">
+                <h3>Galaxxy Constructions</h3>
+                <p>Residential and commercial projects.</p>
+            </div>
 
-            <p>
-                One of the largest planned sporting venues.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy IT World</h3>
+                <p>Future-ready technology parks.</p>
+            </div>
 
-        </div>
+            <div class="company-card">
+                <h3>Galaxxy Malls</h3>
+                <p>World-class shopping destinations.</p>
+            </div>
 
-        <div class="project-card">
+            <div class="company-card">
+                <h3>Galaxxy Amusement Parks</h3>
+                <p>Entertainment for all generations.</p>
+            </div>
 
-            <h3>Galaxxy IT World</h3>
+            <div class="company-card">
+                <h3>Galaxxy Arenas</h3>
+                <p>Sports and entertainment venues.</p>
+            </div>
 
-            <p>
-                Innovation-driven business ecosystem.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy Hotels &amp; Resorts</h3>
+                <p>Luxury hospitality experiences.</p>
+            </div>
 
         </div>
 
@@ -153,49 +128,74 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="experience-section">
+<section class="group-section white">
 
-    <h2>Creating Destinations</h2>
+    <div class="inner">
 
-    <div class="experience-grid">
+        <div class="section-head">
 
-        <div class="experience-card">
+            <span class="section-eyebrow">Signature Projects</span>
 
-            🏙️
-
-            <h3>
-                Smart Cities
-            </h3>
+            <h2>Creating <span>Destinations</span></h2>
 
         </div>
 
-        <div class="experience-card">
+        <div class="feature-grid">
 
-            🏨
+            <div class="feature-card">
+                <h3>Galaxxy Smart City</h3>
+                <p>Sustainable urban development integrating technology and lifestyle.</p>
+            </div>
 
-            <h3>
-                Hotels &amp; Resorts
-            </h3>
+            <div class="feature-card">
+                <h3>Galaxxy International Cricket Stadium</h3>
+                <p>One of the largest planned sporting venues.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Galaxxy IT World</h3>
+                <p>Innovation-driven business ecosystem.</p>
+            </div>
 
         </div>
 
-        <div class="experience-card">
+    </div>
 
-            🎢
+</section>
 
-            <h3>
-                Theme Parks
-            </h3>
+<section class="group-section alt">
+
+    <div class="inner">
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">Destinations</span>
+
+            <h2>Experiences For <span>Generations</span></h2>
 
         </div>
 
-        <div class="experience-card">
+        <div class="icon-grid">
 
-            🏟️
+            <div class="icon-card">
+                🏙️
+                <h3>Smart Cities</h3>
+            </div>
 
-            <h3>
-                Stadiums &amp; Arenas
-            </h3>
+            <div class="icon-card">
+                🏨
+                <h3>Hotels &amp; Resorts</h3>
+            </div>
+
+            <div class="icon-card">
+                🎢
+                <h3>Theme Parks</h3>
+            </div>
+
+            <div class="icon-card">
+                🏟️
+                <h3>Stadiums &amp; Arenas</h3>
+            </div>
 
         </div>
 
@@ -205,37 +205,45 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="future-vision">
 
-    <h2>Building The Future</h2>
+    <div class="inner">
 
-    <p>
+        <h2>Building The <span>Future</span></h2>
 
-        We envision creating landmark developments,
-        world-class infrastructure and hospitality
-        experiences that elevate communities and
-        inspire future generations.
+        <p>
+            We envision creating landmark developments, world-class
+            infrastructure and hospitality experiences that elevate
+            communities and inspire future generations.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
-  <section class="group-cta">
+<section class="group-cta">
 
-<h2>
-    Creating Landmarks,
-    Destinations &amp; Experiences
-</h2>
+    <div class="cta-inner">
 
-<div class="cta-buttons">
+        <span class="hero-eyebrow">Get Involved</span>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <h2>Creating Landmarks, Destinations &amp; Experiences</h2>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <p>
+            Partner with us to build the icons of tomorrow.
+        </p>
 
-</div>
+        <div class="cta-buttons">
+
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 

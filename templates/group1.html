@@ -1,34 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Entertainment, Media &amp; Digital Platforms
+Entertainment, Media &amp; Digital Platforms - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<section class="group-hero">
+<section class="page-hero">
 
-    <div class="hero-overlay">
+    <div class="hero-bg hero-bg-group1"></div>
 
-        <span class="group-tag">
-            KVVSH GROUP
-        </span>
+    <div class="hero-inner">
+
+        <span class="hero-eyebrow">KVVSH Entertainment &amp; Media</span>
 
         <h1>
-            Entertainment, Media &amp; Digital Platforms
+            Entertainment Without <span>Boundaries</span>
         </h1>
 
-        <p>
+        <p class="hero-sub">
             Creating stories, experiences and digital ecosystems
             that inspire millions across the world.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#companies" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -36,105 +47,124 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
-        <h2>50+</h2>
-        <p>TV Channels</p>
-    </div>
+    <div class="stats-grid">
 
-    <div class="stat-box">
-        <h2>1</h2>
-        <p>OTT Platform</p>
-    </div>
+        <div class="stat-box">
+            <h2>50+</h2>
+            <p>TV Channels</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>5+</h2>
-        <p>Media Brands</p>
-    </div>
+        <div class="stat-box">
+            <h2>1</h2>
+            <p>OTT Platform</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>Global</h2>
-        <p>Audience Reach</p>
+        <div class="stat-box">
+            <h2>5+</h2>
+            <p>Media Brands</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>Global</h2>
+            <p>Audience Reach</p>
+        </div>
+
     </div>
 
 </section>
 
-<section class="companies">
+<section class="group-section alt" id="companies">
 
-    <h2>
-        Our Companies
-    </h2>
+    <div class="inner">
 
-    <div class="company-grid">
+        <div class="section-head">
 
-        <div class="company-card">
+            <span class="section-eyebrow">Our Companies</span>
 
-            <h3>
-                Galaxxy TV
-            </h3>
+            <h2>Media <span>Portfolio</span></h2>
 
             <p>
-                Television broadcasting network.
+                From broadcasting and streaming to production and
+                animation, our brands bring stories to life everywhere.
             </p>
 
         </div>
 
-        <div class="company-card">
+        <div class="company-grid">
 
-            <h3>
-                Galaxxy ALOHA
-            </h3>
+            <div class="company-card">
+                <h3>Galaxxy TV</h3>
+                <p>Television broadcasting network.</p>
+            </div>
 
-            <p>
-                Premium OTT streaming platform.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy ALOHA</h3>
+                <p>Premium OTT streaming platform.</p>
+            </div>
 
-        </div>
+            <div class="company-card">
+                <h3>Galaxxy Entertainment</h3>
+                <p>Movie production and distribution.</p>
+            </div>
 
-        <div class="company-card">
+            <div class="company-card">
+                <h3>Galaxxy Music</h3>
+                <p>Audio production and streaming.</p>
+            </div>
 
-            <h3>
-                Galaxxy Entertainment
-            </h3>
+            <div class="company-card">
+                <h3>Galaxxy.edits</h3>
+                <p>Animation and VFX studio.</p>
+            </div>
 
-            <p>
-                Movie production and distribution.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>
-                Galaxxy Music
-            </h3>
-
-            <p>
-                Audio production and streaming.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy Filmspace</h3>
+                <p>Film city and studio ecosystem.</p>
+            </div>
 
         </div>
 
-        <div class="company-card">
+    </div>
 
-            <h3>
-                Galaxxy.edits
-            </h3>
+</section>
 
-            <p>
-                Animation and VFX studio.
-            </p>
+<section class="group-section white">
+
+    <div class="inner">
+
+        <div class="section-head">
+
+            <span class="section-eyebrow">What We Do</span>
+
+            <h2>One Ecosystem, <span>Every Screen</span></h2>
 
         </div>
 
-        <div class="company-card">
+        <div class="icon-grid">
 
-            <h3>
-                Galaxxy Filmspace
-            </h3>
+            <div class="icon-card">
+                📺
+                <h3>Television</h3>
+                <p>Channels reaching global audiences.</p>
+            </div>
 
-            <p>
-                Film city and studio ecosystem.
-            </p>
+            <div class="icon-card">
+                🎬
+                <h3>Film Production</h3>
+                <p>Cinematic stories for the world.</p>
+            </div>
+
+            <div class="icon-card">
+                🎧
+                <h3>Music</h3>
+                <p>Audio production and streaming.</p>
+            </div>
+
+            <div class="icon-card">
+                🎮
+                <h3>Gaming &amp; Animation</h3>
+                <p>Interactive and animated content.</p>
+            </div>
 
         </div>
 
@@ -144,33 +174,59 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-banner">
 
-    <h2>
-        Entertainment Without Boundaries
-    </h2>
+    <div class="banner-inner">
 
-    <p>
-        Delivering content, creativity
-        and innovation across platforms.
-    </p>
+        <h2>Entertainment Without Boundaries</h2>
+
+        <p>
+            Delivering content, creativity and innovation
+            across platforms and around the world.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="future-vision">
+
+    <div class="inner">
+
+        <h2>Content That <span>Inspires</span></h2>
+
+        <p>
+            We believe great stories shape culture and connect people.
+            Our mission is to create meaningful entertainment that
+            inspires millions across every platform, language and generation.
+        </p>
+
+    </div>
 
 </section>
 
 <section class="group-cta">
 
-    <h2>
-        Explore The Future
-        Of Entertainment
-    </h2>
+    <div class="cta-inner">
 
-    <div class="cta-buttons">
+        <span class="hero-eyebrow">Get Involved</span>
 
-        <a href="{{ url_for('business') }}">
-            Back To Businesses
-        </a>
+        <h2>Explore The Future Of Entertainment</h2>
 
-        <a href="{{ url_for('contact') }}">
-            Contact Us
-        </a>
+        <p>
+            Partner with KVVSH to build the next era of media
+            and digital experiences.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
 
     </div>
 
@@ -182,7 +238,7 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <script>
 
-// Add group specific JS here later
+// Group 01 specific JavaScript
 
 </script>
 

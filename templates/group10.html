@@ -1,35 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Finance, Digital Services &amp; Innovation
+Finance, Digital Services &amp; Innovation - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
-<section class="group-hero">
+<section class="page-hero">
 
-    <div class="hero-overlay">
+    <div class="hero-bg hero-bg-group10"></div>
 
-        <span class="group-tag">
-            KVVSH INNOVATION
-        </span>
+    <div class="hero-inner">
+
+        <span class="hero-eyebrow">KVVSH Innovation</span>
 
         <h1>
-            Finance, Digital Services &amp; Innovation
+            Finance, AI &amp; <span>Digital Innovation</span>
         </h1>
 
-        <p>
-            Building the future of banking,
-            artificial intelligence, digital payments
-            and next-generation innovation.
+        <p class="hero-sub">
+            Building the future of banking, artificial intelligence,
+            digital payments and next-generation innovation.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#companies" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -37,123 +47,80 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
+    <div class="stats-grid">
 
-        <h2>5+</h2>
+        <div class="stat-box">
+            <h2>5+</h2>
+            <p>Financial Services</p>
+        </div>
 
-        <p>
-            Financial Services
-        </p>
+        <div class="stat-box">
+            <h2>AI</h2>
+            <p>Research &amp; Innovation</p>
+        </div>
 
-    </div>
+        <div class="stat-box">
+            <h2>Future</h2>
+            <p>Digital Ecosystem</p>
+        </div>
 
-    <div class="stat-box">
-
-        <h2>AI</h2>
-
-        <p>
-            Research &amp; Innovation
-        </p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <h2>Future</h2>
-
-        <p>
-            Digital Ecosystem
-        </p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <h2>Global</h2>
-
-        <p>
-            Innovation Vision
-        </p>
+        <div class="stat-box">
+            <h2>Global</h2>
+            <p>Innovation Vision</p>
+        </div>
 
     </div>
 
 </section>
 
-<section class="companies">
+<section class="group-section alt" id="companies">
 
-    <h2>Our Businesses</h2>
+    <div class="inner">
 
-    <div class="company-grid">
+        <div class="section-head">
 
-        <div class="company-card">
+            <span class="section-eyebrow">Our Businesses</span>
 
-            <h3>
-                Galaxxy XPay
-            </h3>
+            <h2>Digital <span>Finance</span></h2>
 
             <p>
-                Digital payments and UPI ecosystem.
+                Payments, banking, insurance and lending,
+                powered by artificial intelligence.
             </p>
 
         </div>
 
-        <div class="company-card">
+        <div class="company-grid">
 
-            <h3>
-                Galaxxy Bank
-            </h3>
+            <div class="company-card">
+                <h3>Galaxxy XPay</h3>
+                <p>Digital payments and UPI ecosystem.</p>
+            </div>
 
-            <p>
-                Modern banking and financial solutions.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy Bank</h3>
+                <p>Modern banking and financial solutions.</p>
+            </div>
 
-        </div>
+            <div class="company-card">
+                <h3>Insurance Division</h3>
+                <p>Health, life and asset protection.</p>
+            </div>
 
-        <div class="company-card">
+            <div class="company-card">
+                <h3>Lending Services</h3>
+                <p>Personal, business and corporate loans.</p>
+            </div>
 
-            <h3>
-                Insurance Division
-            </h3>
+            <div class="company-card">
+                <h3>Galaxxy Tech Labs</h3>
+                <p>AI research and advanced technologies.</p>
+            </div>
 
-            <p>
-                Health, life and asset protection.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>
-                Lending Services
-            </h3>
-
-            <p>
-                Personal, business and corporate loans.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>
-                Galaxxy Tech Labs
-            </h3>
-
-            <p>
-                AI research and advanced technologies.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>
-                Robotics Division
-            </h3>
-
-            <p>
-                Automation and intelligent systems.
-            </p>
+            <div class="company-card">
+                <h3>Robotics Division</h3>
+                <p>Automation and intelligent systems.</p>
+            </div>
 
         </div>
 
@@ -161,49 +128,39 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="innovation-ecosystem">
+<section class="group-section white">
 
-    <h2>Innovation Ecosystem</h2>
+    <div class="inner">
 
-    <div class="innovation-grid">
+        <div class="section-head">
 
-        <div class="innovation-card">
+            <span class="section-eyebrow">Innovation Ecosystem</span>
 
-            🤖
-
-            <h3>
-                Artificial Intelligence
-            </h3>
+            <h2>Innovation In <span>Focus</span></h2>
 
         </div>
 
-        <div class="innovation-card">
+        <div class="icon-grid">
 
-            🧠
+            <div class="icon-card">
+                🤖
+                <h3>Artificial Intelligence</h3>
+            </div>
 
-            <h3>
-                Machine Learning
-            </h3>
+            <div class="icon-card">
+                🧠
+                <h3>Machine Learning</h3>
+            </div>
 
-        </div>
+            <div class="icon-card">
+                ⚙️
+                <h3>Robotics</h3>
+            </div>
 
-        <div class="innovation-card">
-
-            ⚙️
-
-            <h3>
-                Robotics
-            </h3>
-
-        </div>
-
-        <div class="innovation-card">
-
-            ☁️
-
-            <h3>
-                Cloud Technology
-            </h3>
+            <div class="icon-card">
+                ☁️
+                <h3>Cloud Technology</h3>
+            </div>
 
         </div>
 
@@ -211,65 +168,43 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="finance-section">
+<section class="group-section alt">
 
-    <h2>Digital Financial Ecosystem</h2>
+    <div class="inner">
 
-    <div class="finance-grid">
+        <div class="section-head">
 
-        <div class="finance-card">
+            <span class="section-eyebrow">Digital Financial Ecosystem</span>
 
-            💳
-
-            <h3>
-                Payments
-            </h3>
-
-            <p>
-                Secure digital transactions.
-            </p>
+            <h2>Financial <span>Services</span></h2>
 
         </div>
 
-        <div class="finance-card">
+        <div class="icon-grid">
 
-            🏦
+            <div class="icon-card">
+                💳
+                <h3>Payments</h3>
+                <p>Secure digital transactions.</p>
+            </div>
 
-            <h3>
-                Banking
-            </h3>
+            <div class="icon-card">
+                🏦
+                <h3>Banking</h3>
+                <p>Smart banking solutions.</p>
+            </div>
 
-            <p>
-                Smart banking solutions.
-            </p>
+            <div class="icon-card">
+                🛡️
+                <h3>Insurance</h3>
+                <p>Financial protection services.</p>
+            </div>
 
-        </div>
-
-        <div class="finance-card">
-
-            🛡️
-
-            <h3>
-                Insurance
-            </h3>
-
-            <p>
-                Financial protection services.
-            </p>
-
-        </div>
-
-        <div class="finance-card">
-
-            📈
-
-            <h3>
-                Investments
-            </h3>
-
-            <p>
-                Future wealth creation.
-            </p>
+            <div class="icon-card">
+                📈
+                <h3>Investments</h3>
+                <p>Future wealth creation.</p>
+            </div>
 
         </div>
 
@@ -277,45 +212,34 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="future-tech">
+<section class="group-section white">
 
-    <h2>Future Technologies</h2>
+    <div class="inner">
 
-    <div class="future-grid">
+        <div class="section-head">
 
-        <div class="future-card">
+            <span class="section-eyebrow">Future Technologies</span>
 
-            <h3>
-                AGI Research
-            </h3>
-
-            <p>
-                Exploring next-generation intelligence.
-            </p>
+            <h2>Technologies Of <span>Tomorrow</span></h2>
 
         </div>
 
-        <div class="future-card">
+        <div class="feature-grid">
 
-            <h3>
-                Smart Automation
-            </h3>
+            <div class="feature-card">
+                <h3>AGI Research</h3>
+                <p>Exploring next-generation intelligence.</p>
+            </div>
 
-            <p>
-                Intelligent business systems.
-            </p>
+            <div class="feature-card">
+                <h3>Smart Automation</h3>
+                <p>Intelligent business systems.</p>
+            </div>
 
-        </div>
-
-        <div class="future-card">
-
-            <h3>
-                Digital Innovation
-            </h3>
-
-            <p>
-                Building technologies for tomorrow.
-            </p>
+            <div class="feature-card">
+                <h3>Digital Innovation</h3>
+                <p>Building technologies for tomorrow.</p>
+            </div>
 
         </div>
 
@@ -325,42 +249,46 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="future-vision">
 
-    <h2>
-        Inventing Tomorrow
-    </h2>
+    <div class="inner">
 
-    <p>
+        <h2>Inventing <span>Tomorrow</span></h2>
 
-        Our mission is to build a world-class
-        innovation ecosystem that combines finance,
-        artificial intelligence and advanced
-        technologies to transform how people live,
-        work and interact.
+        <p>
+            Our mission is to build a world-class innovation ecosystem
+            that combines finance, artificial intelligence and advanced
+            technologies to transform how people live, work and interact.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
-   <section class="group-cta">
+<section class="group-cta">
 
+    <div class="cta-inner">
 
-<h2>
-    Building the Future of Finance,
-    AI &amp; Digital Innovation
-</h2>
+        <span class="hero-eyebrow">Get Involved</span>
 
-<div class="cta-buttons">
+        <h2>Building The Future Of Finance, AI &amp; Digital Innovation</h2>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <p>
+            Partner with us to invent the digital
+            experiences of tomorrow.
+        </p>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <div class="cta-buttons">
 
-</div>
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
 
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -370,7 +298,7 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <script>
 
-// Group 11 specific JavaScript
+// Group 10 specific JavaScript
 
 </script>
 

@@ -1,35 +1,45 @@
 {% extends "base.html" %}
 
 {% block title %}
-Industrial &amp; Manufacturing
+Industrial &amp; Manufacturing - KVVSH Group of Companies
 {% endblock %}
 
 {% block extra_css %}
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/group.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/group.css') }}">
 
 {% endblock %}
 
 {% block content %}
 
+<section class="page-hero">
 
-<section class="group-hero">
+    <div class="hero-bg hero-bg-group6"></div>
 
-    <div class="hero-overlay">
+    <div class="hero-inner">
 
-        <span class="group-tag">
-            KVVSH INDUSTRIES
-        </span>
+        <span class="hero-eyebrow">KVVSH Industries</span>
 
         <h1>
-            Industrial &amp; Manufacturing
+            Powering Economies, <span>Building Industry</span>
         </h1>
 
-        <p>
+        <p class="hero-sub">
             Powering economies through advanced manufacturing,
             engineering excellence and industrial innovation.
         </p>
+
+        <div class="hero-actions">
+
+            <a href="#companies" class="btn btn-primary">
+                Explore Division
+            </a>
+
+            <a href="{{ url_for('business') }}" class="btn btn-outline">
+                All Businesses
+            </a>
+
+        </div>
 
     </div>
 
@@ -37,93 +47,80 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="group-stats">
 
-    <div class="stat-box">
-        <h2>7+</h2>
-        <p>Manufacturing Sectors</p>
-    </div>
+    <div class="stats-grid">
 
-    <div class="stat-box">
-        <h2>Global</h2>
-        <p>Export Vision</p>
-    </div>
+        <div class="stat-box">
+            <h2>7+</h2>
+            <p>Manufacturing Sectors</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>Future</h2>
-        <p>Industrial Expansion</p>
-    </div>
+        <div class="stat-box">
+            <h2>Global</h2>
+            <p>Export Vision</p>
+        </div>
 
-    <div class="stat-box">
-        <h2>100%</h2>
-        <p>Innovation Driven</p>
+        <div class="stat-box">
+            <h2>Future</h2>
+            <p>Industrial Expansion</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>100%</h2>
+            <p>Innovation Driven</p>
+        </div>
+
     </div>
 
 </section>
 
-<section class="companies">
+<section class="group-section alt" id="companies">
 
-    <h2>Manufacturing Businesses</h2>
+    <div class="inner">
 
-    <div class="company-grid">
+        <div class="section-head">
 
-        <div class="company-card">
+            <span class="section-eyebrow">Manufacturing Businesses</span>
 
-            <h3>Galaxxy Motors Manufacturing</h3>
+            <h2>Engineering <span>Excellence</span></h2>
 
             <p>
-                Production of cars, bikes,
-                buses and mobility solutions.
+                World-class manufacturing across mobility,
+                marine, electronics, textiles and food.
             </p>
 
         </div>
 
-        <div class="company-card">
+        <div class="company-grid">
 
-            <h3>Galaxxy Ship Manufacturing</h3>
+            <div class="company-card">
+                <h3>Galaxxy Motors Manufacturing</h3>
+                <p>Production of cars, bikes, buses and mobility solutions.</p>
+            </div>
 
-            <p>
-                Marine engineering and
-                shipbuilding excellence.
-            </p>
+            <div class="company-card">
+                <h3>Galaxxy Ship Manufacturing</h3>
+                <p>Marine engineering and shipbuilding excellence.</p>
+            </div>
 
-        </div>
+            <div class="company-card">
+                <h3>Galaxxy Electronics Manufacturing</h3>
+                <p>Advanced electronics production.</p>
+            </div>
 
-        <div class="company-card">
+            <div class="company-card">
+                <h3>Galaxxy Textiles</h3>
+                <p>Apparel and fabric manufacturing.</p>
+            </div>
 
-            <h3>Galaxxy Electronics Manufacturing</h3>
+            <div class="company-card">
+                <h3>Galaxxy Foods Ltd</h3>
+                <p>Modern food processing facilities.</p>
+            </div>
 
-            <p>
-                Advanced electronics production.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Galaxxy Textiles</h3>
-
-            <p>
-                Apparel and fabric manufacturing.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Galaxxy Foods Ltd</h3>
-
-            <p>
-                Modern food processing facilities.
-            </p>
-
-        </div>
-
-        <div class="company-card">
-
-            <h3>Industrial Equipment Division</h3>
-
-            <p>
-                Machinery and industrial systems.
-            </p>
+            <div class="company-card">
+                <h3>Industrial Equipment Division</h3>
+                <p>Machinery and industrial systems.</p>
+            </div>
 
         </div>
 
@@ -131,49 +128,39 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="manufacturing-section">
+<section class="group-section white">
 
-    <h2>Manufacturing Excellence</h2>
+    <div class="inner">
 
-    <div class="manufacturing-grid">
+        <div class="section-head">
 
-        <div class="manufacturing-card">
+            <span class="section-eyebrow">Manufacturing Excellence</span>
 
-            ⚙️
-
-            <h3>
-                Precision Engineering
-            </h3>
+            <h2>Built For <span>Precision</span></h2>
 
         </div>
 
-        <div class="manufacturing-card">
+        <div class="icon-grid">
 
-            🏭
+            <div class="icon-card">
+                ⚙️
+                <h3>Precision Engineering</h3>
+            </div>
 
-            <h3>
-                Smart Factories
-            </h3>
+            <div class="icon-card">
+                🏭
+                <h3>Smart Factories</h3>
+            </div>
 
-        </div>
+            <div class="icon-card">
+                🚢
+                <h3>Marine Technology</h3>
+            </div>
 
-        <div class="manufacturing-card">
-
-            🚢
-
-            <h3>
-                Marine Technology
-            </h3>
-
-        </div>
-
-        <div class="manufacturing-card">
-
-            📦
-
-            <h3>
-                Export Manufacturing
-            </h3>
+            <div class="icon-card">
+                📦
+                <h3>Export Manufacturing</h3>
+            </div>
 
         </div>
 
@@ -181,34 +168,32 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 </section>
 
-<section class="industry-section">
+<section class="group-section alt">
 
-    <h2>Industries We Serve</h2>
+    <div class="inner">
 
-    <div class="industry-grid">
+        <div class="section-head">
 
-        <div class="industry-box">
-            Automotive
+            <span class="section-eyebrow">Industries We Serve</span>
+
+            <h2>Sectors In <span>Motion</span></h2>
+
         </div>
 
-        <div class="industry-box">
-            Marine
-        </div>
+        <div class="chip-grid">
 
-        <div class="industry-box">
-            Electronics
-        </div>
+            <div class="chip-card">Automotive</div>
 
-        <div class="industry-box">
-            Food Processing
-        </div>
+            <div class="chip-card">Marine</div>
 
-        <div class="industry-box">
-            Textiles
-        </div>
+            <div class="chip-card">Electronics</div>
 
-        <div class="industry-box">
-            Industrial Equipment
+            <div class="chip-card">Food Processing</div>
+
+            <div class="chip-card">Textiles</div>
+
+            <div class="chip-card">Industrial Equipment</div>
+
         </div>
 
     </div>
@@ -217,38 +202,46 @@ href="{{ url_for('static', filename='css/group.css') }}">
 
 <section class="future-vision">
 
-    <h2>Building Industrial Strength</h2>
+    <div class="inner">
 
-    <p>
+        <h2>Building Industrial <span>Strength</span></h2>
 
-        Our vision is to establish world-class manufacturing
-        ecosystems that combine technology, efficiency and
-        sustainability to support economic growth globally.
+        <p>
+            Our vision is to establish world-class manufacturing
+            ecosystems that combine technology, efficiency and
+            sustainability to support economic growth globally.
+        </p>
 
-    </p>
+    </div>
 
 </section>
 
- <section class="group-cta">
+<section class="group-cta">
 
+    <div class="cta-inner">
 
-<h2>
-    Engineering The Future
-    Of Industry
-</h2>
+        <span class="hero-eyebrow">Get Involved</span>
 
-<div class="cta-buttons">
+        <h2>Engineering The Future Of Industry</h2>
 
-    <a href="{{ url_for('business') }}">
-        Back To Businesses
-    </a>
+        <p>
+            Partner with us to power the factories
+            and industries of tomorrow.
+        </p>
 
-    <a href="{{ url_for('contact') }}">
-        Contact Us
-    </a>
+        <div class="cta-buttons">
 
-</div>
+            <a href="{{ url_for('business') }}" class="btn btn-primary">
+                Back To Businesses
+            </a>
 
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
