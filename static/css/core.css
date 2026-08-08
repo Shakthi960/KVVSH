@@ -137,6 +137,13 @@ body.loader-lock {
 
 @media (min-width: 768px) {
 
+/* Hide the mobile nav block on desktop for every page
+   (home/about/business rely on styles.css/style.css for this;
+    group pages only load group.css, so this must live in core). */
+.mobile-nav {
+    display: none;
+}
+
 .quicklinks {
     position: fixed;
     top: 0;
