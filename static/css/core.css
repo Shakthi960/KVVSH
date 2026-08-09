@@ -9,6 +9,19 @@
    1. FONTS & BASE
 ------------------------------------------------------------ */
 
+/* Base reset shared by every page.
+   Pages that load style.css/styles.css already reset margins;
+   group pages load only group.css, so this reset must live in
+   core.css to keep spacing (body margin, headings, box-sizing)
+   identical across the whole site. */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --purple: #7D2AE8;
     --purple-light: #a96bff;
