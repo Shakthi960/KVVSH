@@ -8,3 +8,6 @@ venv/
 *.log
 uploads/
 *.pdf
+.pytest_cache/
+
+
