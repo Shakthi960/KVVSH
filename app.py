@@ -123,14 +123,6 @@ def initialize_database():
 initialize_database()
 
 # =====================================================
-# TEST ROUTE
-# =====================================================
-
-@app.route('/test')
-def test():
-    return "Flask Working"
-
-# =====================================================
 # MAIN WEBSITE ROUTES
 # =====================================================
 
@@ -491,5 +483,5 @@ if __name__ == '__main__':
     app.run(
         host='0.0.0.0',
         port=5000,
-        debug=True
+        debug=os.environ.get('FLASK_DEBUG', '') == '1'
     )

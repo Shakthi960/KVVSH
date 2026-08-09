@@ -41,12 +41,6 @@ NAVBAR_MARKERS = [
 ]
 
 
-def test_test_route(client):
-    resp = client.get("/test")
-    assert resp.status_code == 200
-    assert b"Flask Working" in resp.data
-
-
 @pytest.mark.parametrize("path,marker", ROUTES_AND_MARKERS)
 def test_main_routes(client, path, marker):
     resp = client.get(path)

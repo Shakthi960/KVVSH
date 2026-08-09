@@ -470,39 +470,22 @@ window.location.search
 const status =
 params.get("status");
 
-if(status === "success"){
+const popupMessages = {
+
+    "success": "✅ Message sent successfully!",
+    "error": "❌ Something went wrong!",
+    "empty": "⚠ Please fill all required fields.",
+    "email_error": "❌ Email sending failed.",
+    "db_error": "❌ Database connection failed."
+
+};
+
+if(status && popupMessages[status]){
 
     popup.style.display = "flex";
 
     popupMessage.innerText =
-    "✅ Message sent successfully!";
-
-}
-
-else if(status === "error"){
-
-    popup.style.display = "flex";
-
-    popupMessage.innerText =
-    "❌ Something went wrong!";
-
-}
-
-else if(status === "empty"){
-
-    popup.style.display = "flex";
-
-    popupMessage.innerText =
-    "⚠ Please fill all required fields.";
-
-}
-
-else if(status === "email"){
-
-    popup.style.display = "flex";
-
-    popupMessage.innerText =
-    "⚠ Please enter a valid email address.";
+    popupMessages[status];
 
 }
 
@@ -521,24 +504,6 @@ if(closePopup){
         );
 
     };
-
-}
-
-else if(status === "email_error"){
-
-    popup.style.display = "flex";
-
-    popupMessage.innerText =
-    "❌ Email sending failed.";
-
-}
-
-else if(status === "db_error"){
-
-    popup.style.display = "flex";
-
-    popupMessage.innerText =
-    "❌ Database connection failed.";
 
 }
 
@@ -564,26 +529,6 @@ if(status){
 
 }
 
-</script>
-<script>
-const params2 = new URLSearchParams(window.location.search);
-const status2 = params2.get("status");
-
-if(status2 === "success"){
-    alert("Message sent successfully!");
-}
-else if(status2 === "error"){
-    alert("Database error occurred!");
-}
-else if(status2 === "email_error"){
-    alert("Email sending failed!");
-}
-else if(status2 === "db_error"){
-    alert("Database connection failed!");
-}
-else if(status2 === "empty"){
-    alert("Please fill all required fields!");
-}
 </script>
 
 {% endblock %}
